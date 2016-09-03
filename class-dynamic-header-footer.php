@@ -20,10 +20,10 @@ class Dynamic_Header_Footer {
 		$this->check_forced_template();
 
 		// Add a filter to the attributes metabox to inject template into the cache.
-		add_filter( 'page_attributes_dropdown_pages_args', array( $this, 'bhf_register_project_templates' ) );
+		add_filter( 'page_attributes_dropdown_pages_args', array( $this, 'dhf_register_project_templates' ) );
 
 		// Add a filter to the save post to inject out template into the page cache
-		add_filter( 'wp_insert_post_data', array( $this, 'bhf_register_project_templates' ) );
+		add_filter( 'wp_insert_post_data', array( $this, 'dhf_register_project_templates' ) );
 
 		add_filter( 'template_include', array( $this, 'dhf_view_project_template' ) );
 	}
@@ -43,7 +43,7 @@ class Dynamic_Header_Footer {
 		// return $page_template;
 	}
 
-	function bhf_register_project_templates( $atts ) {
+	function dhf_register_project_templates( $atts ) {
 
 		// Create the key used for the themes cache
 		$cache_key = 'page_templates-' . md5( get_theme_root() . '/' . get_stylesheet() );
