@@ -13,6 +13,7 @@
  */
 
 require_once 'class-dynamic-header-footer.php';
+require_once 'class-dhf-admin-ui.php';
 
 define( 'DHF_VER', '0.1.0' );
 define( 'DHF_DIR', plugin_dir_path( __FILE__ ) );

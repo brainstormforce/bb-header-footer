@@ -37,10 +37,10 @@ class Dynamic_Header_Footer {
 	function force_page_template( $page_template ) {
 
 		// if ( is_page( 10885 ) ) {
-		// $page_template = $this->template_file;
+		$page_template = $this->template_file;
 		// }
 
-		// return $page_template;
+		return $page_template;
 	}
 
 	function dhf_register_project_templates( $atts ) {
@@ -132,11 +132,36 @@ class Dynamic_Header_Footer {
 	}
 
 	public static function get_header_content() {
-		echo 'Hello World';
+
+		$header_id = Dynamic_Header_Footer::get_settings( 'dhf_header_id', '' );
+
+		if ( $header_id !== '' ) {
+			echo do_shortcode( '[fl_builder_insert_layout id="' .$header_id. '"]' );
+		} else {
+			wp_head();
+		}
 	}
 
 	public static function get_footer_content() {
-		echo 'World Hello';
+
+		$footer_id = Dynamic_Header_Footer::get_settings( 'dhf_footer_id', '' );
+
+		if ( $footer_id !== '' ) {
+			echo do_shortcode( '[fl_builder_insert_layout id="' .$footer_id. '"]' );
+		} else {
+			wp_footer();
+		}
+	}
+
+	public static function get_settings( $setting = '', $default = '' ) {
+
+		$options = get_option( 'dhf_settings' );
+
+		if ( isset( $options[ $setting ] ) ) {
+			return $options[ $setting ];
+		}
+
+		return $default;
 	}
 
 }
