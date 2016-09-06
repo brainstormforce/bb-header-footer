@@ -6,11 +6,13 @@
 class Dynamic_Header_Footer {
 
 	private $templates;
+	private $template_dir;
 	private $template_file = array();
 
 	function __construct() {
 
-		$this->template_file = DHF_DIR . '/template-page-builder.php';
+		$this->template_file = DHF_DIR . '/templates/default/template-page-builder.php';
+		$this->template_dir = DHF_DIR . '/templates/default';
 
 		$this->templates = array(
 			'template-page-builder.php' => 'Page Builder Template'
@@ -26,6 +28,13 @@ class Dynamic_Header_Footer {
 		add_filter( 'wp_insert_post_data', array( $this, 'dhf_register_project_templates' ) );
 
 		add_filter( 'template_include', array( $this, 'dhf_view_project_template' ) );
+
+		// Scripts and styles
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+	}
+
+	function enqueue_scripts() {
+		wp_enqueue_style( 'shf-style', DHF_URL . 'assets/css/style.css', array(), '1.0' );
 	}
 
 	function check_forced_template() {
@@ -36,9 +45,7 @@ class Dynamic_Header_Footer {
 
 	function force_page_template( $page_template ) {
 
-		// if ( is_page( 10885 ) ) {
 		$page_template = $this->template_file;
-		// }
 
 		return $page_template;
 	}
@@ -70,7 +77,7 @@ class Dynamic_Header_Footer {
 			return $template;
 		}
 
-		$file = DHF_DIR . get_post_meta( $post->ID, '_wp_page_template', true );
+		$file = DHF_DIR . '/templates/default/' . get_post_meta( $post->ID, '_wp_page_template', true );
 
 		// Just to be safe, we check if the file exist first
 		if ( file_exists( $file ) ) {
@@ -82,75 +89,40 @@ class Dynamic_Header_Footer {
 		return $template;
 	}
 
-	public static function get_header() {
-		?>
+	public function get_header() {
 
-		<!DOCTYPE html>
-		<html <?php language_attributes(); ?>>
-		<head>
-			<meta charset="<?php bloginfo( 'charset' ); ?>">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="profile" href="http://gmpg.org/xfn/11">
+		$header_id = Dynamic_Header_Footer::get_settings( 'dhf_header_id', '' );
 
-			<?php wp_head(); ?>
-		</head>
-
-		<body <?php body_class(); ?>>
-		<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
-
-		<header id="masthead" class="site-header" role="banner">
-			<?php Dynamic_Header_Footer::get_header_content(); ?>
-		</header>
-		<!-- #masthead -->
-
-		<div id="content" class="site-content">
-
-		<?php
-
+		if ( $header_id !== '' ) {
+			load_template( $this->template_dir . '/header.php' );
+		} else {
+			get_header();
+		}		
 	}
 
-	public static function get_footer() {
+	public function get_footer() {
 
-		?>
-		</div><!-- #content -->
+		$footer_id = Dynamic_Header_Footer::get_settings( 'dhf_footer_id', '' );
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
-
-			<?php Dynamic_Header_Footer::get_footer_content(); ?>
-
-		</footer><!-- #colophon -->
-		</div><!-- #page -->
-
-		<?php wp_footer(); ?>
-
-		</body>
-		</html>
-
-		<?php
-
+		if ( $footer_id !== '' ) {
+			load_template( $this->template_dir . '/footer.php' );
+		} else {
+			get_footer();
+		}
 	}
 
 	public static function get_header_content() {
 
 		$header_id = Dynamic_Header_Footer::get_settings( 'dhf_header_id', '' );
-
-		if ( $header_id !== '' ) {
-			echo do_shortcode( '[fl_builder_insert_layout id="' .$header_id. '"]' );
-		} else {
-			get_header();
-		}
+		echo do_shortcode( '[fl_builder_insert_layout id="' .$header_id. '"]' );
 	}
 
 	public static function get_footer_content() {
 
 		$footer_id = Dynamic_Header_Footer::get_settings( 'dhf_footer_id', '' );
-
-		if ( $footer_id !== '' ) {
-			echo do_shortcode( '[fl_builder_insert_layout id="' .$footer_id. '"]' );
-		} else {
-			get_footer();
-		}
+		echo "<div class='footer-width-fixer'>";
+		echo do_shortcode( '[fl_builder_insert_layout id="' .$footer_id. '"]' );
+		echo "</div>";
 	}
 
 	public static function get_settings( $setting = '', $default = '' ) {

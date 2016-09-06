@@ -23,9 +23,11 @@ define( 'DHF_PATH', plugin_basename( __FILE__ ) );
 new Dynamic_Header_Footer();
 
 function dhf_get_header() {
-	Dynamic_Header_Footer::get_header();
+	$dynamic_header = new Dynamic_Header_Footer();
+	$dynamic_header->get_header();
 }
 
 function dhf_get_footer() {
-	Dynamic_Header_Footer::get_footer();
+	$dynamic_header = new Dynamic_Header_Footer();
+	$dynamic_header->get_footer();
 }
