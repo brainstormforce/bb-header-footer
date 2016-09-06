@@ -138,7 +138,7 @@ class Dynamic_Header_Footer {
 		if ( $header_id !== '' ) {
 			echo do_shortcode( '[fl_builder_insert_layout id="' .$header_id. '"]' );
 		} else {
-			wp_head();
+			get_header();
 		}
 	}
 
@@ -149,7 +149,7 @@ class Dynamic_Header_Footer {
 		if ( $footer_id !== '' ) {
 			echo do_shortcode( '[fl_builder_insert_layout id="' .$footer_id. '"]' );
 		} else {
-			wp_footer();
+			get_footer();
 		}
 	}
 
