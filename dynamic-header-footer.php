@@ -20,14 +20,16 @@ define( 'DHF_DIR', plugin_dir_path( __FILE__ ) );
 define( 'DHF_URL', plugins_url( '/', __FILE__ ) );
 define( 'DHF_PATH', plugin_basename( __FILE__ ) );
 
-new Dynamic_Header_Footer();
+global $dhf;
+
+$dhf = new Dynamic_Header_Footer();
 
 function dhf_get_header() {
-	$dynamic_header = new Dynamic_Header_Footer();
-	$dynamic_header->get_header();
+	global $dhf;
+	$dhf->get_header();
 }
 
 function dhf_get_footer() {
-	$dynamic_header = new Dynamic_Header_Footer();
-	$dynamic_header->get_footer();
+	global $dhf;
+	$dhf->get_footer();
 }
