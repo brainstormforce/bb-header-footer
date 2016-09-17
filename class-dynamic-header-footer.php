@@ -27,7 +27,7 @@ class Dynamic_Header_Footer {
 	}
 
 	function enqueue_scripts() {
-		wp_enqueue_style( 'shf-style', DHF_URL . 'assets/css/style.css', array(), '1.0' );
+		wp_enqueue_style( 'dhf-style', DHF_URL . 'assets/css/style.css', array(), '1.0' );
 	}
 
 	function check_forced_template() {
