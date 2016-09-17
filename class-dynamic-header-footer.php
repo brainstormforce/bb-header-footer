@@ -29,8 +29,6 @@ class Dynamic_Header_Footer {
 
 				// Check where we want to force the page template
 				$this->check_forced_template();
-			} else {
-
 			}
 		}
 
