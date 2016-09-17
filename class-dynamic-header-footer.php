@@ -42,6 +42,18 @@ class Dynamic_Header_Footer {
 		add_filter( 'page_template', array( $this, 'force_page_template' ) );
 		add_filter( 'single_template', array( $this, 'force_page_template' ) );
 		add_filter( 'archive_template', array( $this, 'force_page_template' ) );
+		add_filter( 'index_template', array( $this, 'force_page_template' ) );
+		add_filter( '404_template', array( $this, 'force_page_template' ) );
+		add_filter( 'author_template', array( $this, 'force_page_template' ) );
+		add_filter( 'category_template', array( $this, 'force_page_template' ) );
+		add_filter( 'tag_template', array( $this, 'force_page_template' ) );
+		add_filter( 'taxonomy_template', array( $this, 'force_page_template' ) );
+		add_filter( 'date_template', array( $this, 'force_page_template' ) );
+		add_filter( 'home_template', array( $this, 'force_page_template' ) );
+		add_filter( 'front_page_template', array( $this, 'force_page_template' ) );
+		add_filter( 'paged_template', array( $this, 'force_page_template' ) );
+		add_filter( 'search_template', array( $this, 'force_page_template' ) );
+		add_filter( 'attachment_template', array( $this, 'force_page_template' ) );
 	}
 
 	function force_page_template( $page_template ) {

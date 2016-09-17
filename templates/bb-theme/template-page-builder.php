@@ -4,7 +4,7 @@
 
 dhf_get_header(); ?>
 
-<?php if ( is_archive() ): ?>
+<?php if ( ! is_singular() ): ?>
 	<div class="fl-archive container">
 		<div class="row">
 
