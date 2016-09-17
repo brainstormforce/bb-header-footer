@@ -14,13 +14,20 @@ class Dynamic_Header_Footer {
 	function __construct() {
 
 		$this->supported_themes = array(
-			'bb-theme'
+			'bb-theme',
+			'next',
+			'generatepress'
 		);
 
-		$this->set_template_path();
+		$status = $this->set_template_path();
 
-		// Check where we want to force the page template
-		$this->check_forced_template();
+		if ( $status == true ) {
+			
+			// Check where we want to force the page template
+			$this->check_forced_template();
+		} else {
+
+		}
 
 		// Scripts and styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -67,14 +74,11 @@ class Dynamic_Header_Footer {
 			$this->templates = array(
 				'template-page-builder.php' => 'Page Builder Template'
 			);
+
+			return true;
 		} else {
 
-			$this->template_file = DHF_DIR . 'templates/default/template-page-builder.php';
-			$this->template_dir  = DHF_DIR . 'templates/default';
-
-			$this->templates = array(
-				'template-page-builder.php' => 'Page Builder Template'
-			);
+			return false;
 		}
 
 	}
