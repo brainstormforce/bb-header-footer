@@ -5,18 +5,19 @@
  */
 class Dynamic_Header_Footer {
 
+	private $supported_themes = array();
+
 	private $templates;
 	private $template_dir;
 	private $template_file = array();
 
 	function __construct() {
 
-		$this->template_file = DHF_DIR . '/templates/default/template-page-builder.php';
-		$this->template_dir = DHF_DIR . '/templates/default';
+		$this->supported_themes = array(
+				'bb-theme'
+			);
 
-		$this->templates = array(
-			'template-page-builder.php' => 'Page Builder Template'
-		);
+		$this->set_template_path();
 
 		// Check where we want to force the page template
 		$this->check_forced_template();
@@ -87,6 +88,30 @@ class Dynamic_Header_Footer {
 		}
 
 		return $template;
+	}
+
+	public function set_template_path() {
+
+		$template = get_template();
+		
+		if ( in_array( $template, $this->supported_themes ) ) {
+						
+			$this->template_file = DHF_DIR . 'templates/'. $template .'/template-page-builder.php';
+			$this->template_dir = DHF_DIR . 'templates/'. $template .'';
+
+			$this->templates = array(
+				'template-page-builder.php' => 'Page Builder Template'
+			);
+		} else {
+
+			$this->template_file = DHF_DIR . 'templates/default/template-page-builder.php';
+			$this->template_dir = DHF_DIR . 'templates/default';
+
+			$this->templates = array(
+				'template-page-builder.php' => 'Page Builder Template'
+			);
+		}
+		
 	}
 
 	public function get_header() {
