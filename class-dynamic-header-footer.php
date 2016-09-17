@@ -19,22 +19,36 @@ class Dynamic_Header_Footer {
 			'generatepress'
 		);
 
-		$status = $this->set_template_path();
+		if ( get_template() == 'genesis' ) {
 
-		if ( $status == true ) {
-			
-			// Check where we want to force the page template
-			$this->check_forced_template();
+			require DHF_DIR . 'themes/genesis/class-genesis-compat.php';
 		} else {
+			$status = $this->set_template_path();
 
+			if ( $status == true ) {
+
+				// Check where we want to force the page template
+				$this->check_forced_template();
+			} else {
+
+			}
 		}
 
 		// Scripts and styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_filter( 'body_class', array( $this, 'body_class' ) );
 	}
 
 	function enqueue_scripts() {
 		wp_enqueue_style( 'dhf-style', DHF_URL . 'assets/css/style.css', array(), '1.0' );
+	}
+
+	function body_class( $classes ) {
+
+		$classes[] = 'dhf-template-'	. get_template();
+		$classes[] = 'dhf-stylesheet-'	. get_stylesheet();
+
+		return $classes;
 	}
 
 	function check_forced_template() {
@@ -68,8 +82,8 @@ class Dynamic_Header_Footer {
 
 		if ( in_array( $template, $this->supported_themes ) ) {
 
-			$this->template_file = DHF_DIR . 'templates/' . $template . '/template-page-builder.php';
-			$this->template_dir  = DHF_DIR . 'templates/' . $template . '';
+			$this->template_file = DHF_DIR . 'themes/' . $template . '/template-page-builder.php';
+			$this->template_dir  = DHF_DIR . 'themes/' . $template . '';
 
 			$this->templates = array(
 				'template-page-builder.php' => 'Page Builder Template'

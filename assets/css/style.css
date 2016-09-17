@@ -1,3 +1,9 @@
 .footer-width-fixer {
 	width: 100%;
 }
+
+/* Aspire pro fixes */
+
+.dhf-stylesheet-aspire-pro .site-header {
+    position: static !important;
+}
