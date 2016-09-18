@@ -1,3 +1,25 @@
 .footer-width-fixer {
 	width: 100%;
 }
+
+/* Container fix for genesis themes */
+
+.fl-builder.dhf-template-genesis.dhf-header .site-header .wrap,
+.fl-builder.dhf-template-genesis.dhf-footer .site-footer .wrap {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+}
+
+/* Container fix for generatepress theme */
+
+.fl-builder.dhf-template-generatepress.dhf-header .site-header,
+.fl-builder.dhf-template-generatepress.dhf-footer .site-footer {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;	
+}
+
+.fl-builder.dhf-template-generatepress.dhf-header .site-header .inside-header {
+	padding: 0;
+}
