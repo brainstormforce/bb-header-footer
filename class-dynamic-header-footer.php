@@ -43,6 +43,17 @@ class Dynamic_Header_Footer {
 
 	function body_class( $classes ) {
 
+		$header_id = Dynamic_Header_Footer::get_settings( 'dhf_header_id', '' );
+		$footer_id = Dynamic_Header_Footer::get_settings( 'dhf_footer_id', '' );
+
+		if ( $header_id !== '' ) {
+			$classes[] = 'dhf-header';
+		}
+
+		if ( $footer_id !== '' ) {
+			$classes[] = 'dhf-footer';
+		}
+
 		$classes[] = 'dhf-template-'	. get_template();
 		$classes[] = 'dhf-stylesheet-'	. get_stylesheet();
 
