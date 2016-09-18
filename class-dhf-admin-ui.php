@@ -70,11 +70,13 @@ class DHF_Admin_UI {
 	function dhf_select_field_1_render() {
 
 		$options = get_option( 'dhf_settings' );
-		$header_id = isset( $options['dhf_header_id'] ) ? $options['dhf_header_id'] : '';
+		$header_id = isset( $options['dhf_header_id'] ) ? $options['dhf_header_id'] : 0;
 
 		$args = array(
 					'selected' => $header_id,
-					'name'     => 'dhf_settings[dhf_header_id]'
+					'name'     => 'dhf_settings[dhf_header_id]',
+					'show_option_none' => 'Select page as Header',
+					'option_none_value' => ''
 				);
 
 		wp_dropdown_pages( $args );
@@ -83,11 +85,13 @@ class DHF_Admin_UI {
 	function dhf_select_field_2_render() {
 
 		$options = get_option( 'dhf_settings' );
-		$footer_id = isset( $options['dhf_footer_id'] ) ? $options['dhf_footer_id'] : '';
+		$footer_id = isset( $options['dhf_footer_id'] ) ? $options['dhf_footer_id'] : 0;
 
 		$args = array(
 					'selected' => $footer_id,
-					'name'     => 'dhf_settings[dhf_footer_id]'
+					'name'     => 'dhf_settings[dhf_footer_id]',
+					'show_option_none' => 'Select page as Footer',
+					'option_none_value' => ''
 				);
 
 		wp_dropdown_pages( $args );
