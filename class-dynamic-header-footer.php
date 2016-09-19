@@ -36,8 +36,8 @@ class Dynamic_Header_Footer {
 				// Check where we want to force the page template
 				$this->check_forced_template();
 			} else {
-				add_action( 'admin_notices', 'unsupported_theme' );
-				add_action( 'network_admin_notices', 'unsupported_theme' );
+				add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
+				add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 			}
 		}
 
