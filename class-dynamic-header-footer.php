@@ -35,6 +35,9 @@ class Dynamic_Header_Footer {
 
 				// Check where we want to force the page template
 				$this->check_forced_template();
+			} else {
+				add_action( 'admin_notices', 'unsupported_theme' );
+				add_action( 'network_admin_notices', 'unsupported_theme' );
 			}
 		}
 
@@ -64,6 +67,13 @@ class Dynamic_Header_Footer {
 		$classes[] = 'dhf-stylesheet-'	. get_stylesheet();
 
 		return $classes;
+	}
+
+	function unsupported_theme() {
+		$class = 'notice notice-error';
+		$message = __( 'Your are using an unsupported theme.', 'dynamic-header-footer' );
+
+		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
 	}
 
 	function check_forced_template() {
