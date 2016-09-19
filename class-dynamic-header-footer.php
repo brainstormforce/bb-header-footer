@@ -25,6 +25,9 @@ class Dynamic_Header_Footer {
 		} elseif ( get_template() == 'bb-theme' ) {
 			
 			require DHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
+		} elseif ( get_template() == 'generatepress' ) {
+			
+			require DHF_DIR . 'themes/generatepress/generatepress-compat.php';
 		} else {
 			$status = $this->set_template_path();
 
