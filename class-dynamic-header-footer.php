@@ -22,6 +22,9 @@ class Dynamic_Header_Footer {
 		if ( get_template() == 'genesis' ) {
 
 			require DHF_DIR . 'themes/genesis/class-genesis-compat.php';
+		} elseif ( get_template() == 'bb-theme' ) {
+			
+			require DHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
 		} else {
 			$status = $this->set_template_path();
 
