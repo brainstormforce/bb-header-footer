@@ -5,12 +5,6 @@
  */
 class BB_Header_Footer {
 
-	private $supported_themes = array();
-
-	private $templates;
-	private $template_dir;
-	private $template_file = array();
-
 	function __construct() {
 
 		if ( class_exists( 'FLBuilder' ) ) {
