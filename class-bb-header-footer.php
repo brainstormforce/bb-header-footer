@@ -13,31 +13,50 @@ class BB_Header_Footer {
 
 	function __construct() {
 
-		$this->supported_themes = array(
-			'bb-theme',
-			'generatepress'
-		);
+		if ( class_exists( 'FLBuilder' ) ) {
 
-		if ( get_template() == 'genesis' ) {
+			if ( get_template() == 'genesis' ) {
 
-			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-		} elseif ( get_template() == 'bb-theme' ) {
-			
-			require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
-		} elseif ( get_template() == 'generatepress' ) {
-			
-			require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
+				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
+			} elseif ( get_template() == 'bb-theme' ) {
+
+				require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
+			} elseif ( get_template() == 'generatepress' ) {
+
+				require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
+			} else {
+
+				add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
+				add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
+			}
+
+			$this->includes();
+
+			// Scripts and styles
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+			add_filter( 'body_class', array( $this, 'body_class' ) );
+
 		} else {
 
-			add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
-			add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
+			add_action( 'admin_notices', array( $this, 'bb_not_available' ) );
+			add_action( 'network_admin_notices', array( $this, 'bb_not_available' ) );
+		}
+	}
+
+	public function bb_not_available() {
+
+		if ( file_exists( plugin_dir_path( 'bb-plugin-agency/fl-builder.php' ) )
+		     || file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) )
+		) {
+
+			$url = network_admin_url() . 'plugins.php?s=Beaver+Builder+Plugin';
+		} else {
+			$url = network_admin_url() . 'plugin-install.php?s=billyyoung&tab=search&type=author';
 		}
 
-		$this->includes();
-
-		// Scripts and styles
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_filter( 'body_class', array( $this, 'body_class' ) );
+		echo '<div class="notice notice-error">';
+		echo "<p>The <strong>Ultimate Addon for Beaver Builder</strong> " . __( 'plugin requires', 'uabb' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'uabb' ) . "</p>";
+		echo '</div>';
 	}
 
 	public function includes() {
@@ -61,17 +80,17 @@ class BB_Header_Footer {
 			$classes[] = 'dhf-footer';
 		}
 
-		$classes[] = 'dhf-template-'	. get_template();
-		$classes[] = 'dhf-stylesheet-'	. get_stylesheet();
+		$classes[] = 'dhf-template-' . get_template();
+		$classes[] = 'dhf-stylesheet-' . get_stylesheet();
 
 		return $classes;
 	}
 
 	public function unsupported_theme() {
-		$class = 'notice notice-error';
+		$class   = 'notice notice-error';
 		$message = __( 'Your are using an unsupported theme.', 'bb-header-footer' );
 
-		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
+		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
 	}
 
 
