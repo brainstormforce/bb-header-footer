@@ -4,11 +4,11 @@ if ( ! function_exists( 'generate_header_items' ) ) {
 	
 	function generate_header_items() {
 
-		$header_id = Dynamic_Header_Footer::get_settings( 'dhf_header_id', '' );
+		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 
 		if ( $header_id !== '' ) {
 
-			Dynamic_Header_Footer::get_header_content();
+			BB_Header_Footer::get_header_content();
 		} else {
 
 			// Header widget
@@ -25,9 +25,9 @@ if ( ! function_exists( 'generate_header_items' ) ) {
 }
 
 
-function dhf_generate_footer_widgets_override( $widgets ) {
+function bb_generate_footer_widgets_override( $widgets ) {
 
-	$footer_id = Dynamic_Header_Footer::get_settings( 'dhf_footer_id', '' );
+	$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 	if ( $footer_id !== '' ) {
 
@@ -38,16 +38,16 @@ function dhf_generate_footer_widgets_override( $widgets ) {
 	}
 }
 
-add_filter( 'generate_footer_widgets', 'dhf_generate_footer_widgets_override' );
+add_filter( 'generate_footer_widgets', 'bb_generate_footer_widgets_override' );
 
-function dhf_generate_add_footer() {
+function bb_generate_add_footer() {
 	
-	$footer_id = Dynamic_Header_Footer::get_settings( 'dhf_footer_id', '' );
+	$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 	if ( $footer_id !== '' ) {
 
-		Dynamic_Header_Footer::get_footer_content();
+		BB_Header_Footer::get_footer_content();
 	}
 }
 
-add_action( 'generate_before_footer_content', 'dhf_generate_add_footer' );
+add_action( 'generate_before_footer_content', 'bb_generate_add_footer' );
