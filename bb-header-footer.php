@@ -13,7 +13,6 @@
  */
 
 require_once 'class-bb-header-footer.php';
-require_once 'class-bb-admin-ui.php';
 
 define( 'BBHF_VER', '0.2' );
 define( 'BBHF_DIR', plugin_dir_path( __FILE__ ) );

@@ -33,9 +33,15 @@ class BB_Header_Footer {
 			add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 		}
 
+		$this->includes();
+
 		// Scripts and styles
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
+	}
+
+	public function includes() {
+		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
 	}
 
 	public function enqueue_scripts() {
@@ -85,7 +91,7 @@ class BB_Header_Footer {
 
 	public static function get_settings( $setting = '', $default = '' ) {
 
-		$options = get_option( 'bb_settings' );
+		$options = get_option( 'bbhf_settings' );
 
 		if ( isset( $options[ $setting ] ) ) {
 			return $options[ $setting ];
