@@ -49,7 +49,7 @@ class BB_Header_Footer {
 		}
 
 		echo '<div class="notice notice-error">';
-		echo "<p>The <strong>Ultimate Addon for Beaver Builder</strong> " . __( 'plugin requires', 'uabb' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'uabb' ) . "</p>";
+		echo "<p>The <strong>BB Header Footer</strong> " . __( 'plugin requires', 'bb-header-footer' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'bb-header-footer' ) . "</p>";
 		echo '</div>';
 	}
 
@@ -82,7 +82,7 @@ class BB_Header_Footer {
 
 	public function unsupported_theme() {
 		$class   = 'notice notice-error';
-		$message = __( 'Your are using an unsupported theme.', 'bb-header-footer' );
+		$message = __( 'Hey, your current theme is not supported by BB Header Footer, click <a href="">here</a> to check out the supported themes.', 'bb-header-footer' );
 
 		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
 	}
