@@ -20,13 +20,13 @@ class BB_Header_Footer {
 
 		if ( get_template() == 'genesis' ) {
 
-			require BB_DIR . 'themes/genesis/class-genesis-compat.php';
+			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
 		} elseif ( get_template() == 'bb-theme' ) {
 			
-			require BB_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
+			require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
 		} elseif ( get_template() == 'generatepress' ) {
 			
-			require BB_DIR . 'themes/generatepress/generatepress-compat.php';
+			require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
 		} else {
 
 			add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
@@ -39,7 +39,7 @@ class BB_Header_Footer {
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'dhf-style', BB_URL . 'assets/css/style.css', array(), '1.0' );
+		wp_enqueue_style( 'dhf-style', BBHF_URL . 'assets/css/style.css', array(), '1.0' );
 	}
 
 	public function body_class( $classes ) {

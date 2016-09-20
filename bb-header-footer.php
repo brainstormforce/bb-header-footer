@@ -15,9 +15,9 @@
 require_once 'class-bb-header-footer.php';
 require_once 'class-bb-admin-ui.php';
 
-define( 'BB_VER', '0.2' );
-define( 'BB_DIR', plugin_dir_path( __FILE__ ) );
-define( 'BB_URL', plugins_url( '/', __FILE__ ) );
-define( 'BB_PATH', plugin_basename( __FILE__ ) );
+define( 'BBHF_VER', '0.2' );
+define( 'BBHF_DIR', plugin_dir_path( __FILE__ ) );
+define( 'BBHF_URL', plugins_url( '/', __FILE__ ) );
+define( 'BBHF_PATH', plugin_basename( __FILE__ ) );
 
 new BB_Header_Footer();
