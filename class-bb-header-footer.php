@@ -58,7 +58,7 @@ class BB_Header_Footer {
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'dhf-style', BBHF_URL . 'assets/css/style.css', array(), '1.0' );
+		wp_enqueue_style( 'dhf-style', BBHF_URL . 'assets/css/style.css', array(), BBHF_VER );
 	}
 
 	public function body_class( $classes ) {
