@@ -7,14 +7,14 @@
  * Author URI:      http://www.nikhilchavan.com/
  * Text Domain:     bb-header-footer
  * Domain Path:     /languages
- * Version:         0.2
+ * Version:         1.0
  *
  * @package         BB_Header_Footer
  */
 
 require_once 'class-bb-header-footer.php';
 
-define( 'BBHF_VER', '0.2' );
+define( 'BBHF_VER', '1.0' );
 define( 'BBHF_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BBHF_URL', plugins_url( '/', __FILE__ ) );
 define( 'BBHF_PATH', plugin_basename( __FILE__ ) );
