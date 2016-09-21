@@ -4,7 +4,7 @@
 	<form id="bb-header-footer-form" action="<?php FLBuilderAdminSettings::render_form_action( 'bb-header-footer' ); ?>"
 	      method="post">
 
-		<h4 class="field-title"><?php _e( 'Select a page to be used as Header', 'uabb' ); ?></h4>
+		<h4 class="field-title"><?php _e( 'Select a page to be used as Header', 'bb-header-footer' ); ?></h4>
 
 		<?php
 
@@ -21,7 +21,7 @@
 		wp_dropdown_pages( $args );
 		?>
 
-		<h4 class="field-title"><?php _e( 'Select a page to be used as Footer', 'uabb' ); ?></h4>
+		<h4 class="field-title"><?php _e( 'Select a page to be used as Footer', 'bb-header-footer' ); ?></h4>
 
 		<?php		
 		$footer_id = isset( $bbhf_settings['bb_footer_id'] ) ? $bbhf_settings['bb_footer_id'] : 0;
@@ -39,7 +39,7 @@
 
 		<p class="submit">
 			<input type="submit" name="fl-save-bb-header-footer" class="button-primary"
-			       value="<?php esc_attr_e( 'Save Settings', 'uabb' ); ?>"/>
+			       value="<?php esc_attr_e( 'Save Settings', 'bb-header-footer' ); ?>"/>
 
 			<?php wp_nonce_field( 'bb-header-footer', 'fl-bb-header-footer-nonce' ); ?>
 		</p>

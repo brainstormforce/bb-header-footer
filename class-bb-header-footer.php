@@ -25,6 +25,7 @@ class BB_Header_Footer {
 			}
 
 			$this->includes();
+			$this->load_textdomain();
 
 			// Scripts and styles
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -55,6 +56,10 @@ class BB_Header_Footer {
 
 	public function includes() {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
+	}
+
+	public function load_textdomain() {
+		load_plugin_textdomain( 'bb-header-footer' );
 	}
 
 	public function enqueue_scripts() {
