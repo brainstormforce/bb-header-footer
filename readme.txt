@@ -1,7 +1,6 @@
 === BB Header Footer ===
 Contributors: Nikschavan, brainstormforce
-Donate link: http://example.com/
-Tags: comments, spam
+Donate link: http://www.nikhilchavan.com/
 Requires at least: 3.6
 Tested up to: 4.7
 Stable tag: 1.0
