@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== BB Header Footer ===
 Contributors: Nikschavan, brainstormforce
 Donate link: http://example.com/
 Tags: comments, spam
