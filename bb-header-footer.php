@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     BB Header Footer
- * Plugin URI:      http://www.nikhilchavan.com/
+ * Plugin URI:      https://www.brainstormforce.com/
  * Description:     Create Header and Footer for your site using Beaver Builder.
  * Author:          Nikhil Chavan, Brainstorm Force
  * Author URI:      http://www.nikhilchavan.com/

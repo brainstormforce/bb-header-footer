@@ -1,6 +1,6 @@
 # BB Header Footer #
-**Contributors:** Nikschavan, brainstormforce  
-**Donate link:** http://www.nikhilchavan.com/  
+**Contributors:** brainstormforce, Nikschavan  
+**Donate link:** https://www.brainstormforce.com/  
 **Requires at least:** 3.6  
 **Tested up to:** 4.7  
 **Stable tag:** 1.0  
