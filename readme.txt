@@ -1,6 +1,6 @@
 === BB Header Footer ===
 Contributors: brainstormforce, Nikschavan
-Donate link: https://www.brainstormforce.com/
+Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 3.6
 Tested up to: 4.7
 Stable tag: 1.0
@@ -11,13 +11,13 @@ Create Header and Footer for your site using Beaver Builder.
 
 == Description ==
 
-Create header and footer of the your site easily using [Beaver Builder](hhttps://www.wpbeaverbuilder.com/ "Beaver Builder"),
+Create header and footer of the your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder"),
 
 The plugin only works with limited number of themes as of now, here is the list of supported themes - 
 
-1. Beaver Builder theme.
-2. Genesis.
-3. Generatepress.
+1. Beaver Builder theme
+2. Genesis Theme
+3. GeneratePress Theme
 
 == Installation ==
 
@@ -30,9 +30,9 @@ The plugin only works with limited number of themes as of now, here is the list 
 
 = Which themes are supported by this plugin? =
 
-1. Beaver Builder theme.
-2. Genesis.
-3. Generatepress.
+1. Beaver Builder Theme.
+2. Genesis Theme (and should work with most of it's child themes).
+3. GeneratePress Theme
 
 == Changelog ==
 
