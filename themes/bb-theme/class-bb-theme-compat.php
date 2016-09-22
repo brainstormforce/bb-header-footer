@@ -50,7 +50,7 @@ class BB_Theme_Compat {
 
 	public function get_header_content() {
 		?>
-			<header temscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 				<?php BB_Header_Footer::get_header_content(); ?>
 			</header>
 		<?php
