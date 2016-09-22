@@ -11,7 +11,7 @@ Create Header and Footer for your site using Beaver Builder.
 
 == Description ==
 
-Create header and footer of the your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder"),
+Create header and footer of the your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder").
 
 The plugin only works with limited number of themes as of now, here is the list of supported themes - 
 
@@ -33,6 +33,13 @@ The plugin only works with limited number of themes as of now, here is the list 
 1. Beaver Builder Theme.
 2. Genesis Theme (and should work with most of it's child themes).
 3. GeneratePress Theme
+
+
+= How does this plugin work? =
+
+1. Simply create a new page (or Beaver Builder Template)
+2. Design it as you would like it for your header or footer
+3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 == Changelog ==
 
