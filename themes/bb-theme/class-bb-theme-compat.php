@@ -49,6 +49,13 @@ class BB_Theme_Compat {
 	}
 
 	public function get_header_content() {
+
+		$header_layout  = FLTheme::get_setting( 'fl-header-layout' );
+
+		if ( $header_layout == 'none' || is_page_template( 'tpl-no-header-footer.php' ) ) {
+			return;
+		}
+
 		?>
 			<header id="masthead" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 				<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
@@ -58,6 +65,11 @@ class BB_Theme_Compat {
 	}
 
 	public function get_footer_content() {
+
+		if ( is_page_template( 'tpl-no-header-footer.php' ) ) {
+			return;
+		}
+
 		?>
 			<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 				<?php BB_Header_Footer::get_footer_content(); ?>
