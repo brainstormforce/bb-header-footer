@@ -46,6 +46,49 @@ class BB_Admin_UI {
 
 	}
 
+	public static function wp_dropdown_pages( $args ) {
+
+		$all_posts = array();
+
+		$atts = array(
+			'post_type'      => array(
+				'fl-builder-template',
+				'page'
+			),
+			'posts_per_page' => 200,
+			'cache_results'  => true
+		);
+
+		$query = new WP_Query( $atts );
+
+		if ( $query->have_posts() ) {
+
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				$title = get_the_title();
+				$ID    = get_the_id();
+
+				$all_posts[ get_post_type() ][ $ID ] = $title;
+			}
+
+		}
+
+		echo '<select name="' . $args['name'] . '">';
+		echo '<option value="">' . $args['show_option_none'] . '</option>';
+
+		foreach ( $all_posts as $post_type => $posts ) {
+			echo '<optgroup label="' . ucwords( str_replace( "-", " ", $post_type ) ) . '">';
+
+			foreach ( $posts as $id => $post_name ) {
+				echo '<option value="' . $id . '" ' . selected( $id, $args['selected'] ) . ' >' . $post_name . '</option>';
+			}
+
+			echo '</optgroup>';
+		}
+
+		echo '</select>';
+	}
+
 }
 
 new BB_Admin_UI();

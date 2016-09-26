@@ -18,7 +18,7 @@
 			'option_none_value' => ''
 		);
 
-		wp_dropdown_pages( $args );
+		BB_Admin_UI::wp_dropdown_pages( $args );
 		?>
 
 		<h4 class="field-title"><?php _e( 'Select a page to be used as Footer', 'bb-header-footer' ); ?></h4>
@@ -33,7 +33,7 @@
 			'option_none_value' => ''
 		);
 
-		wp_dropdown_pages( $args );
+		BB_Admin_UI::wp_dropdown_pages( $args );
 		?>
 
 
