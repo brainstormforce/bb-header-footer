@@ -23,3 +23,7 @@
 .dhf-template-generatepress.dhf-header .site-header .inside-header {
 	padding: 0;
 }
+
+.bhf-hidden {
+	display: none
+}

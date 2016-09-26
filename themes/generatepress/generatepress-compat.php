@@ -7,8 +7,14 @@ if ( ! function_exists( 'generate_header_items' ) ) {
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 
 		if ( $header_id !== '' ) {
+			?>
 
-			BB_Header_Footer::get_header_content();
+			<header id="masthead" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+				<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php BB_Header_Footer::get_header_content(); ?>
+			</header>
+			
+			<?php 
 		} else {
 
 			// Header widget

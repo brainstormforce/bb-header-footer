@@ -50,7 +50,8 @@ class BB_Theme_Compat {
 
 	public function get_header_content() {
 		?>
-			<header itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<header id="masthead" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+				<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php BB_Header_Footer::get_header_content(); ?>
 			</header>
 		<?php
