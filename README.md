@@ -3,7 +3,7 @@
 **Donate link:** https://www.brainstormforce.com/payment/  
 **Requires at least:** 3.6  
 **Tested up to:** 4.7  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.0.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -43,6 +43,8 @@ The plugin only works with limited number of themes as of now, here is the list 
 
 ## Changelog ##
 
-### 1.0 ###
-- Initial release
+### 1.0.1 ###
+- Fix: duplicate <header> tag when using generatepress theme.
 
+### 1.0.0 ###
+- Initial release
