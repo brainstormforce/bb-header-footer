@@ -1,6 +1,7 @@
 === BB Header Footer ===
 Contributors: brainstormforce, Nikschavan
 Donate link: https://www.brainstormforce.com/payment/
+Tags: beaver builder, header, footer, page builder, page builder plugin, design, wysiwyg, template builder, layout builder, landing page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, page layout, visual builder
 Requires at least: 3.6
 Tested up to: 4.7
 Stable tag: 1.0.1
@@ -18,6 +19,10 @@ The plugin only works with limited number of themes as of now, here is the list 
 1. Beaver Builder theme
 2. Genesis Theme
 3. GeneratePress Theme
+
+= Here is a quick video explaining how this plugin works =
+
+[youtube https://www.youtube.com/watch?v=GlHxpuSqZs4&feature=youtu.be]
 
 == Installation ==
 
