@@ -12,7 +12,7 @@ class BB_Header_Footer {
 			if ( get_template() == 'genesis' ) {
 
 				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-			} elseif ( get_template() == 'bb-theme' ) {
+			} elseif ( get_template() == 'bb-theme' || get_template() == 'beaver-builder-theme' ) {
 
 				require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
 			} elseif ( get_template() == 'generatepress' ) {
