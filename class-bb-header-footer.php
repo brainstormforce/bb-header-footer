@@ -9,6 +9,9 @@ class BB_Header_Footer {
 
 		if ( class_exists( 'FLBuilder' ) ) {
 
+			$this->includes();
+			$this->load_textdomain();
+
 			if ( get_template() == 'genesis' ) {
 
 				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
@@ -23,9 +26,6 @@ class BB_Header_Footer {
 				add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
 				add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 			}
-
-			$this->includes();
-			$this->load_textdomain();
 
 			// Scripts and styles
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
