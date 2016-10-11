@@ -55,7 +55,6 @@ class BB_Header_Footer {
 	}
 
 	public function includes() {
-		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui-customizer-select.php';
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui-customizer.php';
 	}
@@ -111,13 +110,7 @@ class BB_Header_Footer {
 
 	public static function get_settings( $setting = '', $default = '' ) {
 
-		$options = get_option( 'bbhf_settings' );
-
-		if ( isset( $options[ $setting ] ) ) {
-			return $options[ $setting ];
-		}
-
-		return $default;
+		return get_theme_mod( $setting, $default );
 	}
 
 }
