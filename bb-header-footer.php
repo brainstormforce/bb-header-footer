@@ -7,30 +7,33 @@
  * Author URI:      https://www.brainstormforce.com/
  * Text Domain:     bb-header-footer
  * Domain Path:     /languages
- * Version:         1.0.1
+ * Version:         1.1-beta
  *
  * @package         BB_Header_Footer
  */
 
 require_once 'class-bb-header-footer.php';
 
-define( 'BBHF_VER', '1.0.2' );
+define( 'BBHF_VER', '1.1-beta' );
 define( 'BBHF_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BBHF_URL', plugins_url( '/', __FILE__ ) );
 define( 'BBHF_PATH', plugin_basename( __FILE__ ) );
 
+/**
+ * Load the Plugin Class'
+ */
 function bb_header_footer_init() {
 	new BB_Header_Footer();
 }
 
 add_action( 'plugins_loaded', 'bb_header_footer_init' );
 
-
-register_activation_hook( __FILE__, 'bhf_migrate_data' );
-
+/**
+ * Mechanism to migrate the options set by users in the previous options panel to customizer
+*/
 function bhf_migrate_data() {
 
-	$bbhf_settings = get_option( 'bbhf_settings' );
+	$bbhf_settings = get_option( 'bbhf_settings', array() );
 	$header_id = isset( $bbhf_settings['bb_header_id'] ) ? $bbhf_settings['bb_header_id'] : 0;
 	$footer_id = isset( $bbhf_settings['bb_footer_id'] ) ? $bbhf_settings['bb_footer_id'] : 0;
 
@@ -42,3 +45,5 @@ function bhf_migrate_data() {
 		set_theme_mod( 'bb_footer_id', $footer_id );
 	}
 }
+
+register_activation_hook( __FILE__, 'bhf_migrate_data' );

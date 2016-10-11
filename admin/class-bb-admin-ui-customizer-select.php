@@ -3,7 +3,7 @@
 /**
  * BHF_Customize_Select setup
  *
- * @since 1.2
+ * @since 1.1
  */
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
