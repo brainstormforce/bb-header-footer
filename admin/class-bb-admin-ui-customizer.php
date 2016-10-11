@@ -16,7 +16,7 @@ class BHF_Admin_UI {
 
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new BHF_Admin_UI();
-			
+
 			self::$instance->hooks();
 		}
 
@@ -29,10 +29,18 @@ class BHF_Admin_UI {
 
 	public function register_customizer( $wp_customize ) {
 
+		$wp_customize->add_panel( 'bb-header-footer', array(
+			'priority'       => 100,
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'title'          => __( 'BB Header Footer', 'bb-header-footer' ),
+		) );
+
 		$wp_customize->add_section( 'bhf-header-section', array(
-			'title'       => __( 'BB Header Footer', 'bb-header-footer' ),
+			'title'       => __( 'Header Footer Templates', 'bb-header-footer' ),
 			'description' => __( 'Select the Page or Beaver Builder template to be used as the header and footer.', 'bb-header-footer' ),
-			'priority'    => 100,
+			'priority'    => 10,
+			'panel'       => 'bb-header-footer',
 		) );
 
 		$wp_customize->add_setting( 'bb_header_id', array(
