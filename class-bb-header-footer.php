@@ -56,6 +56,8 @@ class BB_Header_Footer {
 
 	public function includes() {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
+		require_once BBHF_DIR . 'admin/class-bb-admin-ui-customizer-select.php';
+		require_once BBHF_DIR . 'admin/class-bb-admin-ui-customizer.php';
 	}
 
 	public function load_textdomain() {
