@@ -36,7 +36,7 @@ class BHF_Admin_UI {
 		) );
 
 		$wp_customize->add_setting( 'bb_header_id', array(
-			'default' => ''
+			'default' => 0
 		) );
 
 		$wp_customize->add_control( new BHF_Customize_Select( $wp_customize, 'bb_header_id', array(
@@ -49,7 +49,7 @@ class BHF_Admin_UI {
 		) ) );
 
 		$wp_customize->add_setting( 'bb_footer_id', array(
-			'default' => ''
+			'default' => 0
 		) );
 
 		$wp_customize->add_control( new BHF_Customize_Select( $wp_customize, 'bb_footer_id', array(
