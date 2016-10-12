@@ -5,7 +5,8 @@
 /* Container fix for genesis themes */
 
 .dhf-template-genesis.dhf-header .site-header .wrap,
-.dhf-template-genesis.dhf-footer .site-footer .wrap {
+.dhf-template-genesis.dhf-footer .site-footer .wrap,
+.dhf-template-generatepress.dhf-header .site-header .inside-header {
     width: 100%;
     padding: 0;
     max-width: 100%;
@@ -18,10 +19,6 @@
     width: 100%;
     padding: 0;
     max-width: 100%;	
-}
-
-.dhf-template-generatepress.dhf-header .site-header .inside-header {
-	padding: 0;
 }
 
 .bhf-hidden {
