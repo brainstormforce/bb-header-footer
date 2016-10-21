@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     BB Header Footer
+ * Plugin Name:     Beaver Builder Header Footer
  * Plugin URI:      https://github.com/Nikschavan/bb-header-footer/
  * Description:     Create Header and Footer for your site using Beaver Builder.
  * Author:          Brainstorm Force, Nikhil Chavan
@@ -26,7 +26,7 @@ function bb_header_footer_init() {
 	new BB_Header_Footer();
 }
 
-add_action( 'plugins_loaded', 'bb_header_footer_init' );
+add_action( 'after_setup_theme', 'bb_header_footer_init' );
 
 /**
  * Mechanism to migrate the options set by users in the previous options panel to customizer

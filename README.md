@@ -1,4 +1,4 @@
-# BB Header Footer #
+# Beaver Builder Header Footer #
 **Contributors:** brainstormforce, Nikschavan  
 **Donate link:** https://www.brainstormforce.com/payment/  
 **Tags:** beaver builder, header, footer, page builder, page builder plugin, design, wysiwyg, template builder, layout builder, landing page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, page layout, visual builder  
@@ -8,7 +8,7 @@
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Create Header and Footer for your site using Beaver Builder.
+Create Header and Footer for your site using Beaver Builder Page Builder.
 
 ## Description ##
 
