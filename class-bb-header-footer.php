@@ -12,13 +12,13 @@ class BB_Header_Footer {
 			$this->includes();
 			$this->load_textdomain();
 
-			if ( get_template() == 'genesis' ) {
+			if ( function_exists( 'genesis' ) ) {
 
 				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-			} elseif ( get_template() == 'bb-theme' || get_template() == 'beaver-builder-theme' ) {
+			} elseif ( class_exists( 'FLTheme' ) ) {
 
 				require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
-			} elseif ( get_template() == 'generatepress' ) {
+			} elseif ( defined( 'GENERATE_VERSION' ) ) {
 
 				require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
 			} else {
