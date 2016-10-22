@@ -26,7 +26,7 @@ function bb_header_footer_init() {
 	new BB_Header_Footer();
 }
 
-add_action( 'plugins_loaded', 'bb_header_footer_init' );
+add_action( 'after_setup_theme', 'bb_header_footer_init' );
 
 /**
  * Mechanism to migrate the options set by users in the previous options panel to customizer
