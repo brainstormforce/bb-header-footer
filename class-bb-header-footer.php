@@ -70,6 +70,7 @@ class BB_Header_Footer {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
 
 		if ( $header_id !== '' ) {
 			$classes[] = 'dhf-header';
@@ -77,6 +78,10 @@ class BB_Header_Footer {
 
 		if ( $footer_id !== '' ) {
 			$classes[] = 'dhf-footer';
+		}
+
+		if ( $bb_transparent_header == 'on' ) {
+			$classes[] = 'bbhf-transparent-header';
 		}
 
 		$classes[] = 'dhf-template-' . get_template();
