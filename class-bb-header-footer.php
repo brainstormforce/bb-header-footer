@@ -5,20 +5,24 @@
  */
 class BB_Header_Footer {
 
+	public $template;
+
 	function __construct() {
+
+		$this->template = get_template();
 
 		if ( class_exists( 'FLBuilder' ) ) {
 
 			$this->includes();
 			$this->load_textdomain();
 
-			if ( function_exists( 'genesis' ) ) {
+			if ( $this->template == 'genesis' ) {
 
 				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-			} elseif ( class_exists( 'FLTheme' ) ) {
+			} elseif ( $this->template == 'bb-theme' || $this->template == 'beaver-builder-theme' ) {
 
 				require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
-			} elseif ( defined( 'GENERATE_VERSION' ) ) {
+			} elseif ( $this->template == 'generatepress' ) {
 
 				require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
 			} else {
@@ -84,7 +88,7 @@ class BB_Header_Footer {
 			$classes[] = 'bbhf-transparent-header';
 		}
 
-		$classes[] = 'dhf-template-' . get_template();
+		$classes[] = 'dhf-template-' . $this->template;
 		$classes[] = 'dhf-stylesheet-' . get_stylesheet();
 
 		return $classes;
