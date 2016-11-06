@@ -29,25 +29,25 @@
 
 @media only screen and (min-width: 768px) {
 
-	.bbhf-transparent-header header .fl-row-content-wrap {
+	.dhf-template-beaver-builder-theme.bbhf-transparent-header header .fl-row-content-wrap {
 		background-color: transparent !important;
 	}
 
-	.bbhf-transparent-header .fl-page {
+	.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page {
 		position: relative;
 	}
 
-	.bbhf-transparent-header header#masthead {
+	.dhf-template-beaver-builder-theme.bbhf-transparent-header header#masthead {
 		position: absolute;
 		z-index: 10;
 		width: 100%;
 	}
 
-	body:not(.fl-builder).bbhf-transparent-header .fl-page-content {
+	body:not(.fl-builder).bbhf-transparent-header.fl-builder.dhf-template-beaver-builder-theme .fl-page-content .fl-builder-content .fl-row:first-child .fl-row-content-wrap {
 		padding-top: 180px;	
 	}
 
-	.bbhf-transparent-header.fl-builder .fl-row-content-wrap {
+	.bbhf-transparent-header.fl-builder.dhf-template-beaver-builder-theme .fl-page-content .fl-builder-content .fl-row:first-child .fl-row-content-wrap {
 		padding-top: 190px;
 	}
 	
