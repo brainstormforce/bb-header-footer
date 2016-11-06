@@ -27,23 +27,3 @@ function bb_header_footer_init() {
 }
 
 add_action( 'plugins_loaded', 'bb_header_footer_init' );
-
-/**
- * Mechanism to migrate the options set by users in the previous options panel to customizer
-*/
-function bhf_migrate_data() {
-
-	$bbhf_settings = get_option( 'bbhf_settings', array() );
-	$header_id = isset( $bbhf_settings['bb_header_id'] ) ? $bbhf_settings['bb_header_id'] : 0;
-	$footer_id = isset( $bbhf_settings['bb_footer_id'] ) ? $bbhf_settings['bb_footer_id'] : 0;
-
-	if( get_theme_mod( 'bb_header_id') == false ) {
-		set_theme_mod( 'bb_header_id', $header_id );
-	}
-
-	if( get_theme_mod( 'bb_footer_id') == false ) {
-		set_theme_mod( 'bb_footer_id', $footer_id );
-	}
-}
-
-register_activation_hook( __FILE__, 'bhf_migrate_data' );
