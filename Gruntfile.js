@@ -88,7 +88,7 @@ module.exports = function( grunt ) {
             main: ["bb-header-footer"],
             zip: ["bb-header-footer.zip"]
         }
-        
+
 	} );
 
     grunt.loadNpmTasks('grunt-wp-i18n');

@@ -7,14 +7,14 @@
  * Author URI:      https://www.brainstormforce.com/
  * Text Domain:     bb-header-footer
  * Domain Path:     /languages
- * Version:         1.1-beta
+ * Version:         1.1.0-beta.1
  *
  * @package         BB_Header_Footer
  */
 
 require_once 'class-bb-header-footer.php';
 
-define( 'BBHF_VER', '1.1-beta' );
+define( 'BBHF_VER', '1.1.0-beta.1' );
 define( 'BBHF_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BBHF_URL', plugins_url( '/', __FILE__ ) );
 define( 'BBHF_PATH', plugin_basename( __FILE__ ) );
