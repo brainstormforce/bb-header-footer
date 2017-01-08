@@ -37,9 +37,11 @@ class BB_Admin_UI {
 
 			$bbhf_header = isset(  $_POST['bb_header_id'] ) ? esc_attr( $_POST['bb_header_id'] ) : '';
 			$bbhf_footer = isset(  $_POST['bb_footer_id'] ) ? esc_attr( $_POST['bb_footer_id'] ) : '';
+			$bb_transparent_header = isset(  $_POST['bb_transparent_header'] ) ? esc_attr( $_POST['bb_transparent_header'] ) : 'off';
 
 			$bbhf_settings['bb_header_id'] = $bbhf_header;
 			$bbhf_settings['bb_footer_id'] = $bbhf_footer;
+			$bbhf_settings['bb_transparent_header'] = $bb_transparent_header;
 
 			update_option( 'bbhf_settings', $bbhf_settings );
 		}

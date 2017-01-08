@@ -5,20 +5,24 @@
  */
 class BB_Header_Footer {
 
+	public $template;
+
 	function __construct() {
+
+		$this->template = get_template();
 
 		if ( class_exists( 'FLBuilder' ) ) {
 
 			$this->includes();
 			$this->load_textdomain();
 
-			if ( function_exists( 'genesis' ) ) {
+			if ( $this->template == 'genesis' ) {
 
 				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-			} elseif ( class_exists( 'FLTheme' ) ) {
+			} elseif ( $this->template == 'bb-theme' || $this->template == 'beaver-builder-theme' ) {
 
 				require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
-			} elseif ( defined( 'GENERATE_VERSION' ) ) {
+			} elseif ( $this->template == 'generatepress' ) {
 
 				require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
 			} else {
@@ -50,8 +54,8 @@ class BB_Header_Footer {
 		}
 
 		echo '<div class="notice notice-error">';
-		echo "<p>The <strong>BB Header Footer</strong> " . __( 'plugin requires', 'bb-header-footer' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'bb-header-footer' ) . "</p>";
-		echo '</div>';
+        echo "<p>". sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . "</p>", $url );
+        echo '</div>';
 	}
 
 	public function includes() {
@@ -63,13 +67,14 @@ class BB_Header_Footer {
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'dhf-style', BBHF_URL . 'assets/css/style.css', array(), BBHF_VER );
+		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
 	}
 
 	public function body_class( $classes ) {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
 
 		if ( $header_id !== '' ) {
 			$classes[] = 'dhf-header';
@@ -79,7 +84,11 @@ class BB_Header_Footer {
 			$classes[] = 'dhf-footer';
 		}
 
-		$classes[] = 'dhf-template-' . get_template();
+		if ( $bb_transparent_header == 'on' ) {
+			$classes[] = 'bbhf-transparent-header';
+		}
+
+		$classes[] = 'dhf-template-' . $this->template;
 		$classes[] = 'dhf-stylesheet-' . get_stylesheet();
 
 		return $classes;
