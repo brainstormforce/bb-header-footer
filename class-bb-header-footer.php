@@ -54,8 +54,8 @@ class BB_Header_Footer {
 		}
 
 		echo '<div class="notice notice-error">';
-		echo "<p>The <strong>BB Header Footer</strong> " . __( 'plugin requires', 'bb-header-footer' ) . " <strong><a href='" . $url . "'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'bb-header-footer' ) . "</p>";
-		echo '</div>';
+        echo "<p>". sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . "</p>", $url );
+        echo '</div>';
 	}
 
 	public function includes() {
