@@ -70,7 +70,7 @@ class BB_Header_Footer {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
 
 		wp_register_script( 'bbhf-script', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER);
-		wp_enqueue_script( 'bbhf-script' );
+		// wp_enqueue_script( 'bbhf-script' );
 	}
 
 	public function body_class( $classes ) {
