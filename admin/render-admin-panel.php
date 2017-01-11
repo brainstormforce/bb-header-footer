@@ -21,12 +21,13 @@
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
 		?>
+		<p class="description"> <?php _e( 'The page selected here will be replaced by the header of the theme.<br> If your theme adds separate option for menu that can be enabled/disabled from theme options.', 'bb-header-footer' ) ?> </p>
 
 		<h4> <?php _e( 'Transparent Header', 'bb-header-footer' ) ?> </h4>
 
 		<?php $bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' ); ?>
 		<label><input type="checkbox" name="bb_transparent_header" <?php checked( $bb_transparent_header, 'on' ); ?>> Enable Transparent Header</label>
-
+		<p class="description"> <?php _e( 'Transparent header will be enabled on pages designed with Beaver Builder.', 'bb-header-footer' ) ?> </p>
 		<h3> <?php _e( 'Footer', 'bb-header-footer' ) ?> </h3>
 
 		<h4 class="field-title"><?php _e( 'Select a page to be used as Footer', 'bb-header-footer' ); ?></h4>
@@ -44,6 +45,7 @@
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
 		?>
+		<p class="description"> <?php _e( 'The page selected here will be replaced by the footer of the theme.', 'bb-header-footer' ) ?> </p>
 
 		<p class="submit">
 			<input type="submit" name="fl-save-bb-header-footer" class="button-primary"
