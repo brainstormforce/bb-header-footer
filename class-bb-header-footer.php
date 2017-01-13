@@ -112,9 +112,10 @@ class BB_Header_Footer {
 	public static function get_header_content() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		echo '<div class="float-panel" data-top="0" data-scroll="0">';
+		echo '<div class="bhf-fixed-header">';
 		echo do_shortcode( '[fl_builder_insert_layout id="' . $header_id . '"]' );
 		echo '</div>';
+		echo '<div class="bhf-ffixed-header-fixer" style="display:none;"></div>';
 	}
 
 	public static function get_footer_content() {
