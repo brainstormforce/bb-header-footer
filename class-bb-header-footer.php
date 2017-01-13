@@ -20,7 +20,7 @@ class BB_Header_Footer {
 
 				require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
 			} elseif ( $this->template == 'bb-theme' || $this->template == 'beaver-builder-theme' ) {
-
+				$this->template = 'beaver-builder-theme';
 				require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
 			} elseif ( $this->template == 'generatepress' ) {
 
