@@ -27,13 +27,14 @@
 
 /* Transparent header */
 
-.fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header .fl-row-content-wrap,
-.fl-builder.dhf-template-generatepress.bbhf-transparent-header header .fl-row-content-wrap,
-.fl-builder.dhf-template-generatepress.bbhf-transparent-header .site-header,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header header .fl-row-content-wrap,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header .site-header {
-	background-color: transparent;
+.fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header .float-panel:not(.fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-generatepress.bbhf-transparent-header header .float-panel:not(.fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-generatepress.bbhf-transparent-header .float-panel:not(.fixed) .site-header,
+.fl-builder.dhf-template-genesis.bbhf-transparent-header header .float-panel:not(.fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-genesis.bbhf-transparent-header .float-panel:not(.fixed) .site-header {
+ 	background-color: transparent; 
 	border: none;
+	transition: background-color 0.3s ease-in-out;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page,
@@ -53,4 +54,31 @@
 .fl-builder.dhf-template-genesis.bbhf-transparent-header .site-inner {
 	padding-top: 0;
 	margin-top: 0;
+}
+
+/* Sticky header */
+
+.float-panel {
+    width:100%;
+    transform: translateZ(0);
+    transition:all 0.3s;
+}
+
+/* Float Panel: class="float-panel fixed" */
+
+.fixed {
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    animation:slide-down 0.3s;   
+}                  
+.fixed .fa-gg {                  
+    transform: rotate(360deg);      
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    } 
+    100% {
+        transform: translateY(0);
+    } 
 }

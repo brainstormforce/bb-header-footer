@@ -68,13 +68,16 @@ class BB_Header_Footer {
 
 	public function enqueue_scripts() {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
+		wp_register_script( 'float-panel', BBHF_URL . 'assets/js/float-panel.js', '', BBHF_VER, false );
+		wp_enqueue_script( 'float-panel' );
 	}
 
 	public function body_class( $classes ) {
 
-		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
-		$bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
+		$header_id 				= BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$footer_id 				= BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$bb_transparent_header  = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
+		$bb_sticky_header 		= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
 
 		if ( $header_id !== '' ) {
 			$classes[] = 'dhf-header';
@@ -86,6 +89,10 @@ class BB_Header_Footer {
 
 		if ( $bb_transparent_header == 'on' ) {
 			$classes[] = 'bbhf-transparent-header';
+		}
+
+		if ( $bb_sticky_header == 'on' ) {
+			$classes[] = 'bhf-transparent-header';
 		}
 
 		$classes[] = 'dhf-template-' . $this->template;
@@ -105,7 +112,9 @@ class BB_Header_Footer {
 	public static function get_header_content() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		echo '<div class="float-panel" data-top="0" data-scroll="0">';
 		echo do_shortcode( '[fl_builder_insert_layout id="' . $header_id . '"]' );
+		echo '</div>';
 	}
 
 	public static function get_footer_content() {
