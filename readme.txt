@@ -4,7 +4,7 @@ Donate link: https://www.brainstormforce.com/payment/
 Tags: beaver builder, header, footer, page builder, page builder plugin, design, wysiwyg, template builder, layout builder, landing page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, page layout, visual builder
 Requires at least: 3.6
 Tested up to: 4.7
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ The plugin only works with limited number of themes as of now, here is the list 
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 == Changelog ==
+
+= 1.1.1 =
+- Fix: Transparent header not working in case of bb-theme.
 
 = 1.1.0 =
 - New: Adds option to create transparent header.
