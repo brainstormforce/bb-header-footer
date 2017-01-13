@@ -28,6 +28,13 @@
 		<?php $bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' ); ?>
 		<label><input type="checkbox" name="bb_transparent_header" <?php checked( $bb_transparent_header, 'on' ); ?>> Enable Transparent Header</label>
 		<p class="description"> <?php _e( 'Transparent header will be enabled on pages designed with Beaver Builder.', 'bb-header-footer' ) ?> </p>
+
+		<h4> <?php _e( 'Sticky Header', 'bb-header-footer' ) ?> </h4>
+
+		<?php $bb_sticky_header = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' ); ?>
+		<label><input type="checkbox" name="bb_sticky_header" <?php checked( $bb_sticky_header, 'on' ); ?>> Enable Sticky Header</label>
+		<p class="description"> <?php _e( 'Make the current header sticky?', 'bb-header-footer' ) ?> </p>
+
 		<h3> <?php _e( 'Footer', 'bb-header-footer' ) ?> </h3>
 
 		<h4 class="field-title"><?php _e( 'Select a page to be used as Footer', 'bb-header-footer' ); ?></h4>
