@@ -32,8 +32,8 @@
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .site-header,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header header .fl-row-content-wrap,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header .site-header {
-	background-color: transparent !important;
-	border: none !important;
+	background-color: transparent;
+	border: none;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page,
