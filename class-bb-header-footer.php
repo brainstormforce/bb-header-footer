@@ -25,8 +25,10 @@ class BB_Header_Footer {
 			} elseif ( $this->template == 'generatepress' ) {
 
 				require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
+			} elseif ( $this->template == 'wp-primer-theme' || 'primer' ) {
+				$this->template = 'primer';
+				require BBHF_DIR . 'themes/wp-primer-theme/primer-theme-compat.php';
 			} else {
-
 				add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
 				add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 			}

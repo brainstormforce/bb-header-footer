@@ -2,23 +2,18 @@
 	width: 100%;
 }
 
-/* Container fix for genesis themes */
+/* Container fix for the themes */
 
 .dhf-template-genesis.dhf-header .site-header .wrap,
 .dhf-template-genesis.dhf-footer .site-footer .wrap,
-.dhf-template-generatepress.dhf-header .site-header .inside-header {
+.dhf-template-generatepress.dhf-header .site-header .inside-header,
+.dhf-template-generatepress.dhf-header .site-header,
+.dhf-template-generatepress.dhf-footer .site-footer,
+.dhf-template-primer.dhf-header .site-header,
+.dhf-template-primer.dhf-header .site-header .site-header-wrapper {
     width: 100%;
     padding: 0;
     max-width: 100%;
-}
-
-/* Container fix for generatepress theme */
-
-.dhf-template-generatepress.dhf-header .site-header,
-.dhf-template-generatepress.dhf-footer .site-footer {
-    width: 100%;
-    padding: 0;
-    max-width: 100%;	
 }
 
 .bhf-hidden {
@@ -31,20 +26,23 @@
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header header .fl-row-content-wrap,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .site-header,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header header .fl-row-content-wrap,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header .site-header {
+.fl-builder.dhf-template-genesis.bbhf-transparent-header .site-header,
+.fl-builder.dhf-template-primer.bbhf-transparent-header header .fl-row-content-wrap, {
 	background-color: transparent !important;
 	border: none !important;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .fl-page,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header .fl-page  {
+.fl-builder.dhf-template-genesis.bbhf-transparent-header .fl-page,
+.fl-builder.dhf-template-primer.bbhf-transparent-header .fl-page  {
 	position: relative;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header#masthead,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header header#masthead,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header header#masthead  {
+.fl-builder.dhf-template-genesis.bbhf-transparent-header header#masthead,
+.fl-builder.dhf-template-primer.bbhf-transparent-header header#masthead  {
 	position: absolute;
 	z-index: 10;
 	width: 100%;
