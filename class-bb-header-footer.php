@@ -68,8 +68,8 @@ class BB_Header_Footer {
 
 	public function enqueue_scripts() {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
-		wp_register_script( 'float-panel', BBHF_URL . 'assets/js/float-panel.js', '', BBHF_VER, false );
-		wp_enqueue_script( 'float-panel' );
+		wp_register_script( 'bb-header-footer', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER, false );
+		wp_enqueue_script( 'bb-header-footer' );
 	}
 
 	public function body_class( $classes ) {
