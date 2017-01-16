@@ -54,7 +54,7 @@ class BB_Header_Footer {
 		}
 
 		echo '<div class="notice notice-error">';
-        echo "<p>". sprintf( __( 'The <strong>Timeline Module For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . "</p>", $url );
+        echo "<p>". sprintf( __( 'The <strong>BB Header Footer</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . "</p>", $url );
         echo '</div>';
 	}
 
@@ -68,7 +68,7 @@ class BB_Header_Footer {
 
 	public function enqueue_scripts() {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
-		wp_register_script( 'bb-header-footer', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER, false );
+		wp_register_script( 'bb-header-footer', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER, true );
 		wp_enqueue_script( 'bb-header-footer' );
 	}
 
