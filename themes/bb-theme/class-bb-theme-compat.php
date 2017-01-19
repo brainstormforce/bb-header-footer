@@ -1,11 +1,22 @@
 <?php
 /**
+ * BB Theme Compatibility.
+ *
+ * @package  bb-header-footer
+ */
+
+/**
  * BB_Theme_Compat setup
  *
  * @since 1.0
  */
 class BB_Theme_Compat {
 
+	/**
+	 * Instance of BB_Theme_Compat
+	 *
+	 * @var BB_Theme_Compat
+	 */
 	private static $instance;
 
 	/**
@@ -16,43 +27,40 @@ class BB_Theme_Compat {
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new BB_Theme_Compat();
 
-			// self::$instance->includes();
 			self::$instance->hooks();
 		}
 
 		return self::$instance;
 	}
 
+	/**
+	 * Run all the Actions / Filters.
+	 */
 	public function hooks() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
-		if ( $header_id !== '' ) {
-			add_filter( 'fl_header_enabled', array( $this, 'disable_bb_theme_header' ) );
+		if ( '' !== $header_id ) {
+			add_filter( 'fl_header_enabled', '__return_false' );
 			add_action( 'fl_before_header', array( $this, 'get_header_content' ) );
 		}
 
-		if ( $footer_id !== '' ) {
-			add_filter( 'fl_footer_enabled', array( $this, 'disable_bb_theme_footer' ) );
+		if ( '' !== $footer_id ) {
+			add_filter( 'fl_footer_enabled', '__return_false' );
 			add_action( 'fl_after_content', array( $this, 'get_footer_content' ) );
 		}
 
 	}
 
-	public function disable_bb_theme_header() {
-		return false;
-	}
-
-	public function disable_bb_theme_footer() {
-		return false;
-	}
-
+	/**
+	 * Display header markup for beaver builder theme.
+	 */
 	public function get_header_content() {
 
 		$header_layout  = FLTheme::get_setting( 'fl-header-layout' );
 
-		if ( $header_layout == 'none' || is_page_template( 'tpl-no-header-footer.php' ) ) {
+		if ( 'none' == $header_layout || is_page_template( 'tpl-no-header-footer.php' ) ) {
 			return;
 		}
 
@@ -64,6 +72,9 @@ class BB_Theme_Compat {
 		<?php
 	}
 
+	/**
+	 * Display footer markup for beaver builder theme.
+	 */
 	public function get_footer_content() {
 
 		if ( is_page_template( 'tpl-no-header-footer.php' ) ) {
