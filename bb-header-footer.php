@@ -23,7 +23,7 @@ define( 'BBHF_URL', plugins_url( '/', __FILE__ ) );
 define( 'BBHF_PATH', plugin_basename( __FILE__ ) );
 
 /**
- * Load the Plugin Class'
+ * Load the Plugin Class.
  */
 function bb_header_footer_init() {
 	new BB_Header_Footer();
