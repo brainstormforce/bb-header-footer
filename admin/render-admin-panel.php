@@ -1,4 +1,4 @@
-<div id="fl-bb-header-footer-form" class="fl-settings-form bb-header-footer-fl-settings-form">
+<div id="fl-bb-header-footer-form" class="fl-settings-form bb-header-footer-fl-settings-form" style="max-width: 550px;">
 	<h3>BB header Footer</h3>
 
 	<form id="bb-header-footer-form" action="<?php FLBuilderAdminSettings::render_form_action( 'bb-header-footer' ); ?>"
@@ -61,4 +61,5 @@
 			<?php wp_nonce_field( 'bb-header-footer', 'fl-bb-header-footer-nonce' ); ?>
 		</p>
 	</form>
+	<?php echo BB_Header_Footer::uabb_upsell_message(); ?>
 </div>

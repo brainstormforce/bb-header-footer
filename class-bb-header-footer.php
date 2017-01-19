@@ -126,6 +126,23 @@ class BB_Header_Footer {
 		echo "</div>";
 	}
 
+	public static function uabb_upsell_message() {
+
+		if ( ! is_plugin_active( 'bb-ultimate-addon/bb-ultimate-addon.php' ) ) {
+			$html = '<hr>';
+			$html .= '<span class="upsell-uabb">Want more Beaver Builder Addons? Check out <a target="_blank" href="'. self::uabb_purchase_url() .'">Ultimate Addon for Beaver Builder.</a></span>';
+
+			echo $html;
+		}
+
+	}
+
+	public static function uabb_purchase_url() {
+		$url = 'https://www.ultimatebeaver.com/pricing/?bsf=162&utm_source=plugin-dashboard&utm_campaign=bb-header-footer-upgrade&utm_medium=upgrade-link';
+
+		return $url;
+	}
+
 	public static function get_settings( $setting = '', $default = '' ) {
 
 		$options = get_option( 'bbhf_settings' );
