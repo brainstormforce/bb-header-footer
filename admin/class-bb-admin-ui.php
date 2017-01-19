@@ -1,20 +1,34 @@
 <?php
+/**
+ * Helper functions for the admin ui.
+ *
+ * @package  bb-header-footer
+ */
 
 /**
- *
+ * Helper functions for generating admin ui.
  */
 class BB_Admin_UI {
 
+	/**
+	 * Loads the required actions and filters.
+	 */
 	function __construct() {
 
-		// Add settings to BB's options panel
+		// Add settings to BB's options panel.
 		add_filter( 'fl_builder_admin_settings_nav_items', array( $this, 'settings_nav_item' ) );
 		add_action( 'fl_builder_admin_settings_render_forms', array( $this, 'settings_nav_form' ) );
 
-		// Save settings
+		// Save settings.
 		add_action( 'fl_builder_admin_settings_save', array( $this, 'bbhf_save' ) );
 	}
 
+	/**
+	 * Adds navigation menu in Beaver Builder admin panel.
+	 *
+	 * @param  Array $items Menu items in BB Admin Panel.
+	 * @return Array
+	 */
 	function settings_nav_item( $items ) {
 
 		$items['bb-header-footer'] = array(
@@ -26,10 +40,16 @@ class BB_Admin_UI {
 		return $items;
 	}
 
+	/**
+	 * Loads the view for the admin panel.
+	 */
 	function settings_nav_form() {
 		require_once BBHF_DIR . 'admin/render-admin-panel.php';
 	}
 
+	/**
+	 * Saves the values from the admin panel.
+	 */
 	function bbhf_save() {
 
 		if ( isset( $_POST['fl-bb-header-footer-nonce'] ) &&
@@ -50,6 +70,15 @@ class BB_Admin_UI {
 
 	}
 
+	/**
+	 * Generates a dropdown list of WordPress pages and Beaver Builder templates, echos the generated HTMl markup.
+	 *
+	 * @param  Array $args Parameters for the select field.
+	 *
+	 *         $args[name] => 'name' of the select field, this will be used as the key to be saved in database.
+	 *         $args[selected] => default value of the select field.
+	 *         $args[show_option_none] => Value of the option 'none'.
+	 */
 	public static function wp_dropdown_pages( $args ) {
 
 		$all_posts = array();
@@ -70,9 +99,9 @@ class BB_Admin_UI {
 			while ( $query->have_posts() ) {
 				$query->the_post();
 				$title = get_the_title();
-				$ID    = get_the_id();
+				$id    = get_the_id();
 
-				$all_posts[ get_post_type() ][ $ID ] = $title;
+				$all_posts[ get_post_type() ][ $id ] = $title;
 			}
 		}
 
