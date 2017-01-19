@@ -12,6 +12,9 @@
  * @package         BB_Header_Footer
  */
 
+/**
+ * Load the class loader.
+ */
 require_once 'class-bb-header-footer.php';
 
 define( 'BBHF_VER', '1.1.1' );
