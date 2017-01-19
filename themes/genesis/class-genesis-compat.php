@@ -2,11 +2,19 @@
 /**
  * Genesis_Compat setup
  *
- * @since 1.1.0.4
+ * @package bb-header-footer
  */
 
+/**
+ * Genesis theme compatibility.
+ */
 class Genesis_Compat {
 
+	/**
+	 * Instance of Genesis_Compat.
+	 *
+	 * @var Genesis_Compat
+	 */
 	private static $instance;
 
 	/**
@@ -23,19 +31,22 @@ class Genesis_Compat {
 		return self::$instance;
 	}
 
+	/**
+	 * Run all the Actions / Filters.
+	 */
 	public function hooks() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
-		if ( $header_id !== '' ) {
+		if ( '' !== $header_id ) {
 			add_action( 'init', array( $this, 'genesis_setup_header' ), 10 );
 			add_action( 'genesis_header', array( $this, 'genesis_header_markup_open' ), 16 );
 			add_action( 'genesis_header', array( $this, 'genesis_header_markup_close' ), 25 );
 			add_action( 'genesis_header', array( 'BB_Header_Footer', 'get_header_content' ), 16 );
 		}
 
-		if ( $footer_id !== '' ) {
+		if ( '' !== $footer_id ) {
 			add_action( 'init', array( $this, 'genesis_setup_footer' ), 10 );
 			add_action( 'genesis_footer', array( $this, 'genesis_footer_markup_open' ), 16 );
 			add_action( 'genesis_footer', array( $this, 'genesis_footer_markup_close' ), 25 );
@@ -44,6 +55,9 @@ class Genesis_Compat {
 
 	}
 
+	/**
+	 * Disable header from the theme.
+	 */
 	public function genesis_setup_header() {
 
 		for ( $priority = 0; $priority < 16; $priority++ ) {
@@ -52,13 +66,20 @@ class Genesis_Compat {
 
 	}
 
+	/**
+	 * Disable footer from the theme.
+	 */
 	public function genesis_setup_footer() {
+
 		for ( $priority = 0; $priority < 16; $priority++ ) {
 			remove_all_actions( 'genesis_footer', $priority );
 		}
 
 	}
 
+	/**
+	 * Open markup for header.
+	 */
 	public function genesis_header_markup_open() {
 
 		genesis_markup( array(
@@ -71,6 +92,9 @@ class Genesis_Compat {
 
 	}
 
+	/**
+	 * Close MArkup for header.
+	 */
 	public function genesis_header_markup_close() {
 
 		genesis_structural_wrap( 'header', 'close' );
@@ -81,6 +105,9 @@ class Genesis_Compat {
 
 	}
 
+	/**
+	 * Open markup for footer.
+	 */
 	public function genesis_footer_markup_open() {
 
 		genesis_markup( array(
@@ -92,6 +119,9 @@ class Genesis_Compat {
 
 	}
 
+	/**
+	 * Close markup for footer.
+	 */
 	public function genesis_footer_markup_close() {
 
 		genesis_structural_wrap( 'footer', 'close' );
@@ -105,4 +135,4 @@ class Genesis_Compat {
 
 }
 
-$Genesis_Compat = Genesis_Compat::instance();
+Genesis_Compat::instance();

@@ -90,4 +90,4 @@ class BB_Theme_Compat {
 
 }
 
-$bb_theme = BB_Theme_Compat::instance();
+BB_Theme_Compat::instance();
