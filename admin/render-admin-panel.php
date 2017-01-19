@@ -1,3 +1,12 @@
+<?php
+/**
+ * Render the admin panel for settings.
+ *
+ * @package bb-header-footer
+ */
+
+?>
+
 <div id="fl-bb-header-footer-form" class="fl-settings-form bb-header-footer-fl-settings-form" style="max-width: 550px;">
 	<h3>BB header Footer</h3>
 
@@ -16,7 +25,6 @@
 			'selected'          => $header_id,
 			'name'              => 'bb_header_id',
 			'show_option_none'  => "Theme's Header",
-			'option_none_value' => ''
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
@@ -47,7 +55,6 @@
 			'selected'          => $footer_id,
 			'name'              => 'bb_footer_id',
 			'show_option_none'  => "Theme's Footer",
-			'option_none_value' => ''
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
