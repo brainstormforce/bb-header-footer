@@ -4,15 +4,15 @@
  *
  * @since 1.1.0.4
  */
- 
+
 class Genesis_Compat {
- 
+
 	private static $instance;
- 
+
 	/**
-	*  Initiator
-	*/
-	public static function instance(){
+	 *  Initiator
+	 */
+	public static function instance() {
 
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new Genesis_Compat();
@@ -42,20 +42,19 @@ class Genesis_Compat {
 			add_action( 'genesis_footer', array( 'BB_Header_Footer', 'get_footer_content' ), 16 );
 		}
 
-
 	}
 
 	public function genesis_setup_header() {
 
-		for ( $priority=0; $priority < 16; $priority++ ) { 
-			remove_all_actions( 'genesis_header', $priority );	
+		for ( $priority = 0; $priority < 16; $priority++ ) {
+			remove_all_actions( 'genesis_header', $priority );
 		}
 
 	}
 
 	public function genesis_setup_footer() {
-		for ( $priority=0; $priority < 16; $priority++ ) { 
-			remove_all_actions( 'genesis_footer', $priority );	
+		for ( $priority = 0; $priority < 16; $priority++ ) {
+			remove_all_actions( 'genesis_footer', $priority );
 		}
 
 	}
@@ -66,7 +65,7 @@ class Genesis_Compat {
 			'html5'   => '<header %s>',
 			'xhtml'   => '<div id="header">',
 			'context' => 'site-header',
-			) );
+		) );
 
 		genesis_structural_wrap( 'header' );
 
@@ -78,7 +77,7 @@ class Genesis_Compat {
 		genesis_markup( array(
 			'html5' => '</header>',
 			'xhtml' => '</div>',
-			) );
+		) );
 
 	}
 
@@ -88,7 +87,7 @@ class Genesis_Compat {
 			'html5'   => '<footer %s>',
 			'xhtml'   => '<div id="footer" class="footer">',
 			'context' => 'site-footer',
-			) );
+		) );
 		genesis_structural_wrap( 'footer', 'open' );
 
 	}
@@ -99,11 +98,11 @@ class Genesis_Compat {
 		genesis_markup( array(
 			'html5'   => '</footer>',
 			'xhtml'   => '</div>',
-			) );
+		) );
 
 	}
 
 
 }
- 
+
 $Genesis_Compat = Genesis_Compat::instance();

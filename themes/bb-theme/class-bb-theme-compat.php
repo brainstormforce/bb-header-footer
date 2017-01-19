@@ -5,21 +5,21 @@
  * @since 1.0
  */
 class BB_Theme_Compat {
- 
+
 	private static $instance;
- 
+
 	/**
-	*  Initiator
-	*/
-	public static function instance(){
- 
+	 *  Initiator
+	 */
+	public static function instance() {
+
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new BB_Theme_Compat();
- 
+
 			// self::$instance->includes();
 			self::$instance->hooks();
 		}
- 
+
 		return self::$instance;
 	}
 
@@ -58,7 +58,7 @@ class BB_Theme_Compat {
 
 		?>
 			<header id="masthead" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-				<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo( 'url' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php BB_Header_Footer::get_header_content(); ?>
 			</header>
 		<?php
@@ -76,7 +76,7 @@ class BB_Theme_Compat {
 			</footer>
 		<?php
 	}
- 
+
 }
- 
+
 $bb_theme = BB_Theme_Compat::instance();

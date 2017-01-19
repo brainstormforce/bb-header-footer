@@ -20,7 +20,7 @@ class BB_Admin_UI {
 		$items['bb-header-footer'] = array(
 			'title' 	=> __( 'BB Header Footer', 'bb-header-footer' ),
 			'show'		=> true,
-			'priority'	=> 550
+			'priority'	=> 550,
 		);
 
 		return $items;
@@ -32,13 +32,13 @@ class BB_Admin_UI {
 
 	function bbhf_save() {
 
-		if ( isset( $_POST['fl-bb-header-footer-nonce'] ) && 
+		if ( isset( $_POST['fl-bb-header-footer-nonce'] ) &&
 			wp_verify_nonce( $_POST['fl-bb-header-footer-nonce'], 'bb-header-footer' ) ) {
 
-			$bbhf_header 			= isset(  $_POST['bb_header_id'] ) ? esc_attr( $_POST['bb_header_id'] ) : '';
-			$bbhf_footer 			= isset(  $_POST['bb_footer_id'] ) ? esc_attr( $_POST['bb_footer_id'] ) : '';
-			$bb_transparent_header  = isset(  $_POST['bb_transparent_header'] ) ? esc_attr( $_POST['bb_transparent_header'] ) : 'off';
-			$bb_sticky_header 		= isset(  $_POST['bb_sticky_header'] ) ? esc_attr( $_POST['bb_sticky_header'] ) : 'off';
+			$bbhf_header 			= isset( $_POST['bb_header_id'] ) ? esc_attr( $_POST['bb_header_id'] ) : '';
+			$bbhf_footer 			= isset( $_POST['bb_footer_id'] ) ? esc_attr( $_POST['bb_footer_id'] ) : '';
+			$bb_transparent_header  = isset( $_POST['bb_transparent_header'] ) ? esc_attr( $_POST['bb_transparent_header'] ) : 'off';
+			$bb_sticky_header 		= isset( $_POST['bb_sticky_header'] ) ? esc_attr( $_POST['bb_sticky_header'] ) : 'off';
 
 			$bbhf_settings['bb_header_id'] 			= $bbhf_header;
 			$bbhf_settings['bb_footer_id'] 			= $bbhf_footer;
@@ -57,10 +57,10 @@ class BB_Admin_UI {
 		$atts = array(
 			'post_type'      => array(
 				'fl-builder-template',
-				'page'
+				'page',
 			),
 			'posts_per_page' => 200,
-			'cache_results'  => true
+			'cache_results'  => true,
 		);
 
 		$query = new WP_Query( $atts );
@@ -74,14 +74,13 @@ class BB_Admin_UI {
 
 				$all_posts[ get_post_type() ][ $ID ] = $title;
 			}
-
 		}
 
 		echo '<select name="' . $args['name'] . '">';
 		echo '<option value="">' . $args['show_option_none'] . '</option>';
 
 		foreach ( $all_posts as $post_type => $posts ) {
-			echo '<optgroup label="' . ucwords( str_replace( "-", " ", $post_type ) ) . '">';
+			echo '<optgroup label="' . ucwords( str_replace( '-', ' ', $post_type ) ) . '">';
 
 			foreach ( $posts as $id => $post_name ) {
 				echo '<option value="' . $id . '" ' . selected( $id, $args['selected'] ) . ' >' . $post_name . '</option>';

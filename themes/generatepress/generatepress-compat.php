@@ -1,7 +1,7 @@
 <?php
 
 if ( ! function_exists( 'generate_header_items' ) ) {
-	
+
 	function generate_header_items() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
@@ -9,10 +9,10 @@ if ( ! function_exists( 'generate_header_items' ) ) {
 		if ( $header_id !== '' ) {
 			?>
 
-			<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo('url'); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo( 'url' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php BB_Header_Footer::get_header_content(); ?>
 			
-			<?php 
+			<?php
 		} else {
 
 			// Header widget
@@ -25,7 +25,6 @@ if ( ! function_exists( 'generate_header_items' ) ) {
 			generate_construct_logo();
 		}
 	}
-
 }
 
 
@@ -45,7 +44,7 @@ function bb_generate_footer_widgets_override( $widgets ) {
 add_filter( 'generate_footer_widgets', 'bb_generate_footer_widgets_override' );
 
 function bb_generate_add_footer() {
-	
+
 	$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 	if ( $footer_id !== '' ) {

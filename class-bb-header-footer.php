@@ -54,8 +54,8 @@ class BB_Header_Footer {
 		}
 
 		echo '<div class="notice notice-error">';
-        echo "<p>". sprintf( __( 'The <strong>BB Header Footer</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . "</p>", $url );
-        echo '</div>';
+		echo '<p>' . sprintf( __( 'The <strong>BB Header Footer</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . '</p>', $url );
+		echo '</div>';
 	}
 
 	public function includes() {
@@ -123,14 +123,14 @@ class BB_Header_Footer {
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
 		echo do_shortcode( '[fl_builder_insert_layout id="' . $footer_id . '"]' );
-		echo "</div>";
+		echo '</div>';
 	}
 
 	public static function uabb_upsell_message() {
 
 		if ( ! is_plugin_active( 'bb-ultimate-addon/bb-ultimate-addon.php' ) ) {
 			$html = '<hr>';
-			$html .= '<span class="upsell-uabb">Want more Beaver Builder Addons? Check out <a target="_blank" href="'. self::uabb_purchase_url() .'">Ultimate Addon for Beaver Builder.</a></span>';
+			$html .= '<span class="upsell-uabb">Want more Beaver Builder Addons? Check out <a target="_blank" href="' . self::uabb_purchase_url() . '">Ultimate Addon for Beaver Builder.</a></span>';
 
 			echo $html;
 		}

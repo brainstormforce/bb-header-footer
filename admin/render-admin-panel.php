@@ -16,7 +16,7 @@
 			'selected'          => $header_id,
 			'name'              => 'bb_header_id',
 			'show_option_none'  => "Theme's Header",
-			'option_none_value' => ''
+			'option_none_value' => '',
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
@@ -47,7 +47,7 @@
 			'selected'          => $footer_id,
 			'name'              => 'bb_footer_id',
 			'show_option_none'  => "Theme's Footer",
-			'option_none_value' => ''
+			'option_none_value' => '',
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
