@@ -1,3 +1,12 @@
+<?php
+/**
+ * Render the admin panel for settings.
+ *
+ * @package bb-header-footer
+ */
+
+?>
+
 <div id="fl-bb-header-footer-form" class="fl-settings-form bb-header-footer-fl-settings-form" style="max-width: 550px;">
 	<h3>BB header Footer</h3>
 
