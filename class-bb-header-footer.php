@@ -153,7 +153,7 @@ class BB_Header_Footer {
 		if ( 'on' == $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
 		}
-		
+
 		echo do_shortcode( '[fl_builder_insert_layout id="' . $header_id . '"]' );
 
 		if ( 'on' == $bb_sticky_header ) {
