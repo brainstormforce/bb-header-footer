@@ -207,13 +207,14 @@ class BB_Header_Footer {
 	 */
 	public static function get_settings( $setting = '', $default = '' ) {
 
+		$value 	 = $default;
 		$options = get_option( 'bbhf_settings' );
 
 		if ( isset( $options[ $setting ] ) ) {
-			return $options[ $setting ];
+			$value = $options[ $setting ];
 		}
 
-		return $default;
+		return apply_filters( "bhf_setting_{$setting}", $value );
 	}
 
 }
