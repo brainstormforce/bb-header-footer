@@ -123,7 +123,7 @@ class BB_Header_Footer {
 		}
 
 		if ( 'on' == $bb_sticky_header ) {
-			$classes[] = 'bhf-transparent-header';
+			$classes[] = 'bhf-sticky-header';
 		}
 
 		$classes[] = 'dhf-template-' . $this->template;
@@ -147,11 +147,19 @@ class BB_Header_Footer {
 	 */
 	public static function get_header_content() {
 
-		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		echo '<div class="bhf-fixed-header">';
+		$header_id 				= BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$bb_sticky_header 		= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+
+		if ( 'on' == $bb_sticky_header ) {
+			echo '<div class="bhf-fixed-header">';
+		}
+		
 		echo do_shortcode( '[fl_builder_insert_layout id="' . $header_id . '"]' );
-		echo '</div>';
-		echo '<div class="bhf-ffixed-header-fixer" style="display:none;"></div>';
+
+		if ( 'on' == $bb_sticky_header ) {
+			echo '</div>';
+			echo '<div class="bhf-ffixed-header-fixer" style="display:none;"></div>';
+		}
 	}
 
 	/**

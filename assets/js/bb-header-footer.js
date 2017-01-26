@@ -6,8 +6,8 @@ jQuery(window).on('scroll', function(event) {
 	winTop = win.scrollTop();
 	winWidth = win.outerWidth();
 	stickerHeight = sticker.outerHeight();
-
-	if ( winTop > stickerHeight ) {
+	
+	if ( winTop > 10 ) {
 		sticker.addClass('bhf-fixed');
 		stickyFixer.css({
 			height: stickerHeight,

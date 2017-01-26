@@ -28,11 +28,11 @@
 
 /* Transparent header */
 
-.fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
-.fl-builder.dhf-template-generatepress.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
-.fl-builder.dhf-template-generatepress.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
+.fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
+.fl-builder.dhf-template-generatepress.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
+.fl-builder.dhf-template-generatepress.bbhf-transparent-header:not(.bhf-sticky-header) .site-header,
+.fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
+.fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) .site-header {
  	background-color: transparent; 
 	border: none;
 	transition: background-color 0.3s ease-in-out;
@@ -59,7 +59,17 @@
 
 /* Sticky header */
 
-.bhf-fixed-header {
+.fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-generatepress.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-generatepress.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
+.fl-builder.dhf-template-genesis.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-genesis.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
+    background-color: transparent; 
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bhf-sticky-header .bhf-fixed-header {
     width:100%;
     transform: translateZ(0);
     transition:all 0.3s;
@@ -67,14 +77,14 @@
 
 /* Float Panel: class="float-panel fixed" */
 
-.bhf-fixed {
+.bhf-sticky-header .bhf-fixed {
     box-shadow:0 2px 6px rgba(0,0,0,0.2);
     animation:slide-down 0.3s;
     z-index: 35;
     position: fixed;
 }
 
-.bhf-fixed .fa-gg {                  
+.bhf-sticky-header .bhf-fixed .fa-gg {                  
     transform: rotate(360deg);      
 }
 
