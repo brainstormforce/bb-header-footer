@@ -75,8 +75,6 @@
     transition:all 0.4s;
 }
 
-/* Float Panel: class="float-panel fixed" */
-
 .bhf-sticky-header .bhf-fixed {
     box-shadow:0 2px 6px rgba(0,0,0,0.2);
     animation:fadeIn 0.4s;
@@ -106,4 +104,15 @@
   to {
     opacity: 1;
   }
+}
+
+/*Shrink the sticky header*/
+.bhf-sticky-heade header .fl-row-content-wrap {
+    transition:padding 0.4s ease-in-out;
+}
+
+.bhf-sticky-header .bhf-fixed .fl-row-content-wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+    transition:padding 0.4s ease-in-out;
 }
