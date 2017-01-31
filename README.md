@@ -48,6 +48,9 @@ The plugin only works with limited number of themes as of now, here is the list 
 
 ## Changelog ##
 
+### 1.1.2 (unreleased) ###
+- New: Sticky headers!
+
 ### 1.1.1 ###
 - Fix: Transparent header not working in case of bb-theme.
 
