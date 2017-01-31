@@ -147,8 +147,8 @@ class BB_Header_Footer {
 	 */
 	public static function get_header_content() {
 
-		$header_id 				= BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$bb_sticky_header 		= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$header_id  		= apply_filters( 'bhf_header_id', BB_Header_Footer::get_settings( 'bb_header_id', '' ) );
+		$bb_sticky_header 	= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
@@ -167,7 +167,7 @@ class BB_Header_Footer {
 	 */
 	public static function get_footer_content() {
 
-		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$footer_id = apply_filters( 'bhf_footer_id', BB_Header_Footer::get_settings( 'bb_footer_id', '' ) );
 		echo "<div class='footer-width-fixer'>";
 		echo do_shortcode( '[fl_builder_insert_layout id="' . $footer_id . '"]' );
 		echo '</div>';
