@@ -1,6 +1,6 @@
 === Beaver Builder Header Footer ===
 Contributors: brainstormforce, Nikschavan
-Donate link: https://www.brainstormforce.com/payment/
+Donate link: https://www.paypal.me/BrainstormForce
 Tags: beaver builder, header, footer, page builder, page builder plugin, design, wysiwyg, template builder, layout builder, landing page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, page layout, visual builder
 Requires at least: 3.6
 Tested up to: 4.7
