@@ -46,7 +46,7 @@
 		<h4> <?php _e( 'Shrink sticky header', 'bb-header-footer' ) ?> </h4>
 
 		<?php $bb_shrink_header = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' ); ?>
-		<label><input type="checkbox" name="bb_shrink_header" <?php checked( $bb_shrink_header, 'on' ); ?>> Shrink the header when it sticks</label>
+		<label><input type="checkbox" name="bb_shrink_header" <?php checked( $bb_shrink_header, 'on' ); ?>> Shrink the header when it is fixed</label>
 		<p class="description"> <?php _e( 'Shrink the sticky header?', 'bb-header-footer' ) ?> </p>
 
 		<h3> <?php _e( 'Footer', 'bb-header-footer' ) ?> </h3>
