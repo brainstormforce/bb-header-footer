@@ -59,11 +59,13 @@ class BB_Admin_UI {
 			$bbhf_footer           = isset( $_POST['bb_footer_id'] ) ? esc_attr( $_POST['bb_footer_id'] ) : '';
 			$bb_transparent_header = isset( $_POST['bb_transparent_header'] ) ? esc_attr( $_POST['bb_transparent_header'] ) : 'off';
 			$bb_sticky_header      = isset( $_POST['bb_sticky_header'] ) ? esc_attr( $_POST['bb_sticky_header'] ) : 'off';
+			$bb_shrink_header      = isset( $_POST['bb_shrink_header'] ) ? esc_attr( $_POST['bb_shrink_header'] ) : 'off';
 
 			$bbhf_settings['bb_header_id']          = $bbhf_header;
 			$bbhf_settings['bb_footer_id']          = $bbhf_footer;
 			$bbhf_settings['bb_transparent_header'] = $bb_transparent_header;
 			$bbhf_settings['bb_sticky_header']      = $bb_sticky_header;
+			$bbhf_settings['bb_shrink_header']      = $bb_shrink_header;
 
 			update_option( 'bbhf_settings', $bbhf_settings );
 		}
