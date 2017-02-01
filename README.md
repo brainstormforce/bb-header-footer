@@ -4,7 +4,7 @@
 **Tags:** beaver builder, header, footer, page builder, page builder plugin, design, wysiwyg, template builder, layout builder, landing page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, page layout, visual builder  
 **Requires at least:** 3.6  
 **Tested up to:** 4.7  
-**Stable tag:** 1.1.1  
+**Stable tag:** 1.1.2  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -48,7 +48,7 @@ The plugin only works with limited number of themes as of now, here is the list 
 
 ## Changelog ##
 
-### 1.1.2 (unreleased) ###
+### 1.1.2 ###
 - New: Sticky headers!
 
 ### 1.1.1 ###
