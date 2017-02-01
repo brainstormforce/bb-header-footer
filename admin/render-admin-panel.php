@@ -43,6 +43,12 @@
 		<label><input type="checkbox" name="bb_sticky_header" <?php checked( $bb_sticky_header, 'on' ); ?>> Enable Sticky Header</label>
 		<p class="description"> <?php _e( 'Make the current header sticky?', 'bb-header-footer' ) ?> </p>
 
+		<h4> <?php _e( 'Shrink sticky header', 'bb-header-footer' ) ?> </h4>
+
+		<?php $bb_shrink_header = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' ); ?>
+		<label><input type="checkbox" name="bb_shrink_header" <?php checked( $bb_shrink_header, 'on' ); ?>> Shrink the header when it sticks</label>
+		<p class="description"> <?php _e( 'Shrink the sticky header?', 'bb-header-footer' ) ?> </p>
+
 		<h3> <?php _e( 'Footer', 'bb-header-footer' ) ?> </h3>
 
 		<h4 class="field-title"><?php _e( 'Select a page to be used as Footer', 'bb-header-footer' ); ?></h4>

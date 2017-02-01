@@ -107,11 +107,11 @@
 }
 
 /*Shrink the sticky header*/
-.bhf-sticky-heade header .fl-row-content-wrap {
+.bhf-sticky-header.bhf-shrink-header header .fl-row-content-wrap {
     transition:padding 0.4s ease-in-out;
 }
 
-.bhf-sticky-header .bhf-fixed .fl-row-content-wrap {
+.bhf-sticky-header.bhf-shrink-header .bhf-fixed .fl-row-content-wrap {
     padding-top: 0;
     padding-bottom: 0;
     transition:padding 0.4s ease-in-out;

@@ -109,6 +109,7 @@ class BB_Header_Footer {
 		$footer_id 				= BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		$bb_transparent_header  = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
 		$bb_sticky_header 		= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$bb_shrink_header 		= BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
 
 		if ( '' !== $header_id ) {
 			$classes[] = 'dhf-header';
@@ -124,6 +125,10 @@ class BB_Header_Footer {
 
 		if ( 'on' == $bb_sticky_header ) {
 			$classes[] = 'bhf-sticky-header';
+		}
+
+		if ( 'on' == $bb_shrink_header ) {
+			$classes[] = 'bhf-shrink-header';
 		}
 
 		$classes[] = 'dhf-template-' . $this->template;
