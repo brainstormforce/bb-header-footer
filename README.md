@@ -1,7 +1,7 @@
 # Beaver Builder Header Footer #
 **Contributors:** brainstormforce, Nikschavan  
-**Donate link:** https://www.brainstormforce.com/payment/  
 **Tags:** beaver builder, header footer builder, header, footer, page builder, template builder, landing page builder, front-end editor  
+**Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
 **Tested up to:** 4.7  
 **Stable tag:** 1.1.2  
