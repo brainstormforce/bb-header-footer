@@ -14,6 +14,8 @@ Create Header and Footer for your site using Beaver Builder Page Builder.
 
 Create header and footer of the your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder").
 
+[Click here](https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-plugin-repo&utm_campaign=bb-header-footer&utm_medium=plugin-readme "Beaver Builder Header Footer") to see the demo of this plugin.
+
 The plugin only works with limited number of themes as of now, here is the list of supported themes - 
 
 1. Beaver Builder theme
