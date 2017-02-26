@@ -24,7 +24,7 @@ class BB_Header_Footer {
 
 		$this->template = get_template();
 
-		if ( class_exists( 'FLBuilder' ) ) {
+		if ( class_exists( 'FLBuilder' ) && is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
 
 			$this->includes();
 			$this->load_textdomain();
@@ -159,7 +159,7 @@ class BB_Header_Footer {
 			echo '<div class="bhf-fixed-header">';
 		}
 
-		echo do_shortcode( '[fl_builder_insert_layout id="' . $header_id . '"]' );
+		echo FLBuilderShortcodes::insert_layout( array( 'id' => $header_id ) );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '</div>';
@@ -174,7 +174,7 @@ class BB_Header_Footer {
 
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
-		echo do_shortcode( '[fl_builder_insert_layout id="' . $footer_id . '"]' );
+		echo FLBuilderShortcodes::insert_layout( array( 'id' => $footer_id ) );
 		echo '</div>';
 	}
 
