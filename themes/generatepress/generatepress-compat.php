@@ -1,72 +1,92 @@
 <?php
 /**
- * Generatepress Theme Compatibility.
+ * GeneratepressCompatibility.
  *
  * @package  bb-header-footer
  */
 
-if ( ! function_exists( 'generate_header_items' ) ) {
+/**
+ * GeneratePress_Compat setup
+ *
+ * @since 1.0
+ */
+class GeneratePress_Compat {
 
 	/**
-	 * Override generatepress function for overriding header content.
+	 * Instance of GeneratePress_Compat
+	 *
+	 * @var GeneratePress_Compat
 	 */
-	function generate_header_items() {
+	private static $instance;
+
+	/**
+	 *  Initiator
+	 */
+	public static function instance() {
+
+		if ( ! isset( self::$instance ) ) {
+			self::$instance = new GeneratePress_Compat();
+
+			self::$instance->hooks();
+		}
+
+		return self::$instance;
+	}
+
+	/**
+	 * Run all the Actions / Filters.
+	 */
+	public function hooks() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 		if ( '' !== $header_id ) {
-			?>
-
-			<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo( 'url' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php BB_Header_Footer::get_header_content(); ?>
-			
-			<?php
-		} else {
-
-			// Header widget.
-			generate_construct_header_widget();
-
-			// Site title and tagline.
-			generate_construct_site_title();
-
-			// Site logo.
-			generate_construct_logo();
+			add_action( 'init', array( $this, 'generatepress_setup_header' ), 10 );
+			add_action( 'generate_header', array( $this, 'get_header_content' ) );
 		}
+
+		if ( '' !== $footer_id ) {
+			add_action( 'init', array( $this, 'generatepress_setup_footer' ), 10 );
+			add_action( 'generate_footer', array( $this, 'get_footer_content' ) );
+		}
+
 	}
-}
 
-/**
- * Override number of active widgets
- *
- * @param  int $widgets Number of active widgets.
- * @return int          Returns 0 if footer is selected in the plugin options to disable the footer widgets.
- */
-function bb_generate_footer_widgets_override( $widgets ) {
-
-	$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
-
-	if ( '' !== $footer_id ) {
-
-		return 0;
-	} else {
-
-		return $widgets;
+	/**
+	 * Disable header from the theme.
+	 */
+	public function generatepress_setup_header() {
+		remove_action( 'generate_header', 'generate_construct_header' );
 	}
-}
 
-add_filter( 'generate_footer_widgets', 'bb_generate_footer_widgets_override' );
+	/**
+	 * Disable footer from the theme.
+	 */
+	public function generatepress_setup_footer() {
+		remove_action( 'generate_footer', 'generate_construct_footer_widgets', 5 );
+	}
 
-/**
- * Change content of footer section in generatepress.
- */
-function bb_generate_add_footer() {
+	/**
+	 * Display header markup for beaver builder theme.
+	 */
+	public function get_header_content() {
 
-	$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		?>
+			<header id="masthead" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+				<p class="main-title bhf-hidden" itemprop="headline"><a href="<?php echo bloginfo( 'url' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php BB_Header_Footer::get_header_content(); ?>
+			</header>
+		<?php
+	}
 
-	if ( '' !== $footer_id ) {
-
+	/**
+	 * Display footer markup for beaver builder theme.
+	 */
+	public function get_footer_content() {
 		BB_Header_Footer::get_footer_content();
 	}
+
 }
 
-add_action( 'generate_before_footer_content', 'bb_generate_add_footer' );
+GeneratePress_Compat::instance();
