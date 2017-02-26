@@ -29,7 +29,7 @@ class BB_Header_Footer {
 			$this->includes();
 			$this->load_textdomain();
 
-			// Load themes compatibility
+			// Load themes compatibility.
 			add_action( 'init', array( $this, 'themes_compat' ) );
 
 			// Scripts and styles.
@@ -48,17 +48,17 @@ class BB_Header_Footer {
 	 */
 	public function themes_compat() {
 		if ( 'genesis' == $this->template ) {
-			// Genesis framework theme compatibility
+			// Genesis framework theme compatibility.
 			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
 		} elseif ( 'bb-theme' == $this->template || 'beaver-builder-theme' == $this->template ) {
-			// Beaver Builder Theme compatibility
+			// Beaver Builder Theme compatibility.
 			$this->template = 'beaver-builder-theme';
 			require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
 		} elseif ( 'generatepress' == $this->template ) {
-			// GeneratePress theme compatibility
+			// GeneratePress theme compatibility.
 			require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
 		} elseif ( ! current_theme_supports( 'bb-header-footer' ) ) {
-			// If the theme does not support this plugin, display admin notices
+			// If the theme does not support this plugin, display admin notices.
 			add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
 			add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 		}
