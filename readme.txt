@@ -1,10 +1,10 @@
 === Beaver Builder Header Footer ===
 Contributors: brainstormforce, Nikschavan
-Donate link: https://www.brainstormforce.com/payment/
-Tags: beaver builder, header, footer, page builder, page builder plugin, design, wysiwyg, template builder, layout builder, landing page builder, website builder, site builder, front-end builder, drag and drop builder, editor, front-end editor, page layout, visual builder
+Tags: beaver builder, header footer builder, header, footer, page builder, template builder, landing page builder, front-end editor
+Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
 Tested up to: 4.7
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,8 @@ Create Header and Footer for your site using Beaver Builder Page Builder.
 == Description ==
 
 Create header and footer of the your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder").
+
+[Click here](https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-plugin-repo&utm_campaign=bb-header-footer&utm_medium=plugin-readme "Beaver Builder Header Footer") to see the demo of this plugin.
 
 The plugin only works with limited number of themes as of now, here is the list of supported themes - 
 
@@ -47,6 +49,9 @@ The plugin only works with limited number of themes as of now, here is the list 
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 == Changelog ==
+
+= 1.1.2 =
+- New: Sticky headers!
 
 = 1.1.1 =
 - Fix: Transparent header not working in case of bb-theme.
