@@ -57,6 +57,9 @@ class BB_Header_Footer {
 		} elseif ( 'generatepress' == $this->template ) {
 			// GeneratePress theme compatibility.
 			require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
+		} elseif ( 'wp-primer-theme' == $this->template  || 'primer' == $this->template ) {
+			$this->template = 'primer';
+			require BBHF_DIR . 'themes/wp-primer-theme/primer-theme-compat.php';
 		} elseif ( ! current_theme_supports( 'bb-header-footer' ) ) {
 			// If the theme does not support this plugin, display admin notices.
 			add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );

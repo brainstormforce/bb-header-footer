@@ -1,5 +1,5 @@
 .footer-width-fixer {
-	width: 100%;
+  width: 100%;
 }
 
 /* Container fix for genesis themes */
@@ -22,8 +22,30 @@
     background-color: transparent !important; /* override generatepress default white color for header */
 }
 
+/* Container fix for the primer theme */
+.dhf-template-primer.dhf-header .site-header {
+  background-color: white; /* override primer theme default white color for header */
+  background: white; /* override primer theme default white color for header */
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dhf-template-primer.dhf-header .site-header .site-header-wrapper {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  padding: 0;
+}
+
+.dhf-template-primer.dhf-header .site-header .site-header-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
 .bhf-hidden {
-	display: none
+  display: none
 }
 
 /* Transparent header */
@@ -32,29 +54,40 @@
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header:not(.bhf-sticky-header) .site-header,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) .site-header {
- 	background-color: transparent; 
-	border: none;
-	transition: background-color 0.3s ease-in-out;
+.fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) .site-header,
+.fl-builder.dhf-template-primer.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
+.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
+  background-color: transparent; 
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.admin-bar.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
+  top: 32px;
+}
+
+.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
+  top: 0;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .fl-page,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header .fl-page  {
-	position: relative;
+  position: relative;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header#masthead,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header header#masthead,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header header#masthead  {
-	position: absolute;
-	z-index: 10;
-	width: 100%;
+.fl-builder.dhf-template-genesis.bbhf-transparent-header header#masthead,
+.fl-builder.dhf-template-primer.bbhf-transparent-header header#masthead  {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
 }
 
 .fl-builder.dhf-template-genesis.bbhf-transparent-header .site-inner {
-	padding-top: 0;
-	margin-top: 0;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* Sticky header */
@@ -63,7 +96,9 @@
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
+.fl-builder.dhf-template-genesis.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
+.fl-builder.dhf-template-primer.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-primer.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
     background-color: transparent; 
     border: none;
     transition: background-color 0.3s ease-in-out;
