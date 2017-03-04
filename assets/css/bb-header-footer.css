@@ -23,14 +23,23 @@
 }
 
 /* Container fix for the primer theme */
-.dhf-stylesheet-primer.dhf-header .site-header {
+.dhf-template-primer.dhf-header .site-header {
   background-color: white; /* override primer theme default white color for header */
   background: white; /* override primer theme default white color for header */
   box-shadow: none;
   -webkit-box-shadow: none;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
-.dhf-stylesheet-primer.dhf-header .site-header .site-header-wrapper {
+.dhf-template-primer.dhf-header .site-header .site-header-wrapper {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  padding: 0;
+}
+
+.dhf-template-primer.dhf-header .site-header .site-header-wrapper {
     width: 100%;
     max-width: 100%;
 }
@@ -51,6 +60,14 @@
   background-color: transparent; 
   border: none;
   transition: background-color 0.3s ease-in-out;
+}
+
+.admin-bar.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
+  top: 32px;
+}
+
+.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
+  top: 0;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page,

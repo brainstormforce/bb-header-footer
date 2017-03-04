@@ -40,12 +40,12 @@ class BHF_Primer_Compat {
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 		if ( '' !== $header_id ) {
-			add_action( 'wp', array( $this, 'primer_setup_header' ), 10 );
+			add_action( 'template_redirect', array( $this, 'primer_setup_header' ), 30 );
 			add_action( 'primer_header', array( 'BB_Header_Footer', 'get_header_content' ), 20 );
 		}
 
 		if ( '' !== $footer_id ) {
-			add_action( 'wp', array( $this, 'primer_setup_footer' ), 10 );
+			add_action( 'template_redirect', array( $this, 'primer_setup_footer' ), 30 );
 			add_action( 'primer_footer', array( 'BB_Header_Footer', 'get_footer_content' ), 30 );
 		}
 
