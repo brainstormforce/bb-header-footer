@@ -23,7 +23,7 @@ class BHF_Primer_Compat {
 	public static function instance() {
 
 		if ( ! isset( self::$instance ) ) {
-			self::$instance = new Primer_Compat();
+			self::$instance = new BHF_Primer_Compat();
 
 			self::$instance->hooks();
 		}
