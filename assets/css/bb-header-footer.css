@@ -47,7 +47,7 @@
 .fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) .site-header,
 .fl-builder.dhf-template-primer.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
-.fl-builder.dhf-template-primer.bbhf-transparent-header:not(.bhf-sticky-header) .site-header {
+.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
   background-color: transparent; 
   border: none;
   transition: background-color 0.3s ease-in-out;
