@@ -21,6 +21,7 @@ The plugin only works with limited number of themes as of now, here is the list 
 1. Beaver Builder theme
 2. Genesis Theme
 3. GeneratePress Theme
+4. Primer Theme
 
 ### Here is a quick video explaining how this plugin works ###
 
