@@ -4,15 +4,15 @@
  *
  * @since 1.1.0.4
  */
- 
+
 class Primer_Compat {
- 
+
 	private static $instance;
- 
+
 	/**
-	*  Initiator
-	*/
-	public static function instance(){
+	 *  Initiator
+	 */
+	public static function instance() {
 
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new Primer_Compat();
@@ -55,5 +55,5 @@ class Primer_Compat {
 	}
 
 }
- 
+
 $Primer_Compat = Primer_Compat::instance();
