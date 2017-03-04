@@ -1,12 +1,20 @@
 <?php
 /**
- * Primer_Compat setup
+ * BHF_Primer_Compat setup
  *
- * @since 1.1.0.4
+ * @package bb-header-footer
  */
 
-class Primer_Compat {
+/**
+ * Primer theme compatibility.
+ */
+class BHF_Primer_Compat {
 
+	/**
+	 * Instance of Genesis_Compat.
+	 *
+	 * @var Genesis_Compat
+	 */
 	private static $instance;
 
 	/**
@@ -23,23 +31,29 @@ class Primer_Compat {
 		return self::$instance;
 	}
 
+	/**
+	 * Run all the Actions / Filters.
+	 */
 	public function hooks() {
 
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
-		if ( $header_id !== '' ) {
+		if ( '' !== $header_id ) {
 			add_action( 'wp', array( $this, 'primer_setup_header' ), 10 );
 			add_action( 'primer_header', array( 'BB_Header_Footer', 'get_header_content' ), 20 );
 		}
 
-		if ( $footer_id !== '' ) {
+		if ( '' !== $footer_id ) {
 			add_action( 'wp', array( $this, 'primer_setup_footer' ), 10 );
 			add_action( 'primer_footer', array( 'BB_Header_Footer', 'get_footer_content' ), 30 );
 		}
 
 	}
 
+	/**
+	 * Disable header from the theme.
+	 */
 	public function primer_setup_header() {
 
 		for ( $priority = 0; $priority < 15; $priority++ ) {
@@ -49,6 +63,9 @@ class Primer_Compat {
 
 	}
 
+	/**
+	 * Disable footer from the theme.
+	 */
 	public function primer_setup_footer() {
 		remove_action( 'primer_footer', 'primer_add_footer_widgets' );
 		remove_action( 'primer_after_footer', 'primer_add_site_info' );
@@ -56,4 +73,4 @@ class Primer_Compat {
 
 }
 
-$Primer_Compat = Primer_Compat::instance();
+BHF_Primer_Compat::instance();
