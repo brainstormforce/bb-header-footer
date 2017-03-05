@@ -4,7 +4,7 @@ Tags: beaver builder, header footer builder, header, footer, page builder, templ
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
 Tested up to: 4.7
-Stable tag: 1.1.2
+Stable tag: 1.1.3-beta.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,10 @@ The plugin only works with limited number of themes as of now, here is the list 
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 == Changelog ==
+
+= 1.1.3 =
+- New: Added theme support for the primer theme and it's child theme.
+- Improvement: Allow theme's to declare support for the plugin in their code.
 
 = 1.1.2 =
 - New: Sticky headers!
