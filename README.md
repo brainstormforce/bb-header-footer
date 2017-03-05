@@ -51,6 +51,11 @@ The plugin only works with limited number of themes as of now, here is the list 
 
 ## Changelog ##
 
+### 1.1.3 ###
+- New: Added theme support for the primer theme and it's child theme.
+- Improvement: Allow theme's to declare support for the plugin in their code.
+- Improvement: Add header/footer on page using Beaver Builders functions instead of adding via shortcodes.
+
 ### 1.1.2 ###
 - New: Sticky headers!
 
