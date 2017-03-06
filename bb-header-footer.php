@@ -7,7 +7,7 @@
  * Author URI:      https://www.brainstormforce.com/
  * Text Domain:     bb-header-footer
  * Domain Path:     /languages
- * Version:         1.1.3.
+ * Version:         1.1.3
  *
  * @package         BB_Header_Footer
  */
