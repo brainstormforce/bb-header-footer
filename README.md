@@ -55,7 +55,7 @@ Need help with something? Have an issue to report? [Get in touch](https://github
 ## Changelog ##
 
 ### 1.1.3 ###
-- New: Added theme support for the primer theme and it's child theme.
+- New: Added theme support for the primer theme and it's child themes.
 - Improvement: Allow theme's to declare support for the plugin in their code.
 - Improvement: Add header/footer on page using Beaver Builders functions instead of adding via shortcodes.
 - Improvement: Shrink header option now shrinks the header a bit more leaving some padding in the row.
