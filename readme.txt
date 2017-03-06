@@ -23,6 +23,9 @@ The plugin only works with limited number of themes as of now, here is the list 
 3. GeneratePress Theme
 4. Primer Theme
 
+= Supported & Actively Developed =
+Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Beaver Builder Header Footer on GitHub"). with us on GitHub.
+
 = Here is a quick video explaining how this plugin works =
 
 [youtube https://www.youtube.com/watch?v=GlHxpuSqZs4&feature=youtu.be]
