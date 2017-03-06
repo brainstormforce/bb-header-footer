@@ -42,12 +42,12 @@ class GeneratePress_Compat {
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 		if ( '' !== $header_id ) {
-			add_action( 'init', array( $this, 'generatepress_setup_header' ), 10 );
+			add_action( 'template_redirect', array( $this, 'generatepress_setup_header' ), 10 );
 			add_action( 'generate_header', array( $this, 'get_header_content' ) );
 		}
 
 		if ( '' !== $footer_id ) {
-			add_action( 'init', array( $this, 'generatepress_setup_footer' ), 10 );
+			add_action( 'template_redirect', array( $this, 'generatepress_setup_footer' ), 10 );
 			add_action( 'generate_footer', array( $this, 'get_footer_content' ) );
 		}
 
