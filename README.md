@@ -3,8 +3,8 @@
 **Tags:** beaver builder, header footer builder, header, footer, page builder, template builder, landing page builder, front-end editor  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
-**Tested up to:** 4.7  
-**Stable tag:** 1.1.2  
+**Tested up to:** 4.7.2  
+**Stable tag:** 1.1.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -58,6 +58,7 @@ Need help with something? Have an issue to report? [Get in touch](https://github
 - New: Added theme support for the primer theme and it's child theme.
 - Improvement: Allow theme's to declare support for the plugin in their code.
 - Improvement: Add header/footer on page using Beaver Builders functions instead of adding via shortcodes.
+- Improvement: Shrink header option now shrinks the header a bit more leaving some padding in the row.
 
 ### 1.1.2 ###
 - New: Sticky headers!
