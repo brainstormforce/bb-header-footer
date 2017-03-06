@@ -12,7 +12,7 @@ Create Header and Footer for your site using Beaver Builder Page Builder.
 
 == Description ==
 
-Create header and footer of the your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder").
+Create header and footer of your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder").
 
 [Click here](https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-plugin-repo&utm_campaign=bb-header-footer&utm_medium=plugin-readme "Beaver Builder Header Footer") to see the demo of this plugin.
 
@@ -42,7 +42,7 @@ Need help with something? Have an issue to report? [Get in touch](https://github
 = Which themes are supported by this plugin? =
 
 1. Beaver Builder Theme.
-2. Genesis Theme (and should work with most of it's child themes).
+2. Genesis Theme (and should work with most of its child themes).
 3. GeneratePress Theme
 
 
@@ -57,7 +57,7 @@ Need help with something? Have an issue to report? [Get in touch](https://github
 = 1.1.3 =
 - New: Added theme support for the primer theme and it's child themes.
 - Improvement: Allow theme's to declare support for the plugin in their code.
-- Improvement: Add header/footer on page using Beaver Builders functions instead of adding via shortcodes.
+- Improvement: Add header/footer on the page using Beaver Builders functions instead of adding via shortcodes.
 - Improvement: Shrink header option now shrinks the header a bit more leaving some padding in the row.
 
 = 1.1.2 =
