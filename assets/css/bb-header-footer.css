@@ -147,7 +147,18 @@
 }
 
 .bhf-sticky-header.bhf-shrink-header .bhf-fixed .fl-row-content-wrap {
-    padding-top: 0;
-    padding-bottom: 0;
-    transition:padding 0.4s ease-in-out;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: padding 0.4s ease-in-out;
+    box-sizing: border-box;
+}
+
+.bhf-shrink-header .bhf-fixed .fl-module-content {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.bhf-shrink-header .bhf-fixed .fl-module-content.fl-node-content img {
+    max-height: 50px;
 }
