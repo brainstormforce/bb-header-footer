@@ -5,6 +5,7 @@
 /* Container fix for genesis themes */
 
 .dhf-template-genesis.dhf-header .site-header .wrap,
+.dhf-template-genesis.dhf-footer .site-footer,
 .dhf-template-genesis.dhf-footer .site-footer .wrap,
 .dhf-template-generatepress.dhf-header .site-header .inside-header {
     width: 100%;

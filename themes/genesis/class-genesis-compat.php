@@ -40,14 +40,14 @@ class Genesis_Compat {
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
 		if ( '' !== $header_id ) {
-			add_action( 'init', array( $this, 'genesis_setup_header' ), 10 );
+			add_action( 'template_redirect', array( $this, 'genesis_setup_header' ), 10 );
 			add_action( 'genesis_header', array( $this, 'genesis_header_markup_open' ), 16 );
 			add_action( 'genesis_header', array( $this, 'genesis_header_markup_close' ), 25 );
 			add_action( 'genesis_header', array( 'BB_Header_Footer', 'get_header_content' ), 16 );
 		}
 
 		if ( '' !== $footer_id ) {
-			add_action( 'init', array( $this, 'genesis_setup_footer' ), 10 );
+			add_action( 'template_redirect', array( $this, 'genesis_setup_footer' ), 10 );
 			add_action( 'genesis_footer', array( $this, 'genesis_footer_markup_open' ), 16 );
 			add_action( 'genesis_footer', array( $this, 'genesis_footer_markup_close' ), 25 );
 			add_action( 'genesis_footer', array( 'BB_Header_Footer', 'get_footer_content' ), 16 );
