@@ -4,7 +4,7 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
 **Tested up to:** 4.7.2  
-**Stable tag:** 1.1.3  
+**Stable tag:** 1.1.4  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -53,6 +53,9 @@ Need help with something? Have an issue to report? [Get in touch](https://github
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 ## Changelog ##
+
+### 1.1.4 ###
+- Fix: Hide the default footer in generatepress and genesis theme.
 
 ### 1.1.3 ###
 - New: Added theme support for the primer theme and it's child themes.
