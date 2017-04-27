@@ -1,22 +1,34 @@
 # Beaver Builder Header Footer #
 **Contributors:** brainstormforce, Nikschavan  
-**Tags:** beaver builder, header footer builder, header, footer, page builder, template builder, landing page builder, front-end editor  
+**Tags:** beaver builder header footer, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
-**Tested up to:** 4.7.2  
+**Tested up to:** 4.7.4  
 **Stable tag:** 1.1.4  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-Create Header and Footer for your site using Beaver Builder Page Builder.
+An easy-to-use Beaver Builder addon to import pages or templates as a header or a footer across a Beaver Builder website.
 
 ## Description ##
 
-Create header and footer of your site easily using [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder").
+Have you ever thought of a <a href=” https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description”>Beaver Builder addon</a> that allows you to use customized templates and pages as a header or footer across your website? Beaver Builder Header Footer adds a settings option to your page builder settings page making it easier to add customizable header and footer.
 
-[Click here](https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-plugin-repo&utm_campaign=bb-header-footer&utm_medium=plugin-readme "Beaver Builder Header Footer") to see the demo of this plugin.
+All you need to do is -
 
-The plugin only works with limited number of themes as of now, here is the list of supported themes - 
+1. Design a Page or a Template you wish to use as a Header / Footer
+2. Open the Page Builder settings page
+3. Open the BB Header Footer settings
+4. Select the page or template that you saved to be used as a header.
+
+### Features of Beaver Builder Header Footer ###
+
+- Create attractive pages and templates that can be displayed as a Header or Footer.
+- Lets you use a fully customized header or footer across the website.
+
+### Themes you can use the Beaver Builder Header Footer with ###
+
+As of now, the Beaver Builder Header Footer settings can be used with the following themes.
 
 1. Beaver Builder theme
 2. Genesis Theme
@@ -29,6 +41,31 @@ Need help with something? Have an issue to report? [Get in touch](https://github
 ### Here is a quick video explaining how this plugin works ###
 
 [youtube https://www.youtube.com/watch?v=GlHxpuSqZs4&feature=youtu.be]
+
+Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Brainstorm Force</a>!
+
+### What’s More? ###
+
+If you like this plugin, please leave us a good review and rating! Your feedback and
+suggestions will be highly appreciated.
+ 
+You can also consider checking out our other plugins:
+
+<a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
+
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
+
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign= bbheaderfooter&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
+
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Beaver Builder Cards</a>: An advanced module to create attractive cards using Beaver Builder.
+
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign= bbheaderfooter&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
+
+Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on
+<a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=share”>Facebook</a> and <a
+href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=share”>Twitter</a>.
 
 ## Installation ##
 
