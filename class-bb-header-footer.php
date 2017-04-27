@@ -56,7 +56,7 @@ class BB_Header_Footer {
 			require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
 		} elseif ( 'generatepress' == $this->template ) {
 			// GeneratePress theme compatibility.
-			require BBHF_DIR . 'themes/generatepress/generatepress-compat.php';
+			require BBHF_DIR . 'themes/generatepress/class-generatepress-compat.php';
 		} elseif ( 'wp-primer-theme' == $this->template  || 'primer' == $this->template ) {
 			$this->template = 'primer';
 			require BBHF_DIR . 'themes/wp-primer-theme/primer-theme-compat.php';
@@ -82,6 +82,7 @@ class BB_Header_Footer {
 		}
 
 		echo '<div class="notice notice-error">';
+		/* Translators: URL to activate/install Beaevr Builder lite version */
 		echo '<p>' . sprintf( __( 'The <strong>BB Header Footer</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . '</p>', $url );
 		echo '</div>';
 	}
@@ -171,7 +172,9 @@ class BB_Header_Footer {
 			echo '<div class="bhf-fixed-header">';
 		}
 
-		echo FLBuilderShortcodes::insert_layout( array( 'id' => $header_id ) );
+		echo FLBuilderShortcodes::insert_layout( array(
+			'id' => $header_id,
+		) );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '</div>';
@@ -186,7 +189,9 @@ class BB_Header_Footer {
 
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
-		echo FLBuilderShortcodes::insert_layout( array( 'id' => $footer_id ) );
+		echo FLBuilderShortcodes::insert_layout( array(
+			'id' => $footer_id,
+		) );
 		echo '</div>';
 	}
 

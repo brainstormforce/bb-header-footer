@@ -8,7 +8,7 @@
 /**
  * Primer theme compatibility.
  */
-class BHF_Primer_Compat {
+class BHF_Primer_Theme_Compat {
 
 	/**
 	 * Instance of Genesis_Compat.
@@ -73,4 +73,4 @@ class BHF_Primer_Compat {
 
 }
 
-BHF_Primer_Compat::instance();
+BHF_Primer_Theme_Compat::instance();
