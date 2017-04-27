@@ -12,7 +12,7 @@ An easy-to-use Beaver Builder addon to import pages or templates as a header or 
 
 == Description ==
 
-Have you ever thought of a <a href=” https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description”>Beaver Builder addon</a> that allows you to use customized templates and pages as a header or footer across your website? Beaver Builder Header Footer adds a settings option to your page builder settings page making it easier to add customizable header and footer.
+Have you ever thought of a <a href="https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Beaver Builder addon</a> that allows you to use customized templates and pages as a header or footer across your website? Beaver Builder Header Footer adds a settings option to your page builder settings page making it easier to add customizable header and footer.
 
 All you need to do is -
 
