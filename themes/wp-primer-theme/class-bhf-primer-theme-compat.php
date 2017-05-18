@@ -23,7 +23,7 @@ class BHF_Primer_Theme_Compat {
 	public static function instance() {
 
 		if ( ! isset( self::$instance ) ) {
-			self::$instance = new BHF_Primer_Compat();
+			self::$instance = new BHF_Primer_Theme_Compat();
 
 			self::$instance->hooks();
 		}
