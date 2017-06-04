@@ -167,4 +167,5 @@
 
 .bhf-shrink-header .bhf-fixed .fl-module-content.fl-node-content img {
     max-height: 50px;
+    width: auto;
 }
