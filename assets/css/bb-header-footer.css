@@ -96,6 +96,11 @@
 
 /* Sticky header */
 
+.bhf-fixed-header {
+    position: relative;
+    z-index: 20;
+}
+
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
