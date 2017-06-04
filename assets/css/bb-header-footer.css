@@ -57,7 +57,8 @@
 .fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header:not(.bhf-sticky-header) .site-header,
 .fl-builder.dhf-template-primer.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap,
-.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header {
+.fl-builder.dhf-template-primer.bbhf-transparent-header .site-header,
+.fl-builder.dhf-template-astra.bbhf-transparent-header:not(.bhf-sticky-header) header .fl-row-content-wrap {
   background-color: transparent; 
   border: none;
   transition: background-color 0.3s ease-in-out;
@@ -73,14 +74,16 @@
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header .fl-page,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header .fl-page,
-.fl-builder.dhf-template-genesis.bbhf-transparent-header .fl-page  {
+.fl-builder.dhf-template-genesis.bbhf-transparent-header .fl-page,
+.fl-builder.dhf-template-astra.bbhf-transparent-header .fl-page  {
   position: relative;
 }
 
 .fl-builder.dhf-template-beaver-builder-theme.bbhf-transparent-header header#masthead,
 .fl-builder.dhf-template-generatepress.bbhf-transparent-header header#masthead,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header header#masthead,
-.fl-builder.dhf-template-primer.bbhf-transparent-header header#masthead  {
+.fl-builder.dhf-template-primer.bbhf-transparent-header header#masthead,
+.fl-builder.dhf-template-astra.bbhf-transparent-header header#masthead  {
   position: absolute;
   z-index: 10;
   width: 100%;
@@ -99,7 +102,9 @@
 .fl-builder.dhf-template-genesis.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
 .fl-builder.dhf-template-primer.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
-.fl-builder.dhf-template-primer.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
+.fl-builder.dhf-template-primer.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
+.fl-builder.dhf-template-astra.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-astra.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
     background-color: transparent; 
     border: none;
     transition: background-color 0.3s ease-in-out;

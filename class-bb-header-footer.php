@@ -50,6 +50,9 @@ class BB_Header_Footer {
 		if ( 'genesis' == $this->template ) {
 			// Genesis framework theme compatibility.
 			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
+		} elseif ( 'astra' == $this->template ) {
+			// Beaver Builder Theme compatibility.
+			require BBHF_DIR . 'themes/astra/class-astra-compat.php';
 		} elseif ( 'bb-theme' == $this->template || 'beaver-builder-theme' == $this->template ) {
 			// Beaver Builder Theme compatibility.
 			$this->template = 'beaver-builder-theme';
