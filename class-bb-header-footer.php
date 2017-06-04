@@ -135,15 +135,15 @@ class BB_Header_Footer {
 			$classes[] = 'dhf-footer';
 		}
 
-		if ( 'on' == $bb_transparent_header ) {
+		if ( '' !== $header_id && 'on' == $bb_transparent_header ) {
 			$classes[] = 'bbhf-transparent-header';
 		}
 
-		if ( 'on' == $bb_sticky_header ) {
+		if ( '' !== $header_id && 'on' == $bb_sticky_header ) {
 			$classes[] = 'bhf-sticky-header';
 		}
 
-		if ( 'on' == $bb_shrink_header ) {
+		if ( '' !== $header_id && 'on' == $bb_shrink_header ) {
 			$classes[] = 'bhf-shrink-header';
 		}
 
