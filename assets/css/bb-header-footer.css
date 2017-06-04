@@ -102,7 +102,9 @@
 .fl-builder.dhf-template-genesis.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
 .fl-builder.dhf-template-genesis.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
 .fl-builder.dhf-template-primer.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
-.fl-builder.dhf-template-primer.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
+.fl-builder.dhf-template-primer.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header,
+.fl-builder.dhf-template-astra.bbhf-transparent-header header .bhf-fixed-header:not(.bhf-fixed) .fl-row-content-wrap,
+.fl-builder.dhf-template-astra.bbhf-transparent-header .bhf-fixed-header:not(.bhf-fixed) .site-header {
     background-color: transparent; 
     border: none;
     transition: background-color 0.3s ease-in-out;
