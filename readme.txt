@@ -96,8 +96,8 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 = 1.1.5 =
 - New: Added support for the <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> WordPress theme - The Fastest, Most Lightweight &amp; Customizable WordPress Theme.
 - Fix: Submenu hides behind the page content if sticky header is enabled.
-- Fix: Shrink header breaking the aspect ratio in the images.
-- Fix: Transparent header and sticky header CSS being applied even if custom header is not selected.
+- Fix: Shrink header option breaking the aspect ratio of the images.
+- Fix: Transparent header and sticky header CSS is applied on the page even if custom header is not selected.
 
 = 1.1.4 =
 - Fix: Hide the default footer in generatepress and genesis theme.
