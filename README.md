@@ -30,7 +30,7 @@ All you need to do is -
 
 As of now, the Beaver Builder Header Footer settings can be used with the following themes.
 
-1. <a href="https://wpastra.com/">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme
+1. <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme
 2. Beaver Builder theme
 3. Genesis Theme
 4. GeneratePress Theme
@@ -79,7 +79,7 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 ### Which themes are supported by this plugin? ###
 
-1. <a href="https://wpastra.com/">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme.
+1. <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme.
 2. Beaver Builder theme.
 3. Genesis Theme (and should work with most of its child themes).
 4. GeneratePress Theme.
