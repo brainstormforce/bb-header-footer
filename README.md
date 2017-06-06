@@ -3,8 +3,8 @@
 **Tags:** beaver builder header footer, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
-**Tested up to:** 4.7.4  
-**Stable tag:** 1.1.4  
+**Tested up to:** 4.8.0  
+**Stable tag:** 1.1.5  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -30,10 +30,11 @@ All you need to do is -
 
 As of now, the Beaver Builder Header Footer settings can be used with the following themes.
 
-1. Beaver Builder theme
-2. Genesis Theme
-3. GeneratePress Theme
-4. Primer Theme
+1. <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme
+2. Beaver Builder theme
+3. Genesis Theme
+4. GeneratePress Theme
+5. Primer Theme
 
 ### Supported & Actively Developed ###
 Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Beaver Builder Header Footer on GitHub"). with us on GitHub.
@@ -78,10 +79,11 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 ### Which themes are supported by this plugin? ###
 
-1. Beaver Builder Theme.
-2. Genesis Theme (and should work with most of its child themes).
-3. GeneratePress Theme.
-4. Primer Theme.
+1. <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme.
+2. Beaver Builder theme.
+3. Genesis Theme (and should work with most of its child themes).
+4. GeneratePress Theme.
+5. Primer Theme.
 
 ### How does this plugin work? ###
 
@@ -90,6 +92,12 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 ## Changelog ##
+
+### 1.1.5 ###
+- New: Added support for the <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> WordPress theme - The Fastest, Most Lightweight &amp; Customizable WordPress Theme.
+- Fix: Submenu hides behind the page content if sticky header is enabled.
+- Fix: Shrink header option breaking the aspect ratio of the images.
+- Fix: Transparent header and sticky header CSS is applied on the page even if custom header is not selected.
 
 ### 1.1.4 ###
 - Fix: Hide the default footer in generatepress and genesis theme.
