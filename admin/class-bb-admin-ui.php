@@ -32,9 +32,9 @@ class BB_Admin_UI {
 	function settings_nav_item( $items ) {
 
 		$items['bb-header-footer'] = array(
-			'title' 	=> __( 'BB Header Footer', 'bb-header-footer' ),
-			'show'		=> true,
-			'priority'	=> 550,
+			'title'     => __( 'BB Header Footer', 'bb-header-footer' ),
+			'show'      => true,
+			'priority'  => 550,
 		);
 
 		return $items;

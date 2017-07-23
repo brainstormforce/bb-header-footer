@@ -60,7 +60,7 @@ class BB_Header_Footer {
 		} elseif ( 'generatepress' == $this->template ) {
 			// GeneratePress theme compatibility.
 			require BBHF_DIR . 'themes/generatepress/class-generatepress-compat.php';
-		} elseif ( 'wp-primer-theme' == $this->template  || 'primer' == $this->template ) {
+		} elseif ( 'wp-primer-theme' == $this->template || 'primer' == $this->template ) {
 			$this->template = 'primer';
 			require BBHF_DIR . 'themes/wp-primer-theme/class-bhf-primer-theme-compat.php';
 		} elseif ( ! current_theme_supports( 'bb-header-footer' ) ) {
@@ -121,11 +121,11 @@ class BB_Header_Footer {
 	 */
 	public function body_class( $classes ) {
 
-		$header_id 				= BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$footer_id 				= BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$header_id              = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$footer_id              = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		$bb_transparent_header  = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
-		$bb_sticky_header 		= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
-		$bb_shrink_header 		= BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
+		$bb_sticky_header       = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$bb_shrink_header       = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
 
 		if ( '' !== $header_id ) {
 			$classes[] = 'dhf-header';
@@ -168,16 +168,18 @@ class BB_Header_Footer {
 	 */
 	public static function get_header_content() {
 
-		$header_id 				= BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$bb_sticky_header 		= BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$header_id              = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$bb_sticky_header       = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
 		}
 
-		echo FLBuilderShortcodes::insert_layout( array(
-			'id' => $header_id,
-		) );
+		echo FLBuilderShortcodes::insert_layout(
+			array(
+				'id' => $header_id,
+			)
+		);
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '</div>';
@@ -192,9 +194,11 @@ class BB_Header_Footer {
 
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
-		echo FLBuilderShortcodes::insert_layout( array(
-			'id' => $footer_id,
-		) );
+		echo FLBuilderShortcodes::insert_layout(
+			array(
+				'id' => $footer_id,
+			)
+		);
 		echo '</div>';
 	}
 
@@ -232,7 +236,7 @@ class BB_Header_Footer {
 	 */
 	public static function get_settings( $setting = '', $default = '' ) {
 
-		$value 	 = $default;
+		$value   = $default;
 		$options = get_option( 'bbhf_settings' );
 
 		if ( isset( $options[ $setting ] ) ) {
