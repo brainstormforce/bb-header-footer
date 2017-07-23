@@ -27,7 +27,7 @@ class GeneratePress_Compat {
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new GeneratePress_Compat();
 
-			self::$instance->hooks();
+			add_action( 'wp', array( self::instance(), 'hooks' ) );
 		}
 
 		return self::$instance;
