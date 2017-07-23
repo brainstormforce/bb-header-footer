@@ -93,6 +93,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 == Changelog ==
 
+= 1.1.6-beta.1 =
+- Allow the plugin settings to be changed from child theme functions, This allows disabling and changing headers and footer per page from code.
+
 = 1.1.5 =
 - New: Added support for the <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> WordPress theme - The Fastest, Most Lightweight &amp; Customizable WordPress Theme.
 - Fix: Submenu hides behind the page content if sticky header is enabled.
