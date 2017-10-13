@@ -24,7 +24,7 @@ class BB_Header_Footer {
 
 		$this->template = get_template();
 
-		if ( class_exists( 'FLBuilder' ) && is_callable( 'FLBuilder::render_content_by_id' ) ) {
+		if ( class_exists( 'FLBuilder' ) ) {
 
 			$this->includes();
 			$this->load_textdomain();
@@ -115,11 +115,11 @@ class BB_Header_Footer {
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 
-		if ( '' !== $header_id ) {
+		if ( '' !== $header_id && is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
 			FLBuilder::enqueue_layout_styles_scripts_by_id( $header_id );
 		}
 
-		if ( '' !== $footer_id ) {
+		if ( '' !== $footer_id && is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
 			FLBuilder::enqueue_layout_styles_scripts_by_id( $footer_id );
 		}
 	}
@@ -186,7 +186,7 @@ class BB_Header_Footer {
 			echo '<div class="bhf-fixed-header">';
 		}
 
-		echo FLBuilder::render_content_by_id( $header_id );
+		echo self::render_bb_layout( $header_id );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '</div>';
@@ -201,8 +201,33 @@ class BB_Header_Footer {
 
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
-		echo FLBuilder::render_content_by_id( $footer_id );
+		echo self::render_bb_layout( $footer_id );
 		echo '</div>';
+	}
+
+	/**
+	 * Render the Beaver Builder Layout.
+	 * If method FLBuilder::render_content_by_id() is available it will be used, This was introduced in v1.10 of beaver builder.
+	 * If at all user is on a older version of beaver builder then it will render using the method FLBuilderShortcodes::insert_layout()
+	 *
+	 * @since  1.1.6
+	 *
+	 * @param String $post_id post of which is to be rendered.
+	 *
+	 * @return String Rendered markup of the layout
+	 */
+	public static function render_bb_layout( $post_id ) {
+		if ( is_callable( 'FLBuilder::render_content_by_id' ) ) {
+
+			return FLBuilder::render_content_by_id( $post_id );
+		} elseif ( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+
+			return FLBuilderShortcodes::insert_layout(
+				array(
+					'id' => $post_id,
+				)
+			);
+		}
 	}
 
 	/**
