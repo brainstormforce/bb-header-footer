@@ -3,8 +3,8 @@ Contributors: brainstormforce, Nikschavan
 Tags: beaver builder header footer, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
-Tested up to: 4.8.0
-Stable tag: 1.1.5
+Tested up to: 4.8.2
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,7 +93,7 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 == Changelog ==
 
-= 1.1.6 (unreleased) =
+= 1.1.6 =
 - Fix: Menu module could not highlight the current menu item in the header template.
 - Improvement: Load the Header and Footer JS in the `wp_qneueue_script`. earlier this was loaded right where the shortcode is added.
 - Allow the plugin settings to be changed from child theme functions, This allows disabling and changing headers and footer per page from code.
