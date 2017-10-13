@@ -86,7 +86,7 @@ class BB_Header_Footer {
 
 		echo '<div class="notice notice-error">';
 		/* Translators: URL to activate/install Beaver Builder lite version */
-		echo '<p>' . sprintf( __( 'The <strong>BB Header Footer</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin Version v1.10 or higher installed & activated.', 'bb-header-footer' ) . '</p>', $url );
+		echo '<p>' . sprintf( __( 'The <strong>BB Header Footer</strong> plugin requires Latest version of <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-header-footer' ) . '</p>', $url );
 		echo '</div>';
 	}
 
