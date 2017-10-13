@@ -1,6 +1,7 @@
 sudo: false
 
 language: php
+dist: precise
 
 notifications:
   email:
@@ -31,12 +32,13 @@ before_script:
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
       composer global require wp-coding-standards/wpcs
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+      composer global require wimg/php-compatibility
+      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs, $HOME/.composer/vendor/wimg/php-compatibility
     fi
 
 script:
   - if find . -name "*.php" ! -path "./vendor/*" ! -path "./admin/bsf-core/*" -exec php -l {} \; | grep "Errors parsing"; then exit 1; fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
+      phpcs
     fi
