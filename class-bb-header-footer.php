@@ -24,7 +24,7 @@ class BB_Header_Footer {
 
 		$this->template = get_template();
 
-		if ( class_exists( 'FLBuilder' ) && is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
+		if ( class_exists( 'FLBuilder' ) && is_callable( 'FLBuilder::render_content_by_id' ) ) {
 
 			$this->includes();
 			$this->load_textdomain();
@@ -111,6 +111,17 @@ class BB_Header_Footer {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
 		wp_register_script( 'bb-header-footer', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER, true );
 		wp_enqueue_script( 'bb-header-footer' );
+
+		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+
+		if ( '' !== $header_id ) {
+			FLBuilder::enqueue_layout_styles_scripts_by_id( $header_id );
+		}
+
+		if ( '' !== $footer_id ) {
+			FLBuilder::enqueue_layout_styles_scripts_by_id( $footer_id );
+		}
 	}
 
 	/**
@@ -175,11 +186,7 @@ class BB_Header_Footer {
 			echo '<div class="bhf-fixed-header">';
 		}
 
-		echo FLBuilderShortcodes::insert_layout(
-			array(
-				'id' => $header_id,
-			)
-		);
+		echo FLBuilder::render_content_by_id( $header_id );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '</div>';
@@ -194,11 +201,7 @@ class BB_Header_Footer {
 
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
-		echo FLBuilderShortcodes::insert_layout(
-			array(
-				'id' => $footer_id,
-			)
-		);
+		echo FLBuilder::render_content_by_id( $footer_id );
 		echo '</div>';
 	}
 
