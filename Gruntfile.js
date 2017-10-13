@@ -1,7 +1,7 @@
 module.exports = function( grunt ) {
 
 	'use strict';
-	var banner = '/**\n * <%= pkg.homepage %>\n * Copyright (c) <%= grunt.template.today("yyyy") %>\n * This file is generated automatically. Do not edit.\n */\n';
+
 	// Project configuration
 	grunt.initConfig( {
 
@@ -11,10 +11,11 @@ module.exports = function( grunt ) {
 			options: {
 				textdomain: 'bb-header-footer',
 			},
-			target: {
-				files: {
-					src: [ '*.php', '**/*.php', '!node_modules/**', '!php-tests/**', '!bin/**' ]
-				}
+			update_all_domains: {
+				options: {
+					updateDomains: true
+				},
+				src: [ '*.php', '**/*.php', '!\.git/**/*', '!bin/**/*', '!node_modules/**/*', '!tests/**/*' ]
 			}
 		},
 
@@ -30,6 +31,7 @@ module.exports = function( grunt ) {
 			target: {
 				options: {
 					domainPath: '/languages',
+					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
 					mainFile: 'bb-header-footer.php',
 					potFilename: 'bb-header-footer.pot',
 					potHeaders: {
@@ -41,65 +43,12 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
-
-       copy: {
-            main: {
-                options: {
-                    mode: true
-                },
-                src: [
-                    '**',
-                    '!node_modules/**',
-                    '!.git/**',
-                    '!*.sh',
-                    '!.gitlab-ci.yml',
-                    '!.gitignore',
-                    '!.gitattributes',
-                    '!Gruntfile.js',
-                    'npm-debug.log',
-                    '!package.json',
-                    '!bin/**',
-                    '!tests/**',
-                    '!phpunit.xml.dist',
-                    '!bb-header-footer.zip'
-                ],
-                dest: 'bb-header-footer/'
-            }
-        },
-
-        compress: {
-            main: {
-                options: {
-                    archive: 'bb-header-footer.zip',
-                    mode: 'zip'
-                },
-                files: [
-                    {
-                        src: [
-                            './bb-header-footer/**'
-                        ]
-
-                    }
-                ]
-            }
-        },
-
-        clean: {
-            main: ["bb-header-footer"],
-            zip: ["bb-header-footer.zip"]
-        }
-
 	} );
 
-    grunt.loadNpmTasks('grunt-wp-i18n');
-    grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-compress');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-
-    grunt.registerTask('release', ['clean:zip', 'copy', 'compress', 'clean:main']);
-    grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
-    grunt.registerTask('readme', ['wp_readme_to_markdown']);
+	grunt.loadNpmTasks( 'grunt-wp-i18n' );
+	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
+	grunt.registerTask( 'i18n', ['addtextdomain', 'makepot'] );
+	grunt.registerTask( 'readme', ['wp_readme_to_markdown'] );
 
 	grunt.util.linefeed = '\n';
 
