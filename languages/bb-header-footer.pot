@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Beaver Builder Header Footer package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Beaver Builder Header Footer 1.1.5\n"
+"Project-Id-Version: Beaver Builder Header Footer 1.1.6-beta.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bb-header-footer\n"
-"POT-Creation-Date: 2017-06-06 07:17:31+00:00\n"
+"POT-Creation-Date: 2017-10-13 07:02:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,11 +86,12 @@ msgstr ""
 #: class-bb-header-footer.php:89
 #. Translators: URL to activate/install Beaver Builder lite version
 msgid ""
-"The <strong>BB Header Footer</strong> plugin requires <strong><a "
-"href=\"%s\">Beaver Builder</strong></a> plugin installed & activated."
+"The <strong>BB Header Footer</strong> plugin requires Latest version of "
+"<strong><a href=\"%s\">Beaver Builder</strong></a> plugin installed & "
+"activated."
 msgstr ""
 
-#: class-bb-header-footer.php:161
+#: class-bb-header-footer.php:172
 msgid ""
 "Hey, your current theme is not supported by BB Header Footer, click <a "
 "href=\"https://github.com/Nikschavan/bb-header-footer#which-themes-are-"

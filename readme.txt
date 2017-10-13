@@ -93,7 +93,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 == Changelog ==
 
-= 1.1.6-beta.1 =
+= 1.1.6 (unreleased) =
+- Fix: Menu module could not highlight the current menu item in the header template.
+- Improvement: Load the Header and Footer JS in the `wp_qneueue_script`. earlier this was loaded right where the shortcode is added.
 - Allow the plugin settings to be changed from child theme functions, This allows disabling and changing headers and footer per page from code.
 
 = 1.1.5 =
