@@ -127,3 +127,8 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 ### 1.0.0 ###
 - Initial release
+
+## Upgrade Notice ##
+
+### 1.1.6 ###
+- Beaver Builder Header Footer requires Beaver Builder v1.10 or higher installed on your site.
