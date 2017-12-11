@@ -24,7 +24,7 @@ class BB_Header_Footer {
 
 		$this->template = get_template();
 
-		if ( class_exists( 'FLBuilder' ) ) {
+		if ( class_exists( 'FLBuilder' ) && is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
 
 			$this->includes();
 			$this->load_textdomain();
@@ -111,17 +111,6 @@ class BB_Header_Footer {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
 		wp_register_script( 'bb-header-footer', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER, true );
 		wp_enqueue_script( 'bb-header-footer' );
-
-		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
-
-		if ( '' !== $header_id && is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
-			FLBuilder::enqueue_layout_styles_scripts_by_id( $header_id );
-		}
-
-		if ( '' !== $footer_id && is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
-			FLBuilder::enqueue_layout_styles_scripts_by_id( $footer_id );
-		}
 	}
 
 	/**
@@ -217,17 +206,11 @@ class BB_Header_Footer {
 	 * @return String Rendered markup of the layout
 	 */
 	public static function render_bb_layout( $post_id ) {
-		if ( is_callable( 'FLBuilder::render_content_by_id' ) ) {
-
-			return FLBuilder::render_content_by_id( $post_id );
-		} elseif ( is_callable( 'FLBuilderShortcodes::insert_layout' ) ) {
-
-			return FLBuilderShortcodes::insert_layout(
-				array(
-					'id' => $post_id,
-				)
-			);
-		}
+		return FLBuilderShortcodes::insert_layout(
+			array(
+				'id' => $post_id,
+			)
+		);
 	}
 
 	/**
