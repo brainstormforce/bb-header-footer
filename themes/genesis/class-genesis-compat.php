@@ -133,8 +133,8 @@ class Genesis_Compat {
 		genesis_structural_wrap( 'footer', 'close' );
 		genesis_markup(
 			array(
-				'html5'   => '</footer>',
-				'xhtml'   => '</div>',
+				'html5' => '</footer>',
+				'xhtml' => '</div>',
 			)
 		);
 
