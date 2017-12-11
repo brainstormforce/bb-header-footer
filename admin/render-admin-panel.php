@@ -11,7 +11,7 @@
 	<h3>BB header Footer</h3>
 
 	<form id="bb-header-footer-form" action="<?php FLBuilderAdminSettings::render_form_action( 'bb-header-footer' ); ?>"
-		  method="post">
+		method="post">
 
 		<h3> <?php _e( 'Header', 'bb-header-footer' ); ?> </h3>
 
@@ -22,9 +22,9 @@
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', 0 );
 
 		$args = array(
-			'selected'          => $header_id,
-			'name'              => 'bb_header_id',
-			'show_option_none'  => "Theme's Header",
+			'selected'         => $header_id,
+			'name'             => 'bb_header_id',
+			'show_option_none' => "Theme's Header",
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
@@ -58,9 +58,9 @@
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', 0 );
 
 		$args = array(
-			'selected'          => $footer_id,
-			'name'              => 'bb_footer_id',
-			'show_option_none'  => "Theme's Footer",
+			'selected'         => $footer_id,
+			'name'             => 'bb_footer_id',
+			'show_option_none' => "Theme's Footer",
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
@@ -69,7 +69,7 @@
 
 		<p class="submit">
 			<input type="submit" name="fl-save-bb-header-footer" class="button-primary"
-				   value="<?php esc_attr_e( 'Save Settings', 'bb-header-footer' ); ?>"/>
+				value="<?php esc_attr_e( 'Save Settings', 'bb-header-footer' ); ?>"/>
 
 			<?php wp_nonce_field( 'bb-header-footer', 'fl-bb-header-footer-nonce' ); ?>
 		</p>
