@@ -94,7 +94,7 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 ## Changelog ##
 
 ### 1.1.7 ###
-- Fix: Beaver Builder layout cache missing loading CSS and JS files.
+- Fix: Beaver Builder layout cache missing some of the static CSS and JS files.
 - Fix: When editing the header / footer the layout was being duplicated.
 
 ### 1.1.6 ###
