@@ -76,7 +76,7 @@ class BB_Header_Footer {
 	public function bb_not_available() {
 
 		if ( file_exists( plugin_dir_path( 'bb-plugin-agency/fl-builder.php' ) )
-			 || file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) )
+			|| file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) )
 		) {
 
 			$url = network_admin_url() . 'plugins.php?s=Beaver+Builder+Plugin';

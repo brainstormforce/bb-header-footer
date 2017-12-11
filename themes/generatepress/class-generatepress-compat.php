@@ -86,7 +86,7 @@ class GeneratePress_Compat {
 	 */
 	public function get_footer_content() {
 		?>
-		
+
 		<footer class="ehf-site-info" itemtype="http://schema.org/WPFooter" itemscope="itemscope">
 			<?php BB_Header_Footer::get_footer_content(); ?>
 		</footer>

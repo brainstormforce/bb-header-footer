@@ -11,7 +11,7 @@
 	<h3>BB header Footer</h3>
 
 	<form id="bb-header-footer-form" action="<?php FLBuilderAdminSettings::render_form_action( 'bb-header-footer' ); ?>"
-		  method="post">
+		method="post">
 
 		<h3> <?php _e( 'Header', 'bb-header-footer' ); ?> </h3>
 
@@ -69,7 +69,7 @@
 
 		<p class="submit">
 			<input type="submit" name="fl-save-bb-header-footer" class="button-primary"
-				   value="<?php esc_attr_e( 'Save Settings', 'bb-header-footer' ); ?>"/>
+				value="<?php esc_attr_e( 'Save Settings', 'bb-header-footer' ); ?>"/>
 
 			<?php wp_nonce_field( 'bb-header-footer', 'fl-bb-header-footer-nonce' ); ?>
 		</p>
