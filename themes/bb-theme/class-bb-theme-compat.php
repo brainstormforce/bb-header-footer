@@ -58,7 +58,7 @@ class BB_Theme_Compat {
 	 */
 	public function get_header_content() {
 
-		$header_layout  = FLTheme::get_setting( 'fl-header-layout' );
+		$header_layout = FLTheme::get_setting( 'fl-header-layout' );
 
 		if ( 'none' == $header_layout || is_page_template( 'tpl-no-header-footer.php' ) ) {
 			return;

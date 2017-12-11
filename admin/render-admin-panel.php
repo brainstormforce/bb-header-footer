@@ -22,9 +22,9 @@
 		$header_id = BB_Header_Footer::get_settings( 'bb_header_id', 0 );
 
 		$args = array(
-			'selected'          => $header_id,
-			'name'              => 'bb_header_id',
-			'show_option_none'  => "Theme's Header",
+			'selected'         => $header_id,
+			'name'             => 'bb_header_id',
+			'show_option_none' => "Theme's Header",
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );
@@ -58,9 +58,9 @@
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', 0 );
 
 		$args = array(
-			'selected'          => $footer_id,
-			'name'              => 'bb_footer_id',
-			'show_option_none'  => "Theme's Footer",
+			'selected'         => $footer_id,
+			'name'             => 'bb_footer_id',
+			'show_option_none' => "Theme's Footer",
 		);
 
 		BB_Admin_UI::wp_dropdown_pages( $args );

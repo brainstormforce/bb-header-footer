@@ -65,7 +65,7 @@ class GeneratePress_Compat {
 	 */
 	public function generatepress_setup_footer() {
 		remove_action( 'generate_footer', 'generate_construct_footer_widgets', 5 );
-		remove_action( 'generate_footer','generate_construct_footer' );
+		remove_action( 'generate_footer', 'generate_construct_footer' );
 	}
 
 	/**

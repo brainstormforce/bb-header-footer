@@ -132,11 +132,11 @@ class BB_Header_Footer {
 	 */
 	public function body_class( $classes ) {
 
-		$header_id              = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$footer_id              = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
-		$bb_transparent_header  = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
-		$bb_sticky_header       = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
-		$bb_shrink_header       = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
+		$header_id             = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$footer_id             = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
+		$bb_sticky_header      = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$bb_shrink_header      = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
 
 		if ( '' !== $header_id ) {
 			$classes[] = 'dhf-header';
@@ -179,8 +179,8 @@ class BB_Header_Footer {
 	 */
 	public static function get_header_content() {
 
-		$header_id              = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$bb_sticky_header       = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$header_id        = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+		$bb_sticky_header = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
@@ -236,7 +236,7 @@ class BB_Header_Footer {
 	public static function uabb_upsell_message() {
 
 		if ( ! is_plugin_active( 'bb-ultimate-addon/bb-ultimate-addon.php' ) ) {
-			$html = '<hr>';
+			$html  = '<hr>';
 			$html .= '<span class="upsell-uabb">Want more Beaver Builder Addons? Check out <a target="_blank" href="' . self::uabb_purchase_url() . '">Ultimate Addon for Beaver Builder.</a></span>';
 
 			echo $html;
