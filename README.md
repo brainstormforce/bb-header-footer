@@ -91,6 +91,10 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 2. Design it as you would like it for your header or footer
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
+### How to disable Header/Footer on a specific page? ###
+
+Disabling Header/Footer on a specific page is possible using a filter in the plugin USe this tutorial on how you can do it. - <a href="https://github.com/Nikschavan/bb-header-footer/wiki/How-to-disable-Header-Footer-on-specific-page">https://github.com/Nikschavan/bb-header-footer/wiki/How-to-disable-Header-Footer-on-specific-page</a>
+
 ## Changelog ##
 
 ### 1.1.7 ###
