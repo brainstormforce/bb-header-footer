@@ -3,7 +3,7 @@
  * Plugin Name:     Beaver Builder Header Footer
  * Plugin URI:      https://github.com/Nikschavan/bb-header-footer/
  * Description:     An easy-to-use Beaver Builder addon to import pages or templates as a header or a footer across a Beaver Builder website.
- * Author:          Brainstorm Force, Nikhil Chavan
+ * Author:          Brainstorm Force
  * Author URI:      https://www.brainstormforce.com/
  * Text Domain:     bb-header-footer
  * Domain Path:     /languages
