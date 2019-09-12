@@ -111,6 +111,14 @@ class BB_Header_Footer {
 		wp_enqueue_style( 'bbhf-style', BBHF_URL . 'assets/css/bb-header-footer.css', array(), BBHF_VER );
 		wp_register_script( 'bb-header-footer', BBHF_URL . 'assets/js/bb-header-footer.js', array( 'jquery' ), BBHF_VER, true );
 		wp_enqueue_script( 'bb-header-footer' );
+
+		if ( is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
+			$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+			FLBuilder::enqueue_layout_styles_scripts_by_id( $header_id );
+
+			$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+			FLBuilder::enqueue_layout_styles_scripts_by_id( $footer_id );
+		}
 	}
 
 	/**
