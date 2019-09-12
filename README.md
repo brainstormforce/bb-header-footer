@@ -94,7 +94,7 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 ## Changelog ##
 
 ### 1.1.8 ###
-- Fix: Load CSS/JS of Header and Footer in <header> fixing flash of unstyled content.
+- Fix: Load CSS/JS of Header and Footer in `<header>` fixing flash of unstyled content.
 
 ### 1.1.7 ###
 - Fix: Beaver Builder layout cache missing some of the static CSS and JS files.
