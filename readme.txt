@@ -3,7 +3,7 @@ Contributors: brainstormforce, Nikschavan
 Tags: beaver builder header footer, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
-Tested up to: 4.9.3
+Tested up to: 5.2
 Stable tag: 1.1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -90,10 +90,6 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 1. Simply create a new page (or Beaver Builder Template)
 2. Design it as you would like it for your header or footer
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
-
-= How to disable Header/Footer on a specific page? =
-
-Disabling Header/Footer on a specific page is possible using a filter in the plugin USe this tutorial on how you can do it. - <a href="https://github.com/Nikschavan/bb-header-footer/wiki/How-to-disable-Header-Footer-on-specific-page">https://github.com/Nikschavan/bb-header-footer/wiki/How-to-disable-Header-Footer-on-specific-page</a>
 
 == Changelog ==
 
