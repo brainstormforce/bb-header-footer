@@ -58,9 +58,9 @@ You can also consider checking out our other plugins:
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign= bbheaderfooter&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Alerts for Beaver Builder</a>: An advanced module to create attention seeking alerts in Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Beaver Builder Cards</a>: An advanced module to create attractive cards using Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Cards for Beaver Builder </a>: An advanced module to create attractive cards using Beaver Builder.
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign= bbheaderfooter&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
 
