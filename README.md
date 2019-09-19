@@ -1,6 +1,6 @@
-# Beaver Builder Header Footer #
+# Header Footer for Beaver Builder #
 **Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [Nikschavan](https://profiles.wordpress.org/Nikschavan)  
-**Tags:** beaver builder header footer, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
+**Tags:** header footer for beaver builder, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
 **Tested up to:** 5.2  
@@ -12,7 +12,7 @@ An easy-to-use Beaver Builder addon to import pages or templates as a header or 
 
 ## Description ##
 
-Have you ever thought of a <a href="https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Beaver Builder addon</a> that allows you to use customized templates and pages as a header or footer across your website? Beaver Builder Header Footer adds a settings option to your page builder settings page making it easier to add customizable header and footer.
+Have you ever thought of a <a href="https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Beaver Builder addon</a> that allows you to use customized templates and pages as a header or footer across your website? Header Footer for Beaver Builder adds a settings option to your page builder settings page making it easier to add customizable header and footer.
 
 All you need to do is -
 
@@ -21,14 +21,14 @@ All you need to do is -
 3. Open the BB Header Footer settings
 4. Select the page or template that you saved to be used as a header.
 
-### Features of Beaver Builder Header Footer ###
+### Features of Header Footer for Beaver Builder ###
 
 - Create attractive pages and templates that can be displayed as a Header or Footer.
 - Lets you use a fully customized header or footer across the website.
 
-### Themes you can use the Beaver Builder Header Footer with ###
+### Themes you can use the Header Footer for Beaver Builder with ###
 
-As of now, the Beaver Builder Header Footer settings can be used with the following themes.
+As of now, the Header Footer for Beaver Builder settings can be used with the following themes.
 
 1. <a href="https://wpastra.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Astra</a> - The Fastest, Most Lightweight &amp; Customizable WordPress Theme
 2. Beaver Builder theme
@@ -37,7 +37,7 @@ As of now, the Beaver Builder Header Footer settings can be used with the follow
 5. Primer Theme
 
 ### Supported & Actively Developed ###
-Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Beaver Builder Header Footer on GitHub"). with us on GitHub.
+Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
 
 ### Here is a quick video explaining how this plugin works ###
 
