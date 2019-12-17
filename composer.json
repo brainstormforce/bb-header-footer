@@ -1,25 +1,32 @@
 {
-    "name": "nikschavan/bb-header-footer",
-    "description": "Create Header and Footer for your site using Beaver Builder page builder.",
-    "require-dev": {
-      "brainmaestro/composer-git-hooks": "^2.6",
-      "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-      "phpcompatibility/phpcompatibility-wp": "*",
-      "wp-coding-standards/wpcs": "dev-master"
-    },
-    "extra": {
-      "hooks": {
-        "pre-commit": [
-          "echo committing as $(git config user.name)",
-          "sh bin/block-commits-with-merge-conflict.sh"
-        ]
-      }
-    },
-    "scripts": {
-      "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
-      "post-update-cmd": "vendor/bin/cghooks update",
-      "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
-      "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source"
+  "name": "nikschavan/bb-header-footer",
+  "description": "Create Header and Footer for your site using Beaver Builder page builder.",
+  "require-dev": {
+    "brainmaestro/composer-git-hooks": "^2.6",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "wp-coding-standards/wpcs": "dev-master"
+  },
+  "extra": {
+    "hooks": {
+      "pre-commit": [
+        "echo committing as $(git config user.name)",
+        "sh bin/block-commits-with-merge-conflict.sh"
+      ]
     }
+  },
+  "scripts": {
+    "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
+    "post-update-cmd": "vendor/bin/cghooks update",
+    "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
+    "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source"
+  },
+  "require-dev": {
+    "phpcompatibility/php-compatibility": "*"
+  },
+  "prefer-stable" : true,
+  "scripts": {
+    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
+    "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility"
   }
-  
+}

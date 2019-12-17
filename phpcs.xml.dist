@@ -1,23 +1,24 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Coding Standards for Plugins">
 	<description>Generally-applicable sniffs for WordPress plugins</description>
-
 	<rule ref="PHPCompatibility"/>
 	<config name="testVersion" value="5.3-"/>
-
-	<rule ref="WordPress-Core" >
-		<exclude name="WordPress.PHP.StrictComparisons.LooseComparison" />
-	</rule>
-
+	<rule ref="WordPress-Core" />
 	<rule ref="WordPress-Docs" />
-
+	<rule ref="WordPress-Extra" />
 	<!-- Check all PHP files in directory tree by default. -->
 	<arg name="extensions" value="php"/>
 	<file>.</file>
-
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="strict_class_file_names" value="false" />
+		</properties>
+	</rule>
 	<!-- Show sniff codes in all reports -->
 	<arg value="s"/>
-
+	<exclude-pattern>*/classes/uabb-global-functions.php</exclude-pattern>
+	<exclude-pattern>*/classes/class-uabb-cloud-templates.php</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/admin/bsf-core/*</exclude-pattern>
 </ruleset>
