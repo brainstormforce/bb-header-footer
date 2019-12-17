@@ -4,7 +4,7 @@
 	 *
 	 *  @class BB_Copyright
 	 */
-	class BB_Copyright extends FLBuilderModule {
+	class UABB_Copyright extends FLBuilderModule {
 		/**
 		 * Constructor function that constructs default values for the Copyright Module
 		 *
@@ -13,15 +13,16 @@
 		public function __construct() {
 			parent::__construct(array(
 				'name'		   => __( 'Copyright', 'bb-header-footer' ),
-				'description'  => __( 'Beaver Builder Copyright Module', 'bb-header-footer'),
+				'description'  => __( 'UABB Copyright Module', 'bb-header-footer'),
 				'category'	   => __( 'Basic', 'bb-header-footer'),
 				'enabled'	   => true,
 				'editor_export'=> true,
 			));
 		}
+
 	}
 
-	FLBuilder::register_module('BB_Copyright',array(
+	FLBuilder::register_module('UABB_Copyright',array(
 		'general'	=>	array(
 			'title'		=> __('General', 'bb-header-footer'),
 			'sections'	=> array(
@@ -31,7 +32,7 @@
 						'copyright'		=> array(
 							'type'	  => 'text',
 							'label'   => __( 'Copyright', 'bb-header-footer' ),
-							'default' => 'Copyright ©'.gmdate("Y").' '.get_bloginfo( 'name' ).' Powered by '.get_bloginfo( 'name' ),	
+							'default' => __( 'Copyright © [hfbb_current_year] [hfbb_site_name] | Powered by [hfbb_site_name]', 'bb-header-footer' ),
 							'preview' => array(
 								'type'	=> 'text',
 								'selector' => '.hfbb-copyright-wrap a span, .hfbb-copyright-wrap span'
@@ -39,7 +40,7 @@
 						),
 						'copyright_url' => array(
 							'type'	  => 'link',
-							'label'   => __( 'Url', 'bb-header-footer' ),
+							'label'   => __( 'URL', 'bb-header-footer' ),
 							'preview' => array(
 								'type'	=> 'link',
 								'selector' => '.hfbb-copyright-wrap a',

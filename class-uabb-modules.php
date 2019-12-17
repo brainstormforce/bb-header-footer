@@ -2,7 +2,7 @@
 	/**
 	 * Loads Module 
 	 */
-	class BB_Modules
+	class UABB_Modules
 	{
 		/**
 		 * Initializes the class once all plugins have loaded.
@@ -27,9 +27,10 @@
 		 * Loads our custom modules.
 		 */
 		static public function load_modules() {
-			require_once BBHF_DIR.'modules/bb-copyright/bb-copyright.php';
+			require_once BBHF_DIR.'modules/uabb-copyright/uabb-copyright.php';
+			require BBHF_DIR .'modules/uabb-copyright/class-uabb-copyright-shortcode.php';
 		}
 	}
-	BB_Modules::init();
+	UABB_Modules::init();
 
 	?>
