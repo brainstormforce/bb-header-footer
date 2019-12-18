@@ -69,7 +69,7 @@ class BB_Header_Footer {
 			add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 		}
 
-		// Loads UABB modules
+		// Loads UABB modules.
 		$this->load_uabb_modules();
 	}
 
@@ -122,10 +122,10 @@ class BB_Header_Footer {
 		wp_enqueue_script( 'bb-header-footer' );
 
 		if ( is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
-			$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+			$header_id = self::get_settings( 'bb_header_id', '' );
 			FLBuilder::enqueue_layout_styles_scripts_by_id( $header_id );
 
-			$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+			$footer_id = self::get_settings( 'bb_footer_id', '' );
 			FLBuilder::enqueue_layout_styles_scripts_by_id( $footer_id );
 		}
 	}
@@ -138,11 +138,11 @@ class BB_Header_Footer {
 	 */
 	public function body_class( $classes ) {
 
-		$header_id             = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$footer_id             = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
-		$bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
-		$bb_sticky_header      = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
-		$bb_shrink_header      = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
+		$header_id             = self::get_settings( 'bb_header_id', '' );
+		$footer_id             = self::get_settings( 'bb_footer_id', '' );
+		$bb_transparent_header = self::get_settings( 'bb_transparent_header', 'off' );
+		$bb_sticky_header      = self::get_settings( 'bb_sticky_header', 'off' );
+		$bb_shrink_header      = self::get_settings( 'bb_shrink_header', 'on' );
 
 		if ( '' !== $header_id ) {
 			$classes[] = 'dhf-header';
@@ -185,8 +185,8 @@ class BB_Header_Footer {
 	 */
 	public static function get_header_content() {
 
-		$header_id        = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$bb_sticky_header = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$header_id        = self::get_settings( 'bb_header_id', '' );
+		$bb_sticky_header = self::get_settings( 'bb_sticky_header', 'off' );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
@@ -205,7 +205,7 @@ class BB_Header_Footer {
 	 */
 	public static function get_footer_content() {
 
-		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$footer_id = self::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
 		echo self::render_bb_layout( $footer_id );
 		echo '</div>';

@@ -16,17 +16,15 @@
     }
   },
   "scripts": {
-    "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
-    "post-update-cmd": "vendor/bin/cghooks update",
+   "scripts": {
+    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
+    "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
     "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
     "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source"
   },
   "require-dev": {
     "phpcompatibility/php-compatibility": "*"
   },
-  "prefer-stable" : true,
-  "scripts": {
-    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
-    "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility"
-  }
+  "prefer-stable" : true
+}
 }
