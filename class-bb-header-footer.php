@@ -31,7 +31,6 @@ class BB_Header_Footer {
 
 			// Load themes compatibility.
 			add_action( 'init', array( $this, 'themes_compat' ) );
-
 			// Scripts and styles.
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 			add_filter( 'body_class', array( $this, 'body_class' ) );
@@ -47,6 +46,7 @@ class BB_Header_Footer {
 	 * Themes compatibility
 	 */
 	public function themes_compat() {
+
 		if ( 'genesis' == $this->template ) {
 			// Genesis framework theme compatibility.
 			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
@@ -68,6 +68,9 @@ class BB_Header_Footer {
 			add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
 			add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 		}
+
+		// Loads UABB modules
+		$this->load_uabb_modules();
 	}
 
 	/**
@@ -95,6 +98,12 @@ class BB_Header_Footer {
 	 */
 	public function includes() {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
+	}
+	/**
+	 * Loads UABB modules.
+	 */
+	public function load_uabb_modules() {
+		require_once BBHF_DIR . 'modules/uabb-copyright/uabb-copyright.php';
 	}
 
 	/**

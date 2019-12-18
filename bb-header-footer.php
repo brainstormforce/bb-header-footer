@@ -30,6 +30,4 @@ function bb_header_footer_init() {
 	new BB_Header_Footer();
 }
 
-require 'class-uabb-modules.php';
-
 add_action( 'plugins_loaded', 'bb_header_footer_init' );
