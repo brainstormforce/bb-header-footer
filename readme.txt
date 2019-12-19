@@ -35,6 +35,7 @@ As of now, the Header Footer for Beaver Builder settings can be used with the fo
 3. Genesis Theme
 4. GeneratePress Theme
 5. Primer Theme
+6. Neve Theme
 
 = Supported & Actively Developed =
 Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
@@ -84,6 +85,7 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Genesis Theme (and should work with most of its child themes).
 4. GeneratePress Theme.
 5. Primer Theme.
+6. Neve Theme
 
 = How does this plugin work? =
 
