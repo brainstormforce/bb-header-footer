@@ -47,20 +47,20 @@ class BB_Header_Footer {
 	 */
 	public function themes_compat() {
 
-		if ( 'genesis' == $this->template ) {
+		if ( 'genesis' === $this->template ) {
 			// Genesis framework theme compatibility.
 			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-		} elseif ( 'astra' == $this->template ) {
+		} elseif ( 'astra' === $this->template ) {
 			// Beaver Builder Theme compatibility.
 			require BBHF_DIR . 'themes/astra/class-astra-compat.php';
-		} elseif ( 'bb-theme' == $this->template || 'beaver-builder-theme' == $this->template ) {
+		} elseif ( 'bb-theme' === $this->template || 'beaver-builder-theme' === $this->template ) {
 			// Beaver Builder Theme compatibility.
 			$this->template = 'beaver-builder-theme';
 			require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
-		} elseif ( 'generatepress' == $this->template ) {
+		} elseif ( 'generatepress' === $this->template ) {
 			// GeneratePress theme compatibility.
 			require BBHF_DIR . 'themes/generatepress/class-generatepress-compat.php';
-		} elseif ( 'wp-primer-theme' == $this->template || 'primer' == $this->template ) {
+		} elseif ( 'wp-primer-theme' === $this->template || 'primer' === $this->template ) {
 			$this->template = 'primer';
 			require BBHF_DIR . 'themes/wp-primer-theme/class-bhf-primer-theme-compat.php';
 		} elseif ( ! current_theme_supports( 'bb-header-footer' ) ) {
@@ -154,15 +154,15 @@ class BB_Header_Footer {
 			$classes[] = 'dhf-footer';
 		}
 
-		if ( '' !== $header_id && 'on' == $bb_transparent_header ) {
+		if ( '' !== $header_id && 'on' === $bb_transparent_header ) {
 			$classes[] = 'bbhf-transparent-header';
 		}
 
-		if ( '' !== $header_id && 'on' == $bb_sticky_header ) {
+		if ( '' !== $header_id && 'on' === $bb_sticky_header ) {
 			$classes[] = 'bhf-sticky-header';
 		}
 
-		if ( '' !== $header_id && 'on' == $bb_shrink_header ) {
+		if ( '' !== $header_id && 'on' === $bb_shrink_header ) {
 			$classes[] = 'bhf-shrink-header';
 		}
 
@@ -190,13 +190,13 @@ class BB_Header_Footer {
 		$header_id        = self::get_settings( 'bb_header_id', '' );
 		$bb_sticky_header = self::get_settings( 'bb_sticky_header', 'off' );
 
-		if ( 'on' == $bb_sticky_header ) {
+		if ( 'on' === $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
 		}
 
 		echo self::render_bb_layout( $header_id );
 
-		if ( 'on' == $bb_sticky_header ) {
+		if ( 'on' === $bb_sticky_header ) {
 			echo '</div>';
 			echo '<div class="bhf-ffixed-header-fixer" style="display:none;"></div>';
 		}
