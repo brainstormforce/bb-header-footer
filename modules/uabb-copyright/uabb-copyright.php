@@ -21,12 +21,13 @@ class UABB_Copyright extends FLBuilderModule {
 	public function __construct() {
 		parent::__construct(
 			array(
-				'name'            => __( 'Copyright', 'bb-header-footer' ),
+				'name'            => __( 'UABB Copyright', 'bb-header-footer' ),
 				'description'     => __( 'UABB Copyright Module', 'bb-header-footer' ),
-				'category'        => __( 'Basic', 'bb-header-footer' ),
+				'category'        => __( 'Advance', 'bb-header-footer' ),
 				'enabled'         => true,
 				'editor_export'   => true,
 				'partial_refresh' => true,
+				'icon'            => '',
 			)
 		);
 
