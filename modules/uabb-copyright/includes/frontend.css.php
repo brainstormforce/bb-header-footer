@@ -1,10 +1,10 @@
 <?php
 /**
- *  UABB Copyright Module front-end CSS php file
+ * UABB Copyright Module front-end CSS php file
  *
- *	@since  1.1.9
+ * @since  1.1.9
  *
- *  @package UABB Copyright Module
+ * @package UABB Copyright Module
  */
 
 FLBuilderCSS::typography_field_rule(
