@@ -18,7 +18,7 @@
 require_once 'class-bb-header-footer.php';
 
 
-define( 'BBHF_VER', '1.1.8' );
+define( 'BBHF_VER', '1.1.9' );
 define( 'BBHF_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BBHF_URL', plugins_url( '/', __FILE__ ) );
 define( 'BBHF_PATH', plugin_basename( __FILE__ ) );

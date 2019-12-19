@@ -14,6 +14,8 @@ class UABB_Copyright extends FLBuilderModule {
 	/**
 	 * Constructor function that constructs default values for the Copyright Module
 	 *
+	 * @since  1.1.9
+	 *
 	 * @method __construct
 	 */
 	public function __construct() {
@@ -34,6 +36,8 @@ class UABB_Copyright extends FLBuilderModule {
 	/**
 	 * Get_year method to get the current year
 	 *
+	 * @since  1.1.9
+	 *
 	 * @method get_year
 	 */
 	public static function get_year() {
@@ -45,6 +49,8 @@ class UABB_Copyright extends FLBuilderModule {
 	}
 	/**
 	 * Get_site_title method to get information of site
+	 *
+	 * @since  1.1.9
 	 *
 	 * @method get_site_title
 	 */
