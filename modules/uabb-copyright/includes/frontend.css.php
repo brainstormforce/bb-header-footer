@@ -9,7 +9,7 @@
 
 FLBuilderCSS::rule(
 	array(
-		'selector' => ".fl-node-$id .hfbb-copyright-wrap span, .fl-node-$id .hfbb-copyright-wrap a span",
+		'selector' => ".fl-node-$id .hfbb-copyright-wrap .hfbb-copyright, .fl-node-$id .hfbb-copyright-wrap .hfbb-copyright-link .hfbb-copyright",
 		'props'    => array(
 			'color' => $settings->copyright_color,
 		),
