@@ -100,9 +100,9 @@ class BB_Header_Footer {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
 	}
 	/**
-	 * @since  1.1.9
-	 *
 	 * Loads UABB modules.
+	 *
+	 * @since  1.1.9
 	 */
 	public function load_uabb_modules() {
 		require_once BBHF_DIR . 'modules/uabb-copyright/uabb-copyright.php';
