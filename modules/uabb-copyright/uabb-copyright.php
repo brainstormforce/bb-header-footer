@@ -2,6 +2,8 @@
 /**
  * UABB copyright Module
  *
+ * @since  1.1.9
+ *
  * @package  bb-header-footer
  */
 

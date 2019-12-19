@@ -100,6 +100,8 @@ class BB_Header_Footer {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
 	}
 	/**
+	 * @since  1.1.9
+	 *
 	 * Loads UABB modules.
 	 */
 	public function load_uabb_modules() {

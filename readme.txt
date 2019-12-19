@@ -95,6 +95,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 == Changelog ==
 
+= 1.1.9 =
+- New: Added Copyright module and Shortcode for current year & site title.
+
 = 1.1.8 =
 - Fix: Load CSS/JS of Header and Footer in `<header>` fixing flash of unstyled content.
 

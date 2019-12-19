@@ -2,6 +2,8 @@
 /**
  * Render the frontend content.
  *
+ * @since  1.1.9
+ *
  * @package Copyright Module
  */
 

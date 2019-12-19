@@ -2,6 +2,8 @@
 /**
  *  UABB Copyright Module front-end CSS php file
  *
+ *	@since  1.1.9
+ *
  *  @package UABB Copyright Module
  */
 
