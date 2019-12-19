@@ -31,7 +31,6 @@ class BB_Header_Footer {
 
 			// Load themes compatibility.
 			add_action( 'init', array( $this, 'themes_compat' ) );
-
 			// Scripts and styles.
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 			add_filter( 'body_class', array( $this, 'body_class' ) );
@@ -47,20 +46,21 @@ class BB_Header_Footer {
 	 * Themes compatibility
 	 */
 	public function themes_compat() {
-		if ( 'genesis' == $this->template ) {
+
+		if ( 'genesis' === $this->template ) {
 			// Genesis framework theme compatibility.
 			require BBHF_DIR . 'themes/genesis/class-genesis-compat.php';
-		} elseif ( 'astra' == $this->template ) {
+		} elseif ( 'astra' === $this->template ) {
 			// Beaver Builder Theme compatibility.
 			require BBHF_DIR . 'themes/astra/class-astra-compat.php';
-		} elseif ( 'bb-theme' == $this->template || 'beaver-builder-theme' == $this->template ) {
+		} elseif ( 'bb-theme' === $this->template || 'beaver-builder-theme' === $this->template ) {
 			// Beaver Builder Theme compatibility.
 			$this->template = 'beaver-builder-theme';
 			require BBHF_DIR . 'themes/bb-theme/class-bb-theme-compat.php';
-		} elseif ( 'generatepress' == $this->template ) {
+		} elseif ( 'generatepress' === $this->template ) {
 			// GeneratePress theme compatibility.
 			require BBHF_DIR . 'themes/generatepress/class-generatepress-compat.php';
-		} elseif ( 'wp-primer-theme' == $this->template || 'primer' == $this->template ) {
+		} elseif ( 'wp-primer-theme' === $this->template || 'primer' === $this->template ) {
 			$this->template = 'primer';
 			require BBHF_DIR . 'themes/wp-primer-theme/class-bhf-primer-theme-compat.php';
 		} elseif ( ! current_theme_supports( 'bb-header-footer' ) ) {
@@ -68,6 +68,9 @@ class BB_Header_Footer {
 			add_action( 'admin_notices', array( $this, 'unsupported_theme' ) );
 			add_action( 'network_admin_notices', array( $this, 'unsupported_theme' ) );
 		}
+
+		// Loads UABB modules.
+		$this->load_uabb_modules();
 	}
 
 	/**
@@ -96,6 +99,14 @@ class BB_Header_Footer {
 	public function includes() {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
 	}
+	/**
+	 * Loads UABB modules.
+	 *
+	 * @since  1.1.9
+	 */
+	public function load_uabb_modules() {
+		require_once BBHF_DIR . 'modules/uabb-copyright/uabb-copyright.php';
+	}
 
 	/**
 	 * Loads textdomain for the plugin.
@@ -113,10 +124,10 @@ class BB_Header_Footer {
 		wp_enqueue_script( 'bb-header-footer' );
 
 		if ( is_callable( 'FLBuilder::enqueue_layout_styles_scripts_by_id' ) ) {
-			$header_id = BB_Header_Footer::get_settings( 'bb_header_id', '' );
+			$header_id = self::get_settings( 'bb_header_id', '' );
 			FLBuilder::enqueue_layout_styles_scripts_by_id( $header_id );
 
-			$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+			$footer_id = self::get_settings( 'bb_footer_id', '' );
 			FLBuilder::enqueue_layout_styles_scripts_by_id( $footer_id );
 		}
 	}
@@ -129,11 +140,11 @@ class BB_Header_Footer {
 	 */
 	public function body_class( $classes ) {
 
-		$header_id             = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$footer_id             = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
-		$bb_transparent_header = BB_Header_Footer::get_settings( 'bb_transparent_header', 'off' );
-		$bb_sticky_header      = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
-		$bb_shrink_header      = BB_Header_Footer::get_settings( 'bb_shrink_header', 'on' );
+		$header_id             = self::get_settings( 'bb_header_id', '' );
+		$footer_id             = self::get_settings( 'bb_footer_id', '' );
+		$bb_transparent_header = self::get_settings( 'bb_transparent_header', 'off' );
+		$bb_sticky_header      = self::get_settings( 'bb_sticky_header', 'off' );
+		$bb_shrink_header      = self::get_settings( 'bb_shrink_header', 'on' );
 
 		if ( '' !== $header_id ) {
 			$classes[] = 'dhf-header';
@@ -143,15 +154,15 @@ class BB_Header_Footer {
 			$classes[] = 'dhf-footer';
 		}
 
-		if ( '' !== $header_id && 'on' == $bb_transparent_header ) {
+		if ( '' !== $header_id && 'on' === $bb_transparent_header ) {
 			$classes[] = 'bbhf-transparent-header';
 		}
 
-		if ( '' !== $header_id && 'on' == $bb_sticky_header ) {
+		if ( '' !== $header_id && 'on' === $bb_sticky_header ) {
 			$classes[] = 'bhf-sticky-header';
 		}
 
-		if ( '' !== $header_id && 'on' == $bb_shrink_header ) {
+		if ( '' !== $header_id && 'on' === $bb_shrink_header ) {
 			$classes[] = 'bhf-shrink-header';
 		}
 
@@ -176,16 +187,16 @@ class BB_Header_Footer {
 	 */
 	public static function get_header_content() {
 
-		$header_id        = BB_Header_Footer::get_settings( 'bb_header_id', '' );
-		$bb_sticky_header = BB_Header_Footer::get_settings( 'bb_sticky_header', 'off' );
+		$header_id        = self::get_settings( 'bb_header_id', '' );
+		$bb_sticky_header = self::get_settings( 'bb_sticky_header', 'off' );
 
-		if ( 'on' == $bb_sticky_header ) {
+		if ( 'on' === $bb_sticky_header ) {
 			echo '<div class="bhf-fixed-header">';
 		}
 
 		echo self::render_bb_layout( $header_id );
 
-		if ( 'on' == $bb_sticky_header ) {
+		if ( 'on' === $bb_sticky_header ) {
 			echo '</div>';
 			echo '<div class="bhf-ffixed-header-fixer" style="display:none;"></div>';
 		}
@@ -196,7 +207,7 @@ class BB_Header_Footer {
 	 */
 	public static function get_footer_content() {
 
-		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
+		$footer_id = self::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
 		echo self::render_bb_layout( $footer_id );
 		echo '</div>';
