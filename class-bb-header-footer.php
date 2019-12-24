@@ -216,14 +216,24 @@ class BB_Header_Footer {
 	 */
 	public static function render_bb_layout( $post_id, $data_type ) {
 
+		$data_array = array(
+			'itemscope' => 'itemscope',
+			'data-type' => $data_type,
+		);
+
+		switch ( $data_type ) {
+			case 'header':
+				$data_array['itemtype'] = 'http://schema.org/WPHeader';
+				break;
+			case 'footer':
+				$data_array['itemtype'] = 'http://schema.org/WPFooter';
+				break;
+		}
+
 		return FLBuilder::render_content_by_id(
 			$post_id,
 			'div',
-			array(
-				'itemscope' => 'itemscope',
-				'itemtype'  => 'http://schema.org/WPHeader',
-				'data-type' => $data_type,
-			)
+			$data_array
 		);
 	}
 
