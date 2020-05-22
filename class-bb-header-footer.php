@@ -183,7 +183,7 @@ class BB_Header_Footer {
 			echo '<div class="bhf-fixed-header">';
 		}
 
-		echo self::render_bb_layout( $header_id );
+		echo self::render_bb_layout( $header_id, 'header' );
 
 		if ( 'on' == $bb_sticky_header ) {
 			echo '</div>';
@@ -198,7 +198,7 @@ class BB_Header_Footer {
 
 		$footer_id = BB_Header_Footer::get_settings( 'bb_footer_id', '' );
 		echo "<div class='footer-width-fixer'>";
-		echo self::render_bb_layout( $footer_id );
+		echo self::render_bb_layout( $footer_id, 'footer' );
 		echo '</div>';
 	}
 
@@ -210,14 +210,30 @@ class BB_Header_Footer {
 	 * @since  1.1.6
 	 *
 	 * @param String $post_id post of which is to be rendered.
+	 * @param String $data_type data-type of which is to be rendered.
 	 *
 	 * @return String Rendered markup of the layout
 	 */
-	public static function render_bb_layout( $post_id ) {
-		return FLBuilderShortcodes::insert_layout(
-			array(
-				'id' => $post_id,
-			)
+	public static function render_bb_layout( $post_id, $data_type ) {
+
+		$data_array = array(
+			'itemscope' => 'itemscope',
+			'data-type' => $data_type,
+		);
+
+		switch ( $data_type ) {
+			case 'header':
+				$data_array['itemtype'] = 'http://schema.org/WPHeader';
+				break;
+			case 'footer':
+				$data_array['itemtype'] = 'http://schema.org/WPFooter';
+				break;
+		}
+
+		return FLBuilder::render_content_by_id(
+			$post_id,
+			'div',
+			$data_array
 		);
 	}
 
