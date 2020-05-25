@@ -4,7 +4,7 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
 **Tested up to:** 5.4
-**Stable tag:** 1.1.8  
+**Stable tag:** 1.1.9
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -92,6 +92,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 ## Changelog ##
+
+### 1.1.9 ###
+- Fix: Layout CSS/JS not rendering in some cases
 
 ### 1.1.8 ###
 - Fix: Load CSS/JS of Header and Footer in `<header>` fixing flash of unstyled content.
