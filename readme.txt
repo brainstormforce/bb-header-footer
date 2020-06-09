@@ -95,6 +95,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 == Changelog ==
 
+= 1.2.0 =
+- New: New: Users can now share non-personal usage data to help us test and develop better products. ( https://store.brainstormforce.com/usage-tracking/?utm_source=wp_dashboard&utm_medium=general_settings&utm_campaign=usage_tracking )
+
 = 1.1.9 =
 - Fix: Layout CSS/JS not rendering in some cases
 
