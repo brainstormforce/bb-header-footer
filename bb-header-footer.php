@@ -30,6 +30,3 @@ function bb_header_footer_init() {
 }
 
 add_action( 'plugins_loaded', 'bb_header_footer_init' );
-
-// BSF Analytics Tracker.
-	require_once BBHF_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';

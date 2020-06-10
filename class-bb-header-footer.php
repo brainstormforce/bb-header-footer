@@ -95,6 +95,10 @@ class BB_Header_Footer {
 	 */
 	public function includes() {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
+		// Astra notices
+		require_once BBHF_DIR . 'lib/notices/class-astra-notices.php';
+		// BSF Analytics Tracker.
+		require_once BBHF_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 	}
 
 	/**
