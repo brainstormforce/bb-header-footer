@@ -4,7 +4,7 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
 **Tested up to:** 5.4
-**Stable tag:** 1.1.9
+**Stable tag:** 1.2.0
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
