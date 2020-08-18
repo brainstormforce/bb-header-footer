@@ -1,3 +1,19 @@
+.astra-notice .notice-container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.astra-notice .notice-content {
+  margin-left: 15px;
+}
+
+.astra-notice .notice-image img{
+  max-width: 70px;
+}
+
 .footer-width-fixer {
   width: 100%;
 }
