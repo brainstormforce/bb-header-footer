@@ -7,6 +7,64 @@ module.exports = function( grunt ) {
 
 		pkg: grunt.file.readJSON( 'package.json' ),
 
+		copy: {
+			main: {
+				options: {
+					mode: true
+				},
+				src: [
+					'**',
+					'*.zip',
+					'!node_modules/**',
+					'!build/**',
+					'!css/sourcemap/**',
+					'!.git/**',
+					'!bin/**',
+					'!.gitlab-ci.yml',
+					'!bin/**',
+					'!tests/**',
+					'!phpunit.xml.dist',
+					'!*.sh',
+					'!*.map',
+					'!Gruntfile.js',
+					'!package.json',
+					'!.gitignore',
+					'!phpunit.xml',
+					'!README.md',
+					'!sass/**',
+					'!codesniffer.ruleset.xml',
+					'!vendor/**',
+					'!composer.json',
+					'!composer.lock',
+					'!package-lock.json',
+					'!phpcs.xml.dist',
+				],
+				dest: 'bb-header-footer/'
+			}
+		},
+
+		compress: {
+			main: {
+				options: {
+					archive: 'bb-header-footer-<%= pkg.version %>.zip',
+					mode: 'zip'
+				},
+				files: [
+					{
+						src: [
+							'./bb-header-footer/**'
+						]
+
+					}
+				]
+			}
+		},
+
+		clean: {
+			main: ["bb-header-footer"],
+			zip: ["*.zip"],
+		},
+
 		addtextdomain: {
 			options: {
 				textdomain: 'bb-header-footer',
@@ -49,6 +107,10 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
 	grunt.registerTask( 'i18n', ['addtextdomain', 'makepot'] );
 	grunt.registerTask( 'readme', ['wp_readme_to_markdown'] );
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-compress');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.registerTask('release', ['clean:zip', 'copy', 'compress', 'clean:main']);
 
 	grunt.util.linefeed = '\n';
 
