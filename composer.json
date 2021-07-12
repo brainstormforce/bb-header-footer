@@ -1,9 +1,12 @@
 {
     "name": "nikschavan/bb-header-footer",
     "description": "Create Header and Footer for your site using Beaver Builder page builder.",
+    "require": {
+      "brainstormforce/astra-notices": "^1.1"
+    },
     "require-dev": {
       "brainmaestro/composer-git-hooks": "^2.6",
-      "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+      "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
       "phpcompatibility/phpcompatibility-wp": "*",
       "wp-coding-standards/wpcs": "dev-master"
     },
@@ -13,8 +16,19 @@
           "echo committing as $(git config user.name)",
           "sh bin/block-commits-with-merge-conflict.sh"
         ]
+      },
+      "installer-paths": {
+        "lib/{$name}/": [
+          "brainstormforce/astra-notices"
+        ]
       }
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "git@github.com:brainstormforce/astra-notices.git"
+      }
+    ],
     "scripts": {
       "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
       "post-update-cmd": "vendor/bin/cghooks update",
@@ -22,4 +36,3 @@
       "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source"
     }
   }
-  
