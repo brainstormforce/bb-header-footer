@@ -23,12 +23,6 @@
         ]
       }
     },
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "git@github.com:brainstormforce/astra-notices.git"
-      }
-    ],
     "scripts": {
       "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
       "post-update-cmd": "vendor/bin/cghooks update",
