@@ -3,8 +3,8 @@
 **Tags:** header footer for beaver builder, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
-**Tested up to:** 5.8
-**Stable tag:** 1.2.1
+**Tested up to:** 5.9  
+**Stable tag:** 1.2.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -35,6 +35,7 @@ As of now, the Header Footer for Beaver Builder settings can be used with the fo
 3. Genesis Theme
 4. GeneratePress Theme
 5. Primer Theme
+6. Neve Theme
 
 ### Supported & Actively Developed ###
 Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
@@ -84,6 +85,7 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Genesis Theme (and should work with most of its child themes).
 4. GeneratePress Theme.
 5. Primer Theme.
+6. Neve Theme.
 
 ### How does this plugin work? ###
 
