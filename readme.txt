@@ -3,7 +3,7 @@ Contributors: brainstormforce, Nikschavan
 Tags: header footer for beaver builder, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
-Tested up to: 6.0
+Tested up to: 6.1
 Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,7 +50,7 @@ Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&u
 
 If you like this plugin, please leave us a good review and rating! Your feedback and
 suggestions will be highly appreciated.
- 
+
 You can also consider checking out our other plugins:
 
 <a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
