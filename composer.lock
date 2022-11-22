@@ -8,32 +8,35 @@
     "packages": [
         {
             "name": "brainstormforce/astra-notices",
-            "version": "1.1.8",
+            "version": "1.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainstormforce/astra-notices.git",
-                "reference": "9e46068fa861816d88cae4bbed86adac30743809"
+                "reference": "742c8879a3a9154a55fbf628324af96154d2697f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainstormforce/astra-notices/zipball/9e46068fa861816d88cae4bbed86adac30743809",
-                "reference": "9e46068fa861816d88cae4bbed86adac30743809",
+                "url": "https://api.github.com/repos/brainstormforce/astra-notices/zipball/742c8879a3a9154a55fbf628324af96154d2697f",
+                "reference": "742c8879a3a9154a55fbf628324af96154d2697f",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.11"
+                "composer/installers": "^2.0"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "phpcompatibility/phpcompatibility-wp": "^2.1",
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5",
+                "phpunit/phpunit": "^7",
+                "roots/wordpress": "^5.9",
                 "wp-cli/dist-archive-command": "^2.0",
-                "wp-coding-standards/wpcs": "^2.3"
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "wordpress-plugin",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL v3"
+                "GPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -44,45 +47,43 @@
             "description": "Easily create admin notices",
             "support": {
                 "issues": "https://github.com/brainstormforce/astra-notices/issues",
-                "source": "https://github.com/brainstormforce/astra-notices/tree/1.1.8"
+                "source": "https://github.com/brainstormforce/astra-notices/tree/1.1.11"
             },
-            "time": "2021-07-07T09:51:07+00:00"
+            "time": "2022-02-09T09:14:49+00:00"
         },
         {
             "name": "composer/installers",
-            "version": "v1.11.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "ae03311f45dfe194412081526be2e003960df74b"
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/ae03311f45dfe194412081526be2e003960df74b",
-                "reference": "ae03311f45dfe194412081526be2e003960df74b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/c29dc4b93137acb82734f672c37e029dfbd95b35",
+                "reference": "c29dc4b93137acb82734f672c37e029dfbd95b35",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0 || ^2.0"
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
                 "composer/composer": "1.6.* || ^2.0",
                 "composer/semver": "^1 || ^3",
                 "phpstan/phpstan": "^0.12.55",
                 "phpstan/phpstan-phpunit": "^0.12.16",
-                "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.3"
+                "symfony/phpunit-bridge": "^5.3",
+                "symfony/process": "^5"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
+                    "dev-main": "2.x-dev"
+                },
+                "plugin-modifies-install-path": true
             },
             "autoload": {
                 "psr-4": {
@@ -103,7 +104,6 @@
             "description": "A multi-framework Composer library installer",
             "homepage": "https://composer.github.io/installers/",
             "keywords": [
-                "Craft",
                 "Dolibarr",
                 "Eliasis",
                 "Hurad",
@@ -124,7 +124,6 @@
                 "Whmcs",
                 "WolfCMS",
                 "agl",
-                "aimeos",
                 "annotatecms",
                 "attogram",
                 "bitrix",
@@ -143,7 +142,6 @@
                 "grav",
                 "installer",
                 "itop",
-                "joomla",
                 "known",
                 "kohana",
                 "laravel",
@@ -152,12 +150,14 @@
                 "magento",
                 "majima",
                 "mako",
+                "matomo",
                 "mediawiki",
                 "miaoxing",
                 "modulework",
                 "modx",
                 "moodle",
                 "osclass",
+                "pantheon",
                 "phpbb",
                 "piwik",
                 "ppi",
@@ -170,9 +170,7 @@
                 "silverstripe",
                 "sydes",
                 "sylius",
-                "symfony",
                 "tastyigniter",
-                "typo3",
                 "wordpress",
                 "yawik",
                 "zend",
@@ -180,7 +178,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v1.11.0"
+                "source": "https://github.com/composer/installers/tree/v2.2.0"
             },
             "funding": [
                 {
@@ -196,7 +194,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-28T06:42:17+00:00"
+            "time": "2022-08-20T06:45:11+00:00"
         }
     ],
     "packages-dev": [
@@ -1493,5 +1491,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
