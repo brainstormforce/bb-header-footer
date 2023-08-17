@@ -1,12 +1,12 @@
 # Header Footer for Beaver Builder #
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [Nikschavan](https://profiles.wordpress.org/Nikschavan)
-**Tags:** header footer for beaver builder, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer
-**Donate link:** https://www.paypal.me/BrainstormForce
-**Requires at least:** 3.6
-**Tested up to:** 6.2
-**Stable tag:** 1.2.2
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [Nikschavan](https://profiles.wordpress.org/Nikschavan)  
+**Tags:** header footer for beaver builder, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
+**Donate link:** https://www.paypal.me/BrainstormForce  
+**Requires at least:** 3.6  
+**Tested up to:** 6.3  
+**Stable tag:** 1.2.2  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
 An easy-to-use Beaver Builder addon to import pages or templates as a header or a footer across a Beaver Builder website.
 
