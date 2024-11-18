@@ -3,7 +3,7 @@ Contributors: brainstormforce, Nikschavan
 Tags: header footer for beaver builder, beaver builder addon, beaver builder, page builder addons, beaver builder template
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
