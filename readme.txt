@@ -21,7 +21,7 @@ All you need to do is -
 3. Open the BB Header Footer settings
 4. Select the page or template that you saved to be used as a header.
 
-[Try it out on a free dummy site](https://zipwp.org/plugins/bb-header-footer)
+[Try the live demo of Header Footer for Beaver Builder](https://zipwp.org/plugins/bb-header-footer)
 
 = Features of Header Footer for Beaver Builder =
 
