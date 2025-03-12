@@ -97,6 +97,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 
 ## Changelog ##
 
+### 1.2.3 ###
+- This update addressed a security bug. Please make sure you are using the latest version on your website.
+
 ### 1.2.2 ###
 - Improvement: WordPress 5.9 compatibility.
 
