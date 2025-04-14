@@ -1,10 +1,10 @@
 # Header Footer for Beaver Builder #
 **Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [Nikschavan](https://profiles.wordpress.org/Nikschavan)  
-**Tags:** header footer for beaver builder, beaver builder modules, customize header, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, beaver builder header, customize footer  
+**Tags:** header footer for beaver builder, beaver builder addon, beaver builder, page builder addons, beaver builder template  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
-**Tested up to:** 6.6  
-**Stable tag:** 1.2.2  
+**Tested up to:** 6.8  
+**Stable tag:** 1.2.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -21,7 +21,7 @@ All you need to do is -
 3. Open the BB Header Footer settings
 4. Select the page or template that you saved to be used as a header.
 
-[Try it out on a free dummy site](https://bsf.io/bb-header-footer-demo)
+[Try the live demo of Header Footer for Beaver Builder](https://zipwp.org/plugins/bb-header-footer)
 
 ### Features of Header Footer for Beaver Builder ###
 
@@ -96,6 +96,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 ## Changelog ##
+
+### 1.2.3 ###
+- This update addressed a security bug. Please make sure you are using the latest version on your website.
 
 ### 1.2.2 ###
 - Improvement: WordPress 5.9 compatibility.
