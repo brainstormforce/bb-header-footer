@@ -1,5 +1,5 @@
 === Header Footer for Beaver Builder ===
-Contributors: brainstormforce, Nikschavan
+Contributors: brainstormforce
 Tags: header footer for beaver builder, beaver builder addon, beaver builder, page builder addons, beaver builder template
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
@@ -40,11 +40,7 @@ As of now, the Header Footer for Beaver Builder settings can be used with the fo
 6. Neve Theme
 
 = Supported & Actively Developed =
-Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
-
-= Here is a quick video explaining how this plugin works =
-
-[youtube https://www.youtube.com/watch?v=GlHxpuSqZs4&feature=youtu.be]
+Need help with something? Have an issue to report? [Get in touch](https://github.com/brainstormforce/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
 
 Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Brainstorm Force</a>!
 
