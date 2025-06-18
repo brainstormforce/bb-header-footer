@@ -97,8 +97,6 @@ class BB_Header_Footer {
 		require_once BBHF_DIR . 'admin/class-bb-admin-ui.php';
 		// Astra notices.
 		require_once BBHF_DIR . 'lib/astra-notices/class-astra-notices.php';
-		// BSF Analytics Tracker.
-		require_once BBHF_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 	}
 
 	/**
@@ -170,7 +168,7 @@ class BB_Header_Footer {
 	 */
 	public function unsupported_theme() {
 		$class   = 'notice notice-error';
-		$message = __( 'Hey, your current theme is not supported by BB Header Footer, click <a href="https://github.com/Nikschavan/bb-header-footer#which-themes-are-supported-by-this-plugin">here</a> to check out the supported themes.', 'bb-header-footer' );
+		$message = __( 'Hey, your current theme is not supported by BB Header Footer, click <a href="https://github.com/brainstormforce/bb-header-footer#which-themes-are-supported-by-this-plugin">here</a> to check out the supported themes.', 'bb-header-footer' );
 
 		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message );
 	}

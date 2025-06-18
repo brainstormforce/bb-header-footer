@@ -1,10 +1,10 @@
 # Header Footer for Beaver Builder #
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [Nikschavan](https://profiles.wordpress.org/Nikschavan)  
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)  
 **Tags:** header footer for beaver builder, beaver builder addon, beaver builder, page builder addons, beaver builder template  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 3.6  
 **Tested up to:** 6.8  
-**Stable tag:** 1.2.3  
+**Stable tag:** 1.2.4  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -40,11 +40,7 @@ As of now, the Header Footer for Beaver Builder settings can be used with the fo
 6. Neve Theme
 
 ### Supported & Actively Developed ###
-Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
-
-### Here is a quick video explaining how this plugin works ###
-
-[youtube https://www.youtube.com/watch?v=GlHxpuSqZs4&feature=youtu.be]
+Need help with something? Have an issue to report? [Get in touch](https://github.com/brainstormforce/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
 
 Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Brainstorm Force</a>!
 
@@ -96,6 +92,8 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 ## Changelog ##
+### 1.2.4 ###
+- Updated Readme File.
 
 ### 1.2.3 ###
 - This update addressed a security bug. Please make sure you are using the latest version on your website.
