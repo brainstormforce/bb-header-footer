@@ -8,7 +8,7 @@
 ?>
 
 <div id="fl-bb-header-footer-form" class="fl-settings-form bb-header-footer-fl-settings-form" style="max-width: 550px;">
-	<h3>BB header Footer</h3>
+	<h3>BB Header Footer</h3>
 
 	<form id="bb-header-footer-form" action="<?php FLBuilderAdminSettings::render_form_action( 'bb-header-footer' ); ?>"
 		method="post">
