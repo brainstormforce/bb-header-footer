@@ -4,7 +4,7 @@ Tags: header footer for beaver builder, beaver builder addon, beaver builder, pa
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
 Tested up to: 6.8
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,8 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 == Changelog ==
+= 1.2.4 =
+- Updated Readme File.
 
 = 1.2.3 =
 - This update addressed a security bug. Please make sure you are using the latest version on your website.
