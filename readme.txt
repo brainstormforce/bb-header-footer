@@ -1,10 +1,9 @@
 === Header Footer for Beaver Builder ===
-Contributors: brainstormforce, Nikschavan
+Contributors: Nikschavan
 Tags: header footer for beaver builder, beaver builder addon, beaver builder, page builder addons, beaver builder template
-Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 3.6
 Tested up to: 6.8
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,14 +41,14 @@ As of now, the Header Footer for Beaver Builder settings can be used with the fo
 = Supported & Actively Developed =
 Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
 
-Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Brainstorm Force</a>!
+Made with love by <a href="http://www.nikhilchavan.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Nikhil Chavan</a>!
 
 = What’s More? =
 
 If you like this plugin, please leave us a good review and rating! Your feedback and
 suggestions will be highly appreciated.
 
-You can also consider checking out our other plugins:
+You can also consider checking out these other plugins:
 
 <a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
 
@@ -62,10 +61,6 @@ You can also consider checking out our other plugins:
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=other-plugins”>Cards for Beaver Builder </a>: An advanced module to create attractive cards using Beaver Builder.
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign= bbheaderfooter&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
-
-Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on
-<a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=share”>Facebook</a> and <a
-href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=share”>Twitter</a>.
 
 == Installation ==
 
@@ -92,6 +87,9 @@ href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_so
 3. Then from admin settings, you can assign this page as a Header or Footer of your theme. [Screenshot](https://cloudup.com/ccBOWVTATyh "Screenshot")
 
 == Changelog ==
+= 1.2.5 =
+- Updated help links and improved UI text for better clarity.
+
 = 1.2.4 =
 - Updated Readme File.
 
