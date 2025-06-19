@@ -1,5 +1,5 @@
 {
-    "name": "brainstormforce/bb-header-footer",
+    "name": "nikschavan/bb-header-footer",
     "description": "Create Header and Footer for your site using Beaver Builder page builder.",
     "require": {
       "brainstormforce/astra-notices": "^1.1"

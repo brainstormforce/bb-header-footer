@@ -1,10 +1,10 @@
-# Copyright (C) 2025 Brainstorm Force
+# Copyright (C) 2025 Nikhil Chavan
 # This file is distributed under the same license as the Header Footer for Beaver Builder package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Header Footer for Beaver Builder 1.2.4\n"
+"Project-Id-Version: Header Footer for Beaver Builder 1.2.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bb-header-footer\n"
-"POT-Creation-Date: 2025-06-18 07:07:36+00:00\n"
+"POT-Creation-Date: 2025-06-19 04:51:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -94,7 +94,7 @@ msgstr ""
 #: class-bb-header-footer.php:171
 msgid ""
 "Hey, your current theme is not supported by BB Header Footer, click <a "
-"href=\"https://github.com/brainstormforce/bb-header-footer#which-themes-are-"
+"href=\"https://github.com/Nikschavan/bb-header-footer#which-themes-are-"
 "supported-by-this-plugin\">here</a> to check out the supported themes."
 msgstr ""
 
@@ -111,7 +111,7 @@ msgid "Header Footer for Beaver Builder"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/brainstormforce/bb-header-footer"
+msgid "https://github.com/Nikschavan/bb-header-footer/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -121,9 +121,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Brainstorm Force"
+msgid "Nikhil Chavan"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.brainstormforce.com/"
+msgid "https://www.nikhilchavan.com/"
 msgstr ""
