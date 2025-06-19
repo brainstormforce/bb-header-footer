@@ -41,7 +41,7 @@ As of now, the Header Footer for Beaver Builder settings can be used with the fo
 = Supported & Actively Developed =
 Need help with something? Have an issue to report? [Get in touch](https://github.com/Nikschavan/bb-header-footer "Header Footer for Beaver Builder on GitHub"). with us on GitHub.
 
-Made with love by <a href="http://www.nikhilchavan.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Nikhil Chavan</a>!
+Made with love by <a href="https://www.nikhilchavan.com/?utm_source=wp-repo&utm_campaign=bb-header-footer&utm_medium=description">Nikhil Chavan</a>!
 
 = What’s More? =
 
